@@ -15,6 +15,8 @@ Anatomy file key: `VT79VSlhYlpl0g2JS9vLKt`
 | [Carousel](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50215-16181) | `50215:16181` | Pagination | 4 col, **Not for** |
 | [Promo Bullets](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50260-15154) | `50260:15154` | Lists | 4 col, **Not for** |
 
+**Accessibility reference:** [Service card Accessibility](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50392-15874) `50392:15874` (Cards page, human reviewed). Read it before writing Accessibility rows. Its Detail cells are plain text, not bulleted.
+
 Default **clone source** for a **new** block: **Page Banner** `47299:14446`. Then **blank Eventing and Content bodies** before filling Design Intent, Usage Guidelines, Elements, Interactions, Accessibility. Usage Guidelines is a second clone of that block's Design Intent table, placed directly under it.
 
 On an **existing** Specs & Details frame: do not clone. Do not blank anything. Append to Elements / Interactions / Accessibility only.
@@ -106,9 +108,9 @@ async function ensureUsageGuidelines(frame) {
 
 `blankBody` here only clears **this clone's** body (row 2+), so Design Intent sentences do not leak. Never run it on a Usage Guidelines table that already has body copy.
 
-Then fill the topics from [table-contract.md](table-contract.md). Do not call `applyDoDontLists` on Usage Guidelines or on Tech Spec: Elements.
+Then fill the topics from [table-contract.md](table-contract.md). Do not call `applyElementBullets` on Usage Guidelines.
 
-**Elements Detail** is plain newline-separated implementation lines. No list styling.
+**Elements Detail** is a one-level bullet list. After `writeCell` on column 2, call `applyElementBullets`. Do not include color, line width, or a pixel width or height unless that size is a min or max. See [table-contract.md](table-contract.md).
 
 ## Blank body rows (new block only)
 
@@ -183,10 +185,10 @@ async function writeCell(table, row, col, text) {
 
 Never write to `row < 2`. Body starts at row 2. Preload Figtree Regular / Medium / Bold if needed.
 
-**Elements Detail (column 2)** — after `writeCell`, apply one-level list style. Do not put `• ` in `text`.
+**Elements Detail (column 2)** — after `writeCell`, make every non-empty line a bullet. Do not put `• ` or `- ` in `text`.
 
 ```js
-function applyDoDontLists(textNode) {
+function applyElementBullets(textNode) {
   const chars = textNode.characters;
   if (!chars) return;
   textNode.setRangeListOptions(0, chars.length, { type: "NONE" });
@@ -195,13 +197,7 @@ function applyDoDontLists(textNode) {
   for (const line of lines) {
     const start = offset;
     const end = Math.min(offset + line.length + 1, chars.length);
-    const trimmed = line.trim();
-    const isHeader =
-      trimmed === "" ||
-      trimmed === "DO" ||
-      trimmed === "DON'T" ||
-      trimmed.startsWith("Appears when:");
-    if (!isHeader) {
+    if (line.trim()) {
       textNode.setRangeListOptions(start, end, { type: "UNORDERED" });
     }
     offset += line.length + 1;
@@ -209,7 +205,7 @@ function applyDoDontLists(textNode) {
 }
 ```
 
-Do **not** call `applyDoDontLists` for Usage Guidelines or Tech Spec: Elements. Those cells are plain text.
+Call `applyElementBullets` on every Tech Spec: Elements Detail cell this run writes. Do **not** call it on Usage Guidelines. That Detail stays plain text.
 
 Return `{ createdNodeIds, mutatedNodeIds }` from every mutating `use_figma` call.
 

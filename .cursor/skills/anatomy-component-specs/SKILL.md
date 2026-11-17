@@ -6,7 +6,9 @@ description: >-
   Accessibility) to match Page Banner, Service Card, List item, Modals, and
   Accordion. Usage Guidelines is a purple table under Design Intent for when
   and how a designer or PM should use the component. Tech Spec: Elements is
-  implementation-only (constraints, truncation, dependencies), not usage.
+  implementation-only (truncation, dependencies, min/max size), not usage.
+  Elements Detail is a one-level bullet list, and must not include color,
+  line width, or a pixel width or height unless that size is a min or max.
   Accessibility rows trace to IH A11Y Confluence guidelines
   (accessibility-guidelines.md). On existing specs, add Usage Guidelines if
   missing, and only append new rows to Elements, Interactions, and
@@ -25,7 +27,7 @@ Read **any linked layer** in [Anatomy: IH Design System](https://www.figma.com/d
 
 **On an existing spec:** add **Usage Guidelines** if that table is missing. Append **new rows only** to Usage Guidelines, Elements, Interactions, and Accessibility. **Do not add rows or edit cells** on Design Intent, Eventing, or Content — leave those for manual (or a later skill).
 
-**Copy contract (load every time):** [table-contract.md](table-contract.md) — **Usage Guidelines** is when/how to use the component (designer or PM). **Tech Spec: Elements** is what an engineer needs that the file does not already show (min/max size, truncation, dependencies). Do not put usage DO/DON'T copy in Elements.
+**Copy contract (load every time):** [table-contract.md](table-contract.md) — **Usage Guidelines** is when/how to use the component (designer or PM). **Tech Spec: Elements** is what an engineer needs that the file does not already show (min/max size, truncation, dependencies). Elements Detail is a one-level bullet list. Do not put usage DO/DON'T copy in Elements. Do not put color, line width, or a pixel width or height in Elements unless that size is a min or max.
 **Exemplars, table IDs, `cellAt`:** [exemplar.md](exemplar.md)
 
 ## Guideline sources (load before writing a table)
@@ -48,6 +50,8 @@ When writing new rows **or** revising existing rows in a table listed here, load
 - **Clone existing tables.** Do not create TABLE nodes from scratch.
 - **Existing Elements / Interactions / Accessibility:** append rows for parts not already listed. Do not rewrite filled rows unless the user explicitly asks for a revision.
 - **Accessibility rows must trace to** [accessibility-guidelines.md](accessibility-guidelines.md). No generic a11y copy that is not backed by an IH rule.
+- **Accessibility copy is short and has no WCAG references.** Never write "WCAG" or a criterion number in a cell. Match the reviewed [Service card Accessibility table](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50392-15874): component-specific rows, plain-text Detail, 4 to 6 rows.
+- **No repeated elements in the Accessibility table.** Each Elements value appears once. When an element has more than one concern, write one row and join the concerns in Requirement.
 - **Do not fill leftover rows with** `TBD`, `—`, `N/A`.
 - Token / gradient swatch cards are out of scope.
 - This skill **writes to the Anatomy library file**.
@@ -105,9 +109,9 @@ Do not assume column count. **Page Banner / List item / Service Card** use 4-col
 |-------|-----------|----------------|
 | Design Intent | Fill | **Do not touch** (no new rows, no edits) |
 | Usage Guidelines | Create under Design Intent, then fill | **Create** if missing, then fill. If it already has body rows, **append** missing topics only |
-| Tech Spec: Elements | Fill with implementation details | **Append** rows for parts not already listed. Detail is implementation, not usage |
+| Tech Spec: Elements | Fill with implementation details. Detail is a one-level bullet list | **Append** rows for parts not already listed. Detail is implementation, not usage, and each line is a bullet |
 | Tech Spec: Interactions | Fill | **Append** rows for interactions not already listed |
-| Accessibility | Fill | **Append** rows for a11y items not already listed |
+| Accessibility | Fill. One row per element, no repeats | **Append** rows only for elements not already in column 1 |
 | Eventing | Blank body | **Do not touch** |
 | Content Spec / Guiding Principle | Blank body | **Do not touch** |
 
@@ -115,4 +119,4 @@ Match new rows against the first-column label (case-insensitive). Skip duplicate
 
 ### 6–7. Verify
 
-Increase section height if clipped. Screenshot. Confirm: headers untouched; Usage Guidelines sits directly under Design Intent and its title row is the same purple as Design Intent; Design Intent / Eventing / Content unchanged on existing specs; Elements rows are implementation details, not usage guidance.
+Increase section height if clipped. Screenshot. Confirm: headers untouched; Usage Guidelines sits directly under Design Intent and its title row is the same purple as Design Intent; Design Intent / Eventing / Content unchanged on existing specs; Elements rows are implementation details, not usage guidance; every Elements Detail line is a bullet; they omit color, line width, and pixel width or height except a min or max.

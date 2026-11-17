@@ -28,7 +28,8 @@ Load this whenever filling Anatomy Specs & Details. **Headers stay exactly as th
 
 - Do **not** use `DO` / `DON'T` headers in either table.
 - Never type `• ` or `- ` in the string.
-- Usage Guidelines Detail is designer/PM guidance. Tech Spec Detail is mechanical behavior. See the two sections below.
+- Usage Guidelines Detail is designer/PM guidance and stays plain text.
+- Tech Spec: Elements Detail is mechanical behavior, and every line is a bullet. See the two sections below.
 
 ## Design Intent — do not change headers
 
@@ -108,19 +109,28 @@ This table explains **how each sub-component is built**. Not when a designer sho
 
 Cover, where it applies to that element:
 
-- Min/max width and height
+- Min or max width, and min or max height
 - Line wrapping, truncation, or overflow
 - Responsive behavior (breakpoints, reflow)
 - Conditional or dependent parts (`hide the icon if the label is absent`)
-- Sizing dependencies (`height matches the tallest sibling`)
+- Sizing dependencies that are not a pixel size (`height matches the tallest sibling`, `fills the parent`)
 - State logic that is not a static frame (hover, focus, disabled, error transitions)
 - Differences between variants that are not obvious side by side
 
+**Do not include in Detail:**
+
+- Color. No hex, no fill or stroke token, no color name.
+- Line width or stroke weight.
+- A pixel width or pixel height, including a fixed width, fixed height, padding, or gap in pixels.
+
+The only size numbers allowed are a **min** or a **max** (`Max width: 300`, `min height: Size/40`). A fixed size is not a min or max. Omit it.
+
 **Detail shape:**
 
-- Short labeled lines, separated by real newlines. No `DO` / `DON'T`.
+- One fact per line, separated by real newlines. No `DO` / `DON'T`.
+- Every non-empty line is a bullet. After `writeCell` on the Detail cell, apply unordered list style to each line. Do not type `• ` or `- ` into the string. Recipe: [exemplar.md](exemplar.md).
 - Example: `Max width: 300` / `Truncation: ellipsis after 1 line` / `Depends on: hidden when Label is empty`
-- Token names are fine when a constraint is a token (`min height: Size/40`).
+- A size token is allowed only when it is a min or max (`min height: Size/40`). Do not name a color token.
 - Omit a line that does not apply. Do not write `TBD`, `—`, or `N/A`.
 - One row per sub-component the example (or its component set) actually has.
 - Leave unused grid rows blank.
@@ -145,10 +155,16 @@ Headers: `Elements` · `Requirement` · `Detail`
 - Match the style already on that table:
   - Page Banner / List item / Service Card: concern types from the vocabulary in `accessibility-guidelines.md` (`Landmark`, `Structure`, `Role`, `State`, `Contrast`, `Dynamic content`, `Assistive technology`, `Text alternative`, `Focus`, `Touch target`, …)
   - Modals (if headers/cells already use it): `Required` / `Optional`
-- Detail is one concrete, testable behavior. End with the WCAG criterion in parentheses when the rule has one (`(WCAG 1.4.3)`). Use `must` for Tier 1 / MUST rules and `should` for Tier 2 / SHOULD rules.
-- One rule per row. Only rows for traits the component actually has (no form rows on a list).
-- Leave unused rows blank.
-- **Existing spec:** append a row only when that element + requirement pair is not already listed. Do not edit filled rows unless the user explicitly asks to revise them; then rewrite those rows against `accessibility-guidelines.md`.
+- **Reference exemplar (copy its shape):** the human-reviewed [Service card Accessibility table](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50392-15874), node `50392:15874`, Cards page. Rows: `CTA button`, `Anatomy Chip Static`, `Anatomy Icon Container`, `Service card set`, `Service card`.
+- **Never write a WCAG reference** in any cell: no `(WCAG 1.4.3)`, no criterion numbers, no "WCAG". The guideline file keeps them for tracing only.
+- **No repeated elements.** Every value in the Elements column appears once in the table. Before writing, read column 1 of the whole table, including rows already filled. If an element has more than one concern, write one row: join the concerns in Requirement with ` / ` and give each concern its own sentence in Detail. Never add a second row for the same element.
+- **Elements column:** one distinct part per row. Use the names from Tech Spec: Elements. Name a nested Anatomy component with the `Anatomy` prefix (`Anatomy Chip Static`, `Anatomy Icon Container`). Name the whole component, and the set of them, when each has its own behavior (`Service card`, `Service card set`).
+- **Requirement:** 1 to 3 concern types from the vocabulary, joined with ` / ` (`Structure / Text alternative`).
+- **Detail:** plain text, no bullets. One short sentence per concern, 2 sentences at most. State the rule, then the reason or an `e.g.` example when it helps the reader. Use `must` for Tier 1 / MUST rules and `should` for Tier 2 / SHOULD rules. Use a number only when the number is the rule (`at least 44×44 px, with at least 6 px between targets`).
+- **Component-specific rows only.** Do not add rows every component shares, such as text contrast or text resize, unless something about this component changes them. Favor what a screen reader announces, how parts are grouped, what is hidden, reading order, list semantics, and touch targets.
+- **Order:** nested parts first, then the whole component, then the set.
+- Aim for 4 to 6 rows. Only rows for traits the component actually has (no form rows on a list). Leave unused rows blank.
+- **Existing spec:** append a row only when that element is not already in column 1. Do not edit filled rows unless the user explicitly asks to revise them; then rewrite those rows against `accessibility-guidelines.md`.
 
 ## Eventing and Content
 
@@ -167,8 +183,10 @@ On an existing spec, do **not** add rows to these tables.
 - Fill Eventing or Content on a new clone (except clearing leaked clone copy)
 - Paste Page Banner / Modal copy into a different component
 - Put usage examples in “What does it do”
-- Type `• ` or `- ` in any cell
+- Type `• ` or `- ` in any cell. Elements Detail bullets come from list style, not typed characters
+- Leave Tech Spec: Elements Detail as plain text. Every non-empty line is a bullet
 - Put when/how usage, recommended character counts, or variant-choice advice in Tech Spec: Elements
+- Put color, line width, stroke weight, or a pixel width or height in Tech Spec: Elements, unless that size is a min or max
 - Put min/max pixels, truncation mechanics, breakpoint reflow, or sibling sizing math in Usage Guidelines
 - Fill empty rows with `TBD`, `—`, `N/A`
 - Rewrite filled Usage Guidelines / Element / Interaction / Accessibility rows on an existing spec

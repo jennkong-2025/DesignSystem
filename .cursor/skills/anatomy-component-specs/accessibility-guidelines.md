@@ -20,14 +20,18 @@ Context only (not component rules): space homepage, Accessibility Guidelines and
 
 ## How to write a row
 
-- **Elements** — the sub-component name as it appears in Tech Spec: Elements (`Icon`, `Title`, `Promo Bullets`).
-- **Requirement** — a concern type (see vocabulary below). Keep the table's existing style; Modals-style tables that use `Required` / `Optional` stay that way.
-- **Detail** — one concrete, testable behavior for this component, ending with the WCAG criterion in parentheses when the rule has one: `Text meets 4.5:1 contrast on the page background (WCAG 1.4.3)`. Rules marked "IH best practice" or "IH iOS / Android rule" get no parenthetical.
+Reference exemplar: the human-reviewed [Service card Accessibility table](https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=50392-15874) (`50392:15874`). Copy its shape.
+
+- **Elements** — the sub-component name as it appears in Tech Spec: Elements. Nested Anatomy components take the `Anatomy` prefix (`Anatomy Chip Static`, `Anatomy Icon Container`). Name the whole component and the set when each has its own behavior (`Service card`, `Service card set`).
+- **No repeated elements.** Each Elements value appears once in the whole table, including rows already filled.
+- **Requirement** — one to three concern types (see vocabulary below), joined with ` / ` when an element has more than one. Keep the table's existing style; Modals-style tables that use `Required` / `Optional` stay that way.
+- **Detail** — plain text, no bullets. One short sentence per concern, 2 at most. State the rule, then the reason or an `e.g.` example: `The service icon must be hidden from assistive technology. The title already names the service`.
+  - **Never write the WCAG column into a cell.** No criterion numbers and no "WCAG". The WCAG column below is only for tracing a row back to its rule.
   - Tier 1 / MUST rules: state as a requirement (`must`, or an imperative).
   - Tier 2 / SHOULD rules: use `should`.
-  - Name the Anatomy token when contrast depends on it (`fg/base on bg/base`). Do not invent ratios; use the thresholds below.
+  - Do not name a color token. Do not invent ratios; use the thresholds below. A number belongs in a cell only when the number is the rule (`44×44 px`, `6 px` between targets).
   - Say **member**, not user.
-- One rule per row. Split "contrast and focus" into two rows.
+- **Consolidate and stay specific.** One row per element, concerns joined in Requirement. Skip rules every component shares (text contrast, text resize) unless this component changes them. Favor announcement, grouping, hidden elements, reading order, list semantics, and touch targets. Aim for 4 to 6 rows.
 - Only document what the linked component actually has. No form-field rows on a list; no multimedia rows on a card without video.
 
 ## Requirement vocabulary
