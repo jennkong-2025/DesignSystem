@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Included Health Anatomy design system foundations and writing guidance.">
+  <title>Anatomy — Included Health Design System</title>
+    <link rel="stylesheet" href="css/foundations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to foundations</a>
+
+  <header class="site-header" data-od-id="site-header">
+    <div class="header-inner">
+      <a class="brand-lockup" href="#top" data-od-id="brand-home-link">
+        <img src="assets/images/02da3584e4.svg" alt="Included Health">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-label">Anatomy design system</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation" data-od-id="desktop-navigation">
+        <a href="#foundations" aria-current="page">Foundations</a>
+        <a href="#writing">Writing</a>
+        <a href="#accessibility">Accessibility</a>
+        <a class="nav-page-link" href="index.html" data-od-id="nav-components-link">Components</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Open navigation" data-od-id="mobile-menu-button">Menu</button>
+    </div>
+    <div class="mobile-panel" id="mobile-panel" data-open="false" data-od-id="mobile-navigation">
+      <nav aria-label="Mobile navigation">
+        <a href="#foundations">Foundations</a>
+        <a href="#writing">Writing</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="index.html" data-od-id="mobile-nav-components-link">Components</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cover" id="top" data-od-id="cover">
+      <div class="cover-copy">
+        <img class="cover-mark" src="assets/images/edd81d5288.png" alt="">
+        <p class="kicker">Included Health</p>
+        <h1 data-od-id="cover-title">Anatomy</h1>
+        <p class="cover-subtitle">IH Design System</p>
+      </div>
+      <div class="cover-art" aria-label="Abstract group representing inclusive care" data-od-id="cover-art">
+        <img class="cover-symbol" src="assets/images/edd81d5288.png" alt="">
+      </div>
+    </section>
+
+    <nav class="section-nav" aria-label="On this page" data-od-id="section-navigation">
+      <div class="section-nav-inner">
+        <a href="#foundations" class="active">Principles</a>
+        <a href="#color">Color</a>
+        <a href="#logos">Logos</a>
+        <a href="#type">Typography</a>
+        <a href="#spacing">Spacing</a>
+        <a href="#writing">Writing</a>
+        <a href="#accessibility">Accessibility</a>
+      </div>
+    </nav>
+
+    <section class="docs-section" id="foundations" data-od-id="foundations-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="foundations-heading">Foundations</h2>
+          <p class="intro-copy">Our experiences are grounded in human needs, not system constraints. We design for emotional safety, comprehension, and trust across every ability, context, and state of mind.</p>
+        </div>
+        <div class="principles-grid">
+          <article class="principle-card" data-od-id="principle-conversational">
+            <span class="principle-number">01</span>
+            <h3>Conversational</h3>
+            <p>Write like a real person talking about healthcare, not a healthcare system talking at people.</p>
+          </article>
+          <article class="principle-card" data-od-id="principle-easy">
+            <span class="principle-number">02</span>
+            <h3>Easy</h3>
+            <p>Organize information so members can understand it without working through unnecessary complexity.</p>
+          </article>
+          <article class="principle-card" data-od-id="principle-practical">
+            <span class="principle-number">03</span>
+            <h3>Practical</h3>
+            <p>Guide members toward what they need and help them make informed decisions about their care.</p>
+          </article>
+          <article class="principle-card" data-od-id="principle-inclusive">
+            <span class="principle-number">04</span>
+            <h3>Inclusive</h3>
+            <p>Use respectful, accurate language that welcomes people across abilities, identities, and contexts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-section" id="color" data-od-id="color-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="color-heading">Color</h2>
+          <p class="intro-copy">Use primitives from the Anatomy Colors page and bind components to semantic roles from Color tokens. Included blue is the brand action color; status meaning comes from green, yellow, and red — not from nearby hues.</p>
+        </div>
+        <div class="scale-block" data-od-id="color-semantic">
+          <h3>Semantic roles</h3>
+          <div class="token-grid" data-od-id="color-token-grid">
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-700)"></span></div><div class="swatch-meta"><strong>surface/brand/base</strong><code>#0012e7</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-200)"></span></div><div class="swatch-meta"><strong>surface/brand/weak</strong><code>#e6effe</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-900)"></span></div><div class="swatch-meta"><strong>surface/brand/strongest</strong><code>#001048</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-black)"></span></div><div class="swatch-meta"><strong>text/neutral/strongest</strong><code>#000000</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-800)"></span></div><div class="swatch-meta"><strong>text/secondary</strong><code>#3b3b3b</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-700)"></span></div><div class="swatch-meta"><strong>text/placeholder</strong><code>#6d6d6d</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-white)"></span></div><div class="swatch-meta"><strong>surface/primary</strong><code>#ffffff</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-100)"></span></div><div class="swatch-meta"><strong>surface/secondary</strong><code>#fafafa</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-300)"></span></div><div class="swatch-meta"><strong>border/weakest</strong><code>#e1e1e1</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-green-700)"></span></div><div class="swatch-meta"><strong>text/success/base</strong><code>#008200</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-700)"></span></div><div class="swatch-meta"><strong>text/warning/base</strong><code>#a55600</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-red-700)"></span></div><div class="swatch-meta"><strong>text/danger/base</strong><code>#cb0c31</code></div></article>
+          </div>
+        </div>
+        <div class="scale-block" data-od-id="scale-blue">
+          <h3>Blue</h3>
+          <div class="scale-row">
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-100)"></span></div><div class="swatch-meta"><strong>100</strong><code>#f6fafe</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-200)"></span></div><div class="swatch-meta"><strong>200</strong><code>#e6effe</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-300)"></span></div><div class="swatch-meta"><strong>300</strong><code>#d0e2ff</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-400)"></span></div><div class="swatch-meta"><strong>400</strong><code>#a6c8ff</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-500)"></span></div><div class="swatch-meta"><strong>500</strong><code>#81adf6</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-600)"></span></div><div class="swatch-meta"><strong>600</strong><code>#578ee8</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-700)"></span></div><div class="swatch-meta"><strong>700 base</strong><code>#0012e7</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-800)"></span></div><div class="swatch-meta"><strong>800</strong><code>#002380</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-900)"></span></div><div class="swatch-meta"><strong>900</strong><code>#001048</code></div></article>
+          </div>
+        </div>
+        <div class="scale-block" data-od-id="scale-neutral">
+          <h3>Neutral</h3>
+          <div class="scale-row">
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-white)"></span></div><div class="swatch-meta"><strong>white</strong><code>#ffffff</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-100)"></span></div><div class="swatch-meta"><strong>100</strong><code>#fafafa</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-200)"></span></div><div class="swatch-meta"><strong>200</strong><code>#f2f2f2</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-300)"></span></div><div class="swatch-meta"><strong>300</strong><code>#e1e1e1</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-400)"></span></div><div class="swatch-meta"><strong>400</strong><code>#c6c6c6</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-500)"></span></div><div class="swatch-meta"><strong>500</strong><code>#acacac</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-600)"></span></div><div class="swatch-meta"><strong>600</strong><code>#8f8f8f</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-700)"></span></div><div class="swatch-meta"><strong>700</strong><code>#6d6d6d</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-800)"></span></div><div class="swatch-meta"><strong>800</strong><code>#3b3b3b</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-900)"></span></div><div class="swatch-meta"><strong>900</strong><code>#181818</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-black)"></span></div><div class="swatch-meta"><strong>black</strong><code>#000000</code></div></article>
+          </div>
+        </div>
+        <div class="scale-block" data-od-id="scale-status">
+          <h3>Status primitives</h3>
+          <div class="scale-row">
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-green-700)"></span></div><div class="swatch-meta"><strong>green/700</strong><code>#008200</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-700)"></span></div><div class="swatch-meta"><strong>yellow/700</strong><code>#a55600</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-red-700)"></span></div><div class="swatch-meta"><strong>red/700</strong><code>#cb0c31</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-700)"></span></div><div class="swatch-meta"><strong>teal/700</strong><code>#0b7e7e</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-700)"></span></div><div class="swatch-meta"><strong>purple/700</strong><code>#6a4cde</code></div></article>
+            <article class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-700)"></span></div><div class="swatch-meta"><strong>orange/700</strong><code>#b54325</code></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-section" id="logos" data-od-id="logos-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="logos-heading">Logos</h2>
+          <p class="intro-copy">The 2026 Included Health and Doctor On Demand lockups come from Anatomy. Use the official files; do not redraw, recolor, or restack the mark and wordmark.</p>
+        </div>
+        <div class="scale-block">
+          <h3>Brand logo</h3>
+          <div class="logo-matrix" data-od-id="foundations-brand-logo">
+            <figure class="logo-tile">
+              <div class="logo-plate"><img src="assets/images/17ca3a4763.svg" alt="Included Health wordmark, Included blue"></div>
+              <figcaption>IH / Blue<code>logos/included-health-wordmark-blue.svg</code></figcaption>
+            </figure>
+            <figure class="logo-tile">
+              <div class="logo-plate is-brand"><img src="assets/images/ca0e6b9e89.svg" alt="Included Health wordmark, white"></div>
+              <figcaption>IH / White<code>logos/included-health-wordmark-white.svg</code></figcaption>
+            </figure>
+            <figure class="logo-tile">
+              <div class="logo-plate"><img src="assets/images/352eb6d828.svg" alt="Doctor On Demand wordmark"></div>
+              <figcaption>DOD<code>logos/doctor-on-demand-wordmark-blue.svg</code></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="scale-block">
+          <h3>Brand logo mark</h3>
+          <div class="logo-matrix" data-od-id="foundations-brand-mark">
+            <figure class="logo-tile">
+              <div class="logo-plate"><img src="assets/images/98ad24d23a.svg" alt="Included Health mark, Included blue"></div>
+              <figcaption>IH / Blue<code>logos/included-health-logomark-blue.svg</code></figcaption>
+            </figure>
+            <figure class="logo-tile">
+              <div class="logo-plate is-brand"><img src="assets/images/feeea74ad4.svg" alt="Included Health mark, white"></div>
+              <figcaption>IH / White<code>logos/included-health-logomark-white.svg</code></figcaption>
+            </figure>
+            <figure class="logo-tile">
+              <div class="logo-plate"><img src="assets/images/a4babc3a17.svg" alt="Doctor On Demand mark"></div>
+              <figcaption>DOD<code>logos/doctor-on-demand-logomark-blue.svg</code></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="scale-block">
+          <h3>Example usage</h3>
+          <div class="logo-usage">
+            <div class="logo-usage-card">
+              <img class="wordmark" src="assets/images/17ca3a4763.svg" alt="Included Health on white">
+              <img class="mark-hug" src="assets/images/98ad24d23a.svg" alt="">
+            </div>
+            <div class="logo-usage-card is-brand">
+              <img class="wordmark" src="assets/images/ca0e6b9e89.svg" alt="Included Health on Included blue">
+              <img class="mark-hug" src="assets/images/c48ce33715.svg" alt="">
+            </div>
+            <div class="logo-usage-card">
+              <img class="wordmark" src="assets/images/352eb6d828.svg" alt="Doctor On Demand on white">
+              <img class="mark-hug" src="assets/images/2d7acea5a1.svg" alt="">
+            </div>
+            <div class="logo-usage-card">
+              <img class="lockup" src="assets/images/547ef40649.svg" alt="Included Health and Doctor On Demand cobrand lockup">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-section" id="type" data-od-id="typography-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="typography-heading">Typography</h2>
+          <p class="intro-copy"><strong>Figtree</strong> is a clean yet friendly geometric sans serif for web and mobile apps. Included Health uses Figtree across print and digital surfaces in marketing and member-facing apps, under Google Fonts’ Open Font License.</p>
+        </div>
+
+        <div class="type-gallery" data-od-id="type-gallery">
+          <h3>Gallery</h3>
+          <div class="glyph-block is-bold" data-od-id="glyph-bold-700">
+            <h4>Bold 700</h4>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%^&amp;*()</p>
+          </div>
+          <div class="glyph-block is-medium" data-od-id="glyph-medium-500">
+            <h4>Medium 500</h4>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%^&amp;*()</p>
+          </div>
+        </div>
+
+        <table class="type-table" data-od-id="type-scale">
+          <caption class="sr-only">Included Health named Figtree type styles, with font size, line height, available weights, and platform restrictions.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Font size /<br>line height</th>
+              <th scope="col">Weights</th>
+              <th scope="col" class="col-flag">Desktop web<br>only</th>
+              <th scope="col" class="col-flag">Native app<br>only</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="t-display-1" data-od-id="type-style-display-1">
+              <th scope="row" data-label="Name">Display 1</th>
+              <td class="scaled" data-label="Size / line height">64 / 72</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"><span class="flag"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 10.4l3.2 3.2L15 6.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Desktop web only</span></span></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-display-2" data-od-id="type-style-display-2">
+              <th scope="row" data-label="Name">Display 2</th>
+              <td class="scaled" data-label="Size / line height">40 / 48</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-title-1" data-od-id="type-style-title-1">
+              <th scope="row" data-label="Name">Title 1</th>
+              <td class="scaled" data-label="Size / line height">32 / 40</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-title-2" data-od-id="type-style-title-2">
+              <th scope="row" data-label="Name">Title 2</th>
+              <td class="scaled" data-label="Size / line height">24 / 32</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-title-3" data-od-id="type-style-title-3">
+              <th scope="row" data-label="Name">Title 3</th>
+              <td class="scaled" data-label="Size / line height">20 / 32</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-title-4" data-od-id="type-style-title-4">
+              <th scope="row" data-label="Name">Title 4</th>
+              <td class="scaled" data-label="Size / line height">16 / 24</td>
+              <td class="scaled" data-label="Weights">Bold 700</td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-body-1" data-od-id="type-style-body-1">
+              <th scope="row" data-label="Name">Body 1</th>
+              <td class="scaled" data-label="Size / line height">16 / 24</td>
+              <td class="scaled" data-label="Weights">Bold 700, <span class="medium">Medium 500</span></td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-body-2" data-od-id="type-style-body-2">
+              <th scope="row" data-label="Name">Body 2</th>
+              <td class="scaled" data-label="Size / line height">14 / 20</td>
+              <td class="scaled" data-label="Weights">Bold 700, <span class="medium">Medium 500</span></td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-caption" data-od-id="type-style-caption">
+              <th scope="row" data-label="Name">Caption</th>
+              <td class="scaled" data-label="Size / line height">12 / 16</td>
+              <td class="scaled" data-label="Weights">Bold 700, <span class="medium">Medium 500</span></td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"></td>
+            </tr>
+            <tr class="t-footer" data-od-id="type-style-footer">
+              <th scope="row" data-label="Name">Footer</th>
+              <td class="scaled" data-label="Size / line height">11 / 16</td>
+              <td class="scaled" data-label="Weights">Bold 700, <span class="medium">Medium 500</span></td>
+              <td class="col-flag" data-label="Desktop web only"></td>
+              <td class="col-flag" data-label="Native app only"><span class="flag"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 10.4l3.2 3.2L15 6.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Native app only</span></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="docs-section" id="spacing" data-od-id="spacing-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="spacing-heading">Spacing</h2>
+          <p class="intro-copy">The spacing scale begins at 4px and expands to 64px. Small values belong inside controls; medium values organize components; large values shape page-level layout.</p>
+        </div>
+        <div class="spacing-scale" data-od-id="spacing-scale">
+          <div class="space-token"><code>space/2x-small · 4px</code><div class="space-line space-4"></div></div>
+          <div class="space-token"><code>space/x-small · 8px</code><div class="space-line space-8"></div></div>
+          <div class="space-token"><code>space/small · 12px</code><div class="space-line space-12"></div></div>
+          <div class="space-token"><code>space/medium · 16px</code><div class="space-line space-16"></div></div>
+          <div class="space-token"><code>space/large · 24px</code><div class="space-line space-24"></div></div>
+          <div class="space-token"><code>space/x-large · 32px</code><div class="space-line space-32"></div></div>
+          <div class="space-token"><code>space/2x-large · 48px</code><div class="space-line space-48"></div></div>
+          <div class="space-token"><code>space/3x-large · 64px</code><div class="space-line space-64"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-section" id="writing" data-od-id="writing-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="writing-heading">Writing</h2>
+          <p class="intro-copy">Content helps members make informed decisions and find the care they need in the easiest way possible. Voice stays consistent; tone adapts to the person and moment.</p>
+        </div>
+        <div class="writing-layout">
+          <div class="statement" data-od-id="strategy-statement">
+            <p class="kicker">Strategy statement</p>
+            <blockquote>Empower people to self-serve, then guide them to care when they need support.</blockquote>
+          </div>
+          <div class="writing-list">
+            <article class="writing-item" data-od-id="writing-clear"><span class="icon">01</span><div><h3>Be clear</h3><p>Use concise, everyday language that a wide audience can understand.</p></div></article>
+            <article class="writing-item" data-od-id="writing-concise"><span class="icon">02</span><div><h3>Be concise</h3><p>Keep the essential message visible and use white space to make it scannable.</p></div></article>
+            <article class="writing-item" data-od-id="writing-consistent"><span class="icon">03</span><div><h3>Be consistent</h3><p>Reuse established terms and patterns so the experience feels reliable.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-section" id="accessibility" data-od-id="accessibility-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2 data-od-id="accessibility-heading">Accessible writing</h2>
+          <p class="intro-copy">Accessibility and inclusivity go hand in hand. Familiar interactions and perceivable content make care information more usable for everyone.</p>
+        </div>
+        <div class="a11y-card">
+          <div>
+            <h3>Write for people across abilities and contexts</h3>
+            <ul>
+              <li>Prioritize simplicity and familiar, consistent interactions.</li>
+              <li>Make content perceivable through sight, hearing, or touch.</li>
+              <li>Use the language people and communities use for themselves.</li>
+              <li>Avoid language that frames disability as a negative quality.</li>
+            </ul>
+          </div>
+          <aside class="tip" data-od-id="accessibility-tip">
+            <strong>Writing tip</strong>
+            <p>Lead with the person’s goals and accomplishments before mentioning a disability when that detail is relevant.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-od-id="site-footer">
+    <div class="footer-inner">
+      <img src="assets/images/02da3584e4.svg" alt="Included Health">
+      <span>Anatomy · Writing &amp; Foundations reference</span>
+    </div>
+  </footer>
+
+    <script src="js/foundations.js"></script>
+</body>
+</html>

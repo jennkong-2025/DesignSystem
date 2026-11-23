@@ -1,0 +1,1839 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Included Health Anatomy component library reference.">
+  <title>Anatomy Components — Included Health Design System</title>
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to components</a>
+  <header class="topbar" data-od-id="top-navigation">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" data-od-id="brand-lockup">
+        <img src="assets/images/02da3584e4.svg" alt="Included Health">
+        <span>Anatomy Design System</span>
+      </a>
+      <nav class="top-links" id="top-links" aria-label="Primary">
+        <a href="#components" aria-current="page">Components</a>
+        <a href="#logos">Logos</a>
+        <a href="#patterns">Patterns</a>
+        <a href="#tokens">Tokens</a>
+        <a class="nav-page-link" href="foundations.html" data-od-id="nav-foundations-link">Foundations</a>
+      </nav>
+      <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="top-links">Menu</button>
+    </div>
+  </header>
+
+  <section class="cover" id="top" data-od-id="cover">
+    <div class="cover-copy">
+      <p class="cover-kicker">IH Design System</p>
+      <h1 data-od-id="cover-heading">Anatomy</h1>
+      <p>Components and templates for clear, accessible member experiences.</p>
+    </div>
+    <div class="cover-art" aria-hidden="true">
+      <div class="people"><span class="person"></span><span class="person"></span><span class="person"></span></div>
+    </div>
+  </section>
+
+  <div class="shell">
+    <aside class="side-nav" aria-label="Component index" data-od-id="component-index">
+      <p>Components</p>
+      <div class="side-nav-scroll" data-od-id="component-index-scroll">
+        <div class="nav-group" data-nav-group="atoms">
+          <div class="nav-group-row">
+            <a href="#atoms">Atoms</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-atoms" data-od-id="nav-toggle-atoms"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Atoms subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-atoms">
+            <a class="sub" href="#icon-container">Icon container</a>
+            <a class="sub" href="#divider">Divider</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="avatar">
+          <div class="nav-group-row">
+            <a href="#avatar">Avatar</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-avatar" data-od-id="nav-toggle-avatar"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Avatar subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-avatar">
+            <a class="sub" href="#avatar-photo">Photo</a>
+            <a class="sub" href="#avatar-initials">Initials</a>
+            <a class="sub" href="#avatar-clinic">Clinic fallback</a>
+            <a class="sub" href="#avatar-dot">Dot</a>
+            <a class="sub" href="#avatar-provider">Provider fallback</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="badges">
+          <div class="nav-group-row">
+            <a href="#badges">Badges</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-badges" data-od-id="nav-toggle-badges"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Badges subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-badges">
+            <a class="sub" href="#badge-verified">Badge Verified</a>
+            <a class="sub" href="#badge-notification">Badge Notification</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="buttons">
+          <div class="nav-group-row">
+            <a href="#buttons">Buttons</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-buttons" data-od-id="nav-toggle-buttons"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Buttons subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-buttons">
+            <a class="sub" href="#button-groups">Button groups</a>
+            <a class="sub" href="#icon-buttons">Icon buttons</a>
+            <a class="sub" href="#text-links">Text links</a>
+            <a class="sub" href="#segmented-control">Segmented control</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="feedback">
+          <div class="nav-group-row">
+            <a href="#feedback">Banners</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-feedback" data-od-id="nav-toggle-banners"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Banners subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-feedback">
+            <a class="sub" href="#page-banners">Page banners</a>
+            <a class="sub" href="#inline-banners">Inline banners</a>
+            <a class="sub" href="#banner-guidance">Usage guidance</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="forms">
+          <div class="nav-group-row">
+            <a href="#forms">Inputs &amp; forms</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-forms" data-od-id="nav-toggle-forms"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Inputs and forms subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-forms">
+            <a class="sub" href="#form-info">Form info</a>
+            <a class="sub" href="#text-field">Text field</a>
+            <a class="sub" href="#text-area">Text Area</a>
+            <a class="sub" href="#dropdown">Dropdown</a>
+            <a class="sub" href="#search-field">Search Field</a>
+            <a class="sub" href="#date-input">Date Input</a>
+            <a class="sub" href="#calendar">Calendar</a>
+            <a class="sub" href="#phone-input">Phone Input</a>
+            <a class="sub" href="#radio-button">Radio Button</a>
+            <a class="sub" href="#checkbox">Checkbox</a>
+            <a class="sub" href="#slider">Slider</a>
+            <a class="sub" href="#star-rating">Star rating</a>
+            <a class="sub" href="#sms-verification">SMS Verification</a>
+            <a class="sub" href="#payment">Payment</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="cards">
+          <div class="nav-group-row">
+            <a href="#cards">Cards</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-cards" data-od-id="nav-toggle-cards"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Cards subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-cards">
+            <a class="sub" href="#get-care-card">Get Care Card</a>
+            <a class="sub" href="#status-card">Status Card</a>
+            <a class="sub" href="#service-card">Service Card</a>
+            <a class="sub" href="#preview-card">Preview Card</a>
+            <a class="sub" href="#confirmation-card">Confirmation Card</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="lists">
+          <div class="nav-group-row">
+            <a href="#lists">Lists</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-lists" data-od-id="nav-toggle-lists"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Lists subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-lists">
+            <a class="sub" href="#list-items">List items</a>
+            <a class="sub" href="#accordions">Accordion</a>
+            <a class="sub" href="#timelines">Timeline</a>
+            <a class="sub" href="#promo-bullets">Promo bullets</a>
+            <a class="sub" href="#detail-lists">Detail List</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="navigation">
+          <div class="nav-group-row">
+            <a href="#navigation">Navigation</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-navigation" data-od-id="nav-toggle-navigation"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Navigation subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-navigation">
+            <a class="sub" href="#bottom-tab-bar">Bottom tab bar</a>
+            <a class="sub" href="#nav-drawer">Nav Drawer (web)</a>
+            <a class="sub" href="#top-nav">Top Nav</a>
+            <a class="sub" href="#secondary-nav">Secondary nav</a>
+            <a class="sub" href="#page-tab">Page Tab</a>
+            <a class="sub" href="#footer-nav">Footer</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="messaging">
+          <div class="nav-group-row">
+            <a href="#messaging">Messaging</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-messaging" data-od-id="nav-toggle-messaging"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Messaging subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-messaging">
+            <a class="sub" href="#timestamp">Timestamp</a>
+            <a class="sub" href="#system-message">System Message</a>
+            <a class="sub" href="#chat-input">Chat input</a>
+            <a class="sub" href="#jump-to-latest">Jump to Latest</a>
+            <a class="sub" href="#response">Response</a>
+            <a class="sub" href="#attachments">Attachments</a>
+            <a class="sub" href="#quick-reply">Quick Reply</a>
+            <a class="sub" href="#multi-select-reply">Multi-select Reply</a>
+            <a class="sub" href="#disclaimer">Disclaimer</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="logos">
+          <div class="nav-group-row">
+            <a href="#logos">Logos</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-logos" data-od-id="nav-toggle-logos"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Logos subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-logos">
+            <a class="sub" href="#brand-logo">Brand logo</a>
+            <a class="sub" href="#brand-logo-mark">Brand logo mark</a>
+            <a class="sub" href="#logo-example-usage">Logo example usage</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="patterns">
+          <div class="nav-group-row">
+            <a href="#patterns">Patterns</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="tokens">
+          <div class="nav-group-row">
+            <a href="#tokens">Tokens</a>
+            <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="nav-subs-tokens" data-od-id="nav-toggle-tokens"><span class="nav-chevron" aria-hidden="true"></span><span class="visually-hidden">Toggle Tokens subsections</span></button>
+          </div>
+          <div class="nav-subs" id="nav-subs-tokens">
+            <a class="sub" href="#color-primitives">Primitives</a>
+            <a class="sub" href="#color-semantic">Semantic</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main">
+      <section class="intro" id="components" data-od-id="components-introduction">
+        <p class="eyebrow">Component reference</p>
+        <h2 data-od-id="components-heading">Built for moments that matter.</h2>
+        <p>This responsive reference distills the imported library’s core families and states. Every example uses measured Figma values for color, type, spacing, radius, and control sizing. Start with Atoms, Avatar, and Badges — the building blocks used across the rest of the catalog.</p>
+      </section>
+
+      <section class="component-section" id="atoms" data-od-id="atoms-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Primitives</p><h3>Atoms</h3><p>Shared containers that wrap an icon or split content. Use these instead of inventing a new circle or rule for each screen.</p></div>
+          <span class="count">01 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="icon-container" data-od-id="icon-container-subsection">
+          <div class="sub-head"><p class="eyebrow">Icon plate</p><h4>Icon container</h4><p>A circular plate for a single glyph. Production sizes in the component set are 40, 48, 56, and 80. The inner placeholder scales 20 / 24 / 28 / 40. The page also documents 16, 24, 32, 64, and 160 as related image-container sizes — do not mix those into this plate unless a spec says so.</p></div>
+          <div class="demo">
+            <div class="demo-label">State × size</div>
+            <div class="stage avatar-scroll">
+              <div class="atom-matrix" data-od-id="icon-container-matrix">
+                <span></span>
+                <p class="col-label">40</p>
+                <p class="col-label">48</p>
+                <p class="col-label">56</p>
+                <p class="col-label">80</p>
+                <p class="row-label">Primary</p>
+                <span class="ic ic-40 primary" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 primary" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 primary" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 primary" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Neutral</p>
+                <span class="ic ic-40 neutral" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 neutral" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 neutral" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 neutral" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Purple</p>
+                <span class="ic ic-40 purple" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 purple" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 purple" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 purple" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Orange</p>
+                <span class="ic ic-40 orange" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 orange" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 orange" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 orange" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Success</p>
+                <span class="ic ic-40 success" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 success" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 success" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 success" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Warning</p>
+                <span class="ic ic-40 warning" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 warning" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 warning" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 warning" aria-hidden="true"><span class="ph"></span></span>
+                <p class="row-label">Danger</p>
+                <span class="ic ic-40 danger" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-48 danger" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-56 danger" aria-hidden="true"><span class="ph"></span></span>
+                <span class="ic ic-80 danger" aria-hidden="true"><span class="ph"></span></span>
+              </div>
+              <p class="card-spec-note">Figma: radius max 9999 · surfaces brand/neutral/accentOne/accentTwo/success/warning/danger weak · glyph uses the exported placeholder, tinted with the matching text token.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="divider" data-od-id="divider-subsection">
+          <div class="sub-head"><p class="eyebrow">Separation</p><h4>Divider</h4><p>Two types: a 1px content rule, and an OR rule that splits a line around Body 2 Medium label. Reference width is 343px.</p></div>
+          <div class="demo">
+            <div class="demo-label">Content and OR</div>
+            <div class="stage">
+              <div class="divider-stack" data-od-id="divider-types">
+                <div class="divider-content" role="separator"></div>
+                <div class="divider-or" role="separator"><span>OR</span></div>
+              </div>
+              <p class="card-spec-note">Figma: Type=content is a hairline in border/weakest. Type=or uses 20px gaps and text/neutral/strong (#3b3b3b).</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="avatar" data-od-id="avatar-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Identity</p><h3>Avatar</h3><p>Circular identity for a member, provider, clinic, or the Dot assistant. Prefer a photo. Initials are the next fallback. Clinic and provider glyphs are for those roles when a photo is not available. Dot is reserved for the Included Health assistant.</p></div>
+          <span class="count">02 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="avatar-photo" data-od-id="avatar-photo-subsection">
+          <div class="sub-head"><p class="eyebrow">Preferred</p><h4>Photo</h4><p>Crop a real photograph into the circle. 24 through 160. A verified badge may sit on 48 and up, bottom-right.</p></div>
+          <div class="demo">
+            <div class="demo-label">Sizes with optional verification</div>
+            <div class="stage avatar-scroll">
+              <div class="badge-row" data-od-id="avatar-photo-sizes">
+                <span class="avatar av-24" aria-label="Member photo, 24"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span></span>
+                <span class="avatar av-32" aria-label="Member photo, 32"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span></span>
+                <span class="avatar av-48" aria-label="Verified member photo, 48"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar av-64" aria-label="Verified member photo, 64"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar av-80" aria-label="Verified member photo, 80"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar av-160" aria-label="Verified member photo, 160"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+              </div>
+              <p class="card-spec-note">Figma sizes: 24, 32, 48, 64, 80, 160. Photo uses a 1px border/weakest ring. Verified overlay: 16 / 22 / 28 / 46 on 48 / 64 / 80 / 160.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="avatar-initials" data-od-id="avatar-initials-subsection">
+          <div class="sub-head"><p class="eyebrow">Fallback</p><h4>Initials</h4><p>Use two letters when no photo is available. Neutral weak fill, black Figtree Bold. Type tracks the named scale: Caption at 24, Body 2 at 32, Title 3 at 48, Title 2 at 64, Title 1 at 80, Display 1 at 160.</p></div>
+          <div class="demo">
+            <div class="demo-label">AL across sizes</div>
+            <div class="stage avatar-scroll">
+              <div class="badge-row" data-od-id="avatar-initials-sizes">
+                <span class="avatar initials av-24" aria-label="Initials AL, 24">AL</span>
+                <span class="avatar initials av-32" aria-label="Initials AL, 32">AL</span>
+                <span class="avatar initials av-48" aria-label="Verified initials AL, 48">AL<span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar initials av-64" aria-label="Verified initials AL, 64">AL<span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar initials av-80" aria-label="Verified initials AL, 80">AL<span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar initials av-160" aria-label="Verified initials AL, 160">AL<span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="avatar-clinic" data-od-id="avatar-clinic-subsection">
+          <div class="sub-head"><p class="eyebrow">Place</p><h4>Clinic fallback</h4><p>Location glyph on a neutral plate when the subject is a clinic or site, not a person. No verified badge. Sizes start at 32 — there is no 24 in the Figma set.</p></div>
+          <div class="demo">
+            <div class="demo-label">32 to 160</div>
+            <div class="stage avatar-scroll">
+              <div class="badge-row" data-od-id="avatar-clinic-sizes">
+                <span class="avatar fallback av-32" aria-label="Clinic, 32"><span class="avatar-media"><img src="assets/images/d7c7b23444.svg" alt=""></span></span>
+                <span class="avatar fallback av-48" aria-label="Clinic, 48"><span class="avatar-media"><img src="assets/images/d7c7b23444.svg" alt=""></span></span>
+                <span class="avatar fallback av-64" aria-label="Clinic, 64"><span class="avatar-media"><img src="assets/images/d7c7b23444.svg" alt=""></span></span>
+                <span class="avatar fallback av-80" aria-label="Clinic, 80"><span class="avatar-media"><img src="assets/images/d7c7b23444.svg" alt=""></span></span>
+                <span class="avatar fallback av-160" aria-label="Clinic, 160"><span class="avatar-media"><img src="assets/images/d7c7b23444.svg" alt=""></span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="avatar-dot" data-od-id="avatar-dot-subsection">
+          <div class="sub-head"><p class="eyebrow">Assistant</p><h4>Dot</h4><p>The Included Health assistant mark on white with a weakest border. Do not substitute a member photo or initials for Dot.</p></div>
+          <div class="demo">
+            <div class="demo-label">24 to 160</div>
+            <div class="stage avatar-scroll">
+              <div class="badge-row" data-od-id="avatar-dot-sizes">
+                <span class="avatar fallback av-24" aria-label="Dot, 24"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+                <span class="avatar fallback av-32" aria-label="Dot, 32"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+                <span class="avatar fallback av-48" aria-label="Dot, 48"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+                <span class="avatar fallback av-64" aria-label="Dot, 64"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+                <span class="avatar fallback av-80" aria-label="Dot, 80"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+                <span class="avatar fallback av-160" aria-label="Dot, 160"><span class="avatar-media"><img src="assets/images/d34dd6b36f.svg" alt=""></span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="avatar-provider" data-od-id="avatar-provider-subsection">
+          <div class="sub-head"><p class="eyebrow">Clinician fallback</p><h4>Provider fallback</h4><p>Use when initials are not available for a clinician. Neutral plate plus the exported person-medical glyph. Verified badge may appear from 48 up, as in the Figma matrix.</p></div>
+          <div class="demo">
+            <div class="demo-label">24 to 160</div>
+            <div class="stage avatar-scroll">
+              <div class="badge-row" data-od-id="avatar-provider-sizes">
+                <span class="avatar fallback av-24" aria-label="Provider, 24"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span></span>
+                <span class="avatar fallback av-32" aria-label="Provider, 32"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span></span>
+                <span class="avatar fallback av-48" aria-label="Verified provider, 48"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar fallback av-64" aria-label="Verified provider, 64"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar fallback av-80" aria-label="Verified provider, 80"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+                <span class="avatar fallback av-160" aria-label="Verified provider, 160"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
+              </div>
+              <p class="card-spec-note">Annotation in Figma: provider fallback if initials are not available. Initials are used when no photo is available.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="badges" data-od-id="badges-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Status marks</p><h3>Badges</h3><p>Two families: a verified seal for Included Health or Doctor On Demand, and a notification mark for unread or unseen activity. Do not invent a third badge shape.</p></div>
+          <span class="count">03 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="badge-verified" data-od-id="badge-verified-subsection">
+          <div class="sub-head"><p class="eyebrow">Credential</p><h4>Badge Verified</h4><p>Scalloped Included blue seal. Small is 32px; large is 44px. IH uses the knockout logomark. DOD uses the dr+ mark. Place on an avatar’s bottom-right — never as a standalone brand logo.</p></div>
+          <div class="demo">
+            <div class="demo-label">IH and DOD · small and large</div>
+            <div class="stage">
+              <div class="badge-row" data-od-id="badge-verified-variants">
+                <div class="badge-pair"><span class="badge-verified ih" role="img" aria-label="Included Health verified, small"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span><span>IH · 32</span></div>
+                <div class="badge-pair"><span class="badge-verified ih large" role="img" aria-label="Included Health verified, large"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span><span>IH · 44</span></div>
+                <div class="badge-pair"><span class="badge-verified dod" role="img" aria-label="Doctor On Demand verified, small"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/dce26874c5.png" alt=""></span><span>DOD · 32</span></div>
+                <div class="badge-pair"><span class="badge-verified dod large" role="img" aria-label="Doctor On Demand verified, large"><img class="seal" src="assets/images/b4c6f0a11e.svg" alt=""><img class="mark" src="assets/images/dce26874c5.png" alt=""></span><span>DOD · 44</span></div>
+              </div>
+              <p class="card-spec-note">Seals and marks are exported Figma vectors. The DOD small seal shares the IH small star path, with the dr+ mark inset 18.75%.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="badge-notification" data-od-id="badge-notification-subsection">
+          <div class="sub-head"><p class="eyebrow">Unread</p><h4>Badge Notification</h4><p>Brand style only in this production set. Minimized is an 8px dot. Emphasized is a 20px count with Caption Bold and a 2px white stroke so it stays visible on a photo or icon.</p></div>
+          <div class="demo">
+            <div class="demo-label">Minimized and emphasized</div>
+            <div class="stage">
+              <div class="badge-row" data-od-id="badge-notification-variants">
+                <div class="notice-stack">
+                  <span class="badge-dot" aria-label="Unread"></span>
+                  <span class="badge-count" aria-label="1 unread">1</span>
+                </div>
+                <div class="notice-on-photo">
+                  <span class="host"><img src="assets/images/d9ade7fcec.png" alt=""></span>
+                  <span class="badge-dot" aria-hidden="true"></span>
+                </div>
+                <div class="notice-on-photo">
+                  <span class="host"><img src="assets/images/d9ade7fcec.png" alt=""></span>
+                  <span class="badge-count">1</span>
+                </div>
+              </div>
+              <p class="card-spec-note">Figma: Style=brand · Type=minimized 8px · Type=emphasized 20px Caption Bold inverse. Stroke is white so the count reads on imagery.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="buttons" data-od-id="buttons-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Actions</p><h3>Buttons</h3><p>Use one primary action per task. The family covers three hierarchy levels, two sizes, fixed or content-fit widths, destructive actions, and six interaction states, plus groups, icon buttons, text links, and the segmented control. Medium button labels use <strong>Body 1</strong> (Figtree Medium 500, 16&nbsp;/&nbsp;24); Small buttons use <strong>Body 2</strong> (14&nbsp;/&nbsp;20).</p></div>
+          <span class="count">04 / 13</span>
+        </div>
+        <div class="demo">
+          <div class="demo-label">Measured anatomy</div>
+          <div class="button-specs" data-od-id="button-specifications">
+            <div class="button-spec"><strong>Medium</strong><span>48px high · 12px / 16px padding</span></div>
+            <div class="button-spec"><strong>Small</strong><span>36px high · 8px / 12px padding · 44px tap region</span></div>
+            <div class="button-spec"><strong>Shape</strong><span>24px radius · 6px item gap</span></div>
+            <div class="button-spec"><strong>Label</strong><span>Medium: Body 1 · 16 / 24<br>Small: Body 2 · 14 / 20</span></div>
+          </div>
+          <div class="stage">
+            <div class="hierarchy-row">
+              <div class="state-sample">
+                <span>Primary</span>
+                <button class="btn fixed" type="button" data-od-id="button-primary">Find care</button>
+              </div>
+              <div class="state-sample">
+                <span>Secondary</span>
+                <button class="btn secondary fixed" type="button" data-od-id="button-secondary">View benefits</button>
+              </div>
+              <div class="state-sample">
+                <span>Tertiary</span>
+                <button class="btn tertiary fixed" type="button" data-od-id="button-tertiary">Learn more</button>
+              </div>
+            </div>
+          </div>
+          <div class="demo-label">Primary states</div>
+          <div class="stage state-grid" data-od-id="button-state-grid">
+            <div class="state-sample"><span>Default</span><button class="btn fixed" type="button">Find care</button></div>
+            <div class="state-sample"><span>Hover</span><button class="btn fixed is-hovered" type="button">Find care</button></div>
+            <div class="state-sample"><span>Focus</span><button class="btn fixed is-focused" type="button">Find care</button></div>
+            <div class="state-sample"><span>Pressed</span><button class="btn fixed is-pressed" type="button">Find care</button></div>
+            <div class="state-sample"><span>Loading</span><button class="btn fixed is-loading" type="button" aria-busy="true"><span class="button-label">Finding care</span><span class="spinner" aria-hidden="true"></span></button></div>
+            <div class="state-sample"><span>Disabled</span><button class="btn fixed" type="button" disabled="">Unavailable</button></div>
+          </div>
+          <div class="demo-label">Size, width, and intent</div>
+          <div class="stage row">
+            <button class="btn small fixed" type="button" data-od-id="button-small-fixed">Small fixed</button>
+            <button class="btn small" type="button" data-od-id="button-small-hug">Small hug</button>
+            <button class="btn" type="button" data-od-id="button-medium-hug">Medium hug</button>
+            <button class="btn destructive fixed" type="button" data-od-id="button-destructive">Cancel visit</button>
+          </div>
+        </div>
+
+        <div class="sub-head" id="button-groups" data-od-id="button-groups-head">
+          <h4>Button groups</h4>
+          <p>Groups keep related actions on one decision. Stack vertically when both labels are long or the surface is narrow; pair horizontally when the two labels are short. The group holds one primary and one secondary — never two solid buttons.</p>
+        </div>
+        <div class="demo" data-od-id="button-groups-demo">
+          <div class="demo-label">Vertical, horizontal, and appointment groups</div>
+          <div class="stage group-row">
+            <div>
+              <p class="group-caption">Vertical · 8px gap</p>
+              <div class="button-group" data-od-id="button-group-vertical">
+                <button class="btn" type="button">Schedule a visit</button>
+                <button class="btn secondary" type="button">Message my care team</button>
+              </div>
+            </div>
+            <div>
+              <p class="group-caption">Horizontal · secondary leads</p>
+              <div class="button-group horizontal" data-od-id="button-group-horizontal">
+                <button class="btn secondary" type="button">Not now</button>
+                <button class="btn" type="button">Confirm</button>
+              </div>
+            </div>
+            <div>
+              <p class="group-caption">Appointment times and CTA</p>
+              <div class="button-group" data-od-id="button-group-appointments">
+                <div class="appointment-grid" role="radiogroup" aria-label="Appointment time" data-choice-group="">
+                  <button class="appt-chip" type="button" role="radio" aria-checked="true"><strong>12:00 PM</strong><span>Thu, Nov 13</span></button>
+                  <button class="appt-chip" type="button" role="radio" aria-checked="false"><strong>2:30 PM</strong><span>Thu, Nov 13</span></button>
+                  <button class="appt-chip" type="button" role="radio" aria-checked="false"><strong>9:15 AM</strong><span>Fri, Nov 14</span></button>
+                  <button class="appt-chip" type="button" role="radio" aria-checked="false"><strong>4:45 PM</strong><span>Fri, Nov 14</span></button>
+                </div>
+                <button class="btn secondary" type="button">See more times</button>
+              </div>
+            </div>
+          </div>
+          <div class="stage">
+            <p class="stage-note">Chips carry a Caption Bold time over a Footer date, sit at a 44px minimum height, and behave as a single-select radio group. The group's own action stays secondary so the chips remain the primary decision.</p>
+          </div>
+        </div>
+
+        <div class="sub-head" id="icon-buttons" data-od-id="icon-buttons-head">
+          <h4>Icon buttons</h4>
+          <p>Use an icon button only when the action is already obvious in context — dismiss, expand, more. Small is 32px with a 16px glyph, medium is 40px with a 20px glyph, and both keep a 48px tap region. Always supply an accessible name.</p>
+        </div>
+        <div class="demo" data-od-id="icon-buttons-demo">
+          <div class="demo-label">Colors and states · small, filled</div>
+          <div class="stage">
+            <div class="icon-matrix" data-od-id="icon-button-matrix">
+              <span></span>
+              <span class="col-head">Brand</span>
+              <span class="col-head">Neutral</span>
+              <span class="col-head">Destructive</span>
+
+              <span class="row-head">Default</span>
+              <span><button class="icon-btn filled" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled neutral" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled destructive" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+
+              <span class="row-head">Hover</span>
+              <span><button class="icon-btn filled is-hovered" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled neutral is-hovered" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled destructive is-hovered" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+
+              <span class="row-head">Focus</span>
+              <span><button class="icon-btn filled is-focused" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled neutral is-focused" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled destructive is-focused" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+
+              <span class="row-head">Pressed</span>
+              <span><button class="icon-btn filled is-pressed" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled neutral is-pressed" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled destructive is-pressed" type="button" aria-label="More about your coverage"><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+
+              <span class="row-head">Disabled</span>
+              <span><button class="icon-btn filled" type="button" aria-label="More about your coverage" disabled=""><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled neutral" type="button" aria-label="More about your coverage" disabled=""><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+              <span><button class="icon-btn filled destructive" type="button" aria-label="More about your coverage" disabled=""><span class="glyph glyph-info" aria-hidden="true"></span></button></span>
+            </div>
+          </div>
+          <div class="demo-label">Size and background</div>
+          <div class="stage row">
+            <button class="icon-btn" type="button" aria-label="Show plan details" data-od-id="icon-button-small-plain"><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+            <button class="icon-btn filled" type="button" aria-label="Show plan details" data-od-id="icon-button-small-filled"><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+            <button class="icon-btn medium" type="button" aria-label="Show plan details" data-od-id="icon-button-medium-plain"><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+            <button class="icon-btn medium filled" type="button" aria-label="Show plan details" data-od-id="icon-button-medium-filled"><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+            <p class="stage-note">32px and 40px, each with and without the neutral background field.</p>
+          </div>
+        </div>
+
+        <div class="sub-head" id="text-links" data-od-id="text-links-head">
+          <h4>Text links</h4>
+          <p>Text links carry navigation inside a sentence or beneath a form — policy pages, benefit details, help articles. They share the button label style, Body 1 in Figtree Medium, and stay underlined so they read as links without relying on color alone.</p>
+        </div>
+        <div class="demo" data-od-id="text-links-demo">
+          <div class="demo-label">States</div>
+          <div class="stage link-states">
+            <p class="link-state"><span>Default</span><a class="text-link" href="#text-links" data-od-id="text-link-default">Terms of Service</a></p>
+            <p class="link-state"><span>Hover</span><a class="text-link is-hovered" href="#text-links">Terms of Service</a></p>
+            <p class="link-state"><span>Focus</span><a class="text-link is-focused" href="#text-links">Terms of Service</a></p>
+            <p class="link-state"><span>Pressed</span><a class="text-link is-pressed" href="#text-links">Terms of Service</a></p>
+            <p class="link-state"><span>Disabled</span><span class="text-link is-disabled" aria-disabled="true">Terms of Service</span></p>
+          </div>
+          <div class="stage">
+            <p class="stage-note">Hover and pressed tint the 8px rounded field behind the label rather than changing the ink, so contrast never drops. The Figma specimen draws focus at 1px; it is rendered here at 2px to meet the WCAG 2.2 focus appearance minimum.</p>
+          </div>
+        </div>
+
+        <div class="sub-head" id="segmented-control" data-od-id="segmented-control-head">
+          <h4>Segmented control</h4>
+          <p>Use a segmented control to switch between two to four views of the same content — never to submit an action. The selected segment lifts onto a white field with a check and Body 2 Bold; the rest stay Body 2 Medium on the shared track.</p>
+        </div>
+        <div class="demo" data-od-id="segmented-control-demo">
+          <div class="demo-label">Two, three, and four segments</div>
+          <div class="stage segment-set">
+            <div class="segmented" role="radiogroup" aria-label="Claims view" data-od-id="segmented-two">
+              <button type="button" role="radio" aria-checked="true" tabindex="0"><span class="glyph glyph-check" aria-hidden="true"></span>Open</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>Closed</button>
+            </div>
+            <div class="segmented" role="radiogroup" aria-label="Care history range" data-od-id="segmented-three">
+              <button type="button" role="radio" aria-checked="true" tabindex="0"><span class="glyph glyph-check" aria-hidden="true"></span>This month</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>This year</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>All time</button>
+            </div>
+            <div class="segmented" role="radiogroup" aria-label="Benefit category" data-od-id="segmented-four">
+              <button type="button" role="radio" aria-checked="true" tabindex="0"><span class="glyph glyph-check" aria-hidden="true"></span>Medical</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>Dental</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>Vision</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1"><span class="glyph glyph-check" aria-hidden="true"></span>Rx</button>
+            </div>
+            <p class="stage-note">Arrow keys move the selection and the 32px track keeps a 48px tap region. Keep labels to one or two words; below 600px the check is dropped and the white field alone carries selection so four segments still fit at 360px.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="component-section" id="feedback" data-od-id="feedback-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Status and feedback</p><h3>Banners</h3><p>Use the banner type that matches who initiated the message and how broadly it applies.</p></div>
+          <span class="count">05 / 13</span>
+        </div>
+        <div class="sub-head" id="page-banners" data-od-id="page-banners-heading">
+          <h4>Page banners</h4>
+          <p>System-initiated page or service states sit directly below navigation and scroll with the page. Desktop and tablet use an 80px minimum height; phone uses 108px.</p>
+        </div>
+        <div class="demo" data-od-id="page-banner-demo">
+          <div class="demo-label">Default, success, warning, and danger</div>
+          <div class="stage banner-stack">
+            <article class="banner page-banner" role="status" data-od-id="page-banner-default">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">i</span>
+                <div class="banner-copy"><h5 class="banner-title">Your benefits are ready</h5><p>Explore the care and support included with your plan.</p></div>
+                <a class="banner-action" href="#cards">View benefits</a>
+                <button class="dismiss" type="button" aria-label="Dismiss benefits notification">×</button>
+              </div>
+            </article>
+            <article class="banner page-banner success" role="status" data-od-id="page-banner-success">
+              <div class="banner-content">
+                <span class="banner-icon check" aria-hidden="true"></span>
+                <div class="banner-copy"><h5 class="banner-title">You’re reconnected</h5><p>Your account is up to date and ready to use.</p></div>
+                <button class="dismiss" type="button" aria-label="Dismiss connection notification">×</button>
+              </div>
+            </article>
+            <article class="banner page-banner warning" role="status" data-od-id="page-banner-warning">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">!</span>
+                <div class="banner-copy"><h5 class="banner-title">Enrollment closes Friday</h5><p>Review your information before the enrollment window ends.</p></div>
+                <a class="banner-action" href="#forms">Review details</a>
+                <button class="dismiss" type="button" aria-label="Dismiss enrollment notification">×</button>
+              </div>
+            </article>
+            <article class="banner page-banner danger" role="alert" data-od-id="page-banner-danger">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">!</span>
+                <div class="banner-copy"><h5 class="banner-title">We couldn’t load this page</h5><p>Check your connection, then try again.</p></div>
+                <a class="banner-action" href="#feedback">Try again</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="sub-head" id="inline-banners" data-od-id="inline-banners-heading">
+          <h4>Inline banners</h4>
+          <p>Place section-specific guidance adjacent to the content it explains. The compact surface uses a 12px radius, one-pixel semantic border, and an 88px minimum height.</p>
+        </div>
+        <div class="demo" data-od-id="inline-banner-demo">
+          <div class="demo-label">Contextual variants</div>
+          <div class="stage banner-grid">
+            <article class="banner inline-banner" role="note" data-od-id="inline-banner-default">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">i</span>
+                <div class="banner-copy"><h5 class="banner-title">About this estimate</h5><p>Your final cost may change after your plan processes the claim.</p></div>
+                <button class="dismiss" type="button" aria-label="Dismiss estimate note">×</button>
+              </div>
+            </article>
+            <article class="banner inline-banner success" role="status" data-od-id="inline-banner-success">
+              <div class="banner-content">
+                <span class="banner-icon check" aria-hidden="true"></span>
+                <div class="banner-copy"><h5 class="banner-title">Provider selected</h5><p>You can change your choice before booking.</p></div>
+                <button class="dismiss" type="button" aria-label="Dismiss provider confirmation">×</button>
+              </div>
+            </article>
+            <article class="banner inline-banner warning" role="note" data-od-id="inline-banner-warning">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">!</span>
+                <div class="banner-copy"><h5 class="banner-title">Late cancellation fee</h5><p>This provider may charge a fee for changes within 24 hours.</p></div>
+                <a class="banner-action" href="#banner-guidance">Learn more</a>
+              </div>
+            </article>
+            <article class="banner inline-banner danger" role="alert" data-od-id="inline-banner-danger">
+              <div class="banner-content">
+                <span class="banner-icon" aria-hidden="true">!</span>
+                <div class="banner-copy"><h5 class="banner-title">Document not uploaded</h5><p>Choose a PDF, JPG, or PNG smaller than 10 MB.</p></div>
+                <button class="dismiss" type="button" aria-label="Dismiss upload error">×</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="sub-head" id="banner-guidance" data-od-id="banner-guidance-heading">
+          <h4>Choose the right feedback pattern</h4>
+          <p>The source system distinguishes scope and initiation before visual style. Critical recovery actions must remain visible and should never rely on an auto-dismissing toast.</p>
+        </div>
+        <div class="demo" data-od-id="banner-guidance-demo">
+          <div class="demo-label">Placement and behavior</div>
+          <div class="stage banner-guidance">
+            <article class="banner-rule" data-od-id="banner-rule-page">
+              <strong>Page banner</strong>
+              <p>System initiated. Communicates a page-wide or service state and scrolls with content.</p>
+              <p class="placement">Top · below navigation</p>
+            </article>
+            <article class="banner-rule" data-od-id="banner-rule-inline">
+              <strong>Inline banner</strong>
+              <p>System initiated. Explains section-specific content, consequences, or required context.</p>
+              <p class="placement">Adjacent to related content</p>
+            </article>
+            <article class="banner-rule" data-od-id="banner-rule-toast">
+              <strong>Toast</strong>
+              <p>Closes the loop after a member action. Keep it brief; allow dismissal or use a short timeout only when appropriate.</p>
+              <p class="placement">Bottom · above navigation</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="component-section" id="forms" data-od-id="forms-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Data entry</p><h3>Inputs &amp; forms</h3><p>Labels stay visible, fields are 48px with 8px corners, and focus uses a 2.5px Included blue ring. Required fields use an asterisk — never “optional.”</p></div>
+          <span class="count">06 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="form-info" data-od-id="form-info-subsection">
+          <div class="sub-head"><p class="eyebrow">Content rules</p><h4>Form info</h4><p>Mark required field titles with an asterisk. Keep submit active. Use Skip when a screen is optional.</p></div>
+          <div class="demo">
+            <div class="demo-label">Required fields and actions</div>
+            <div class="stage">
+              <div class="form-rules">
+                <article class="form-rule" data-od-id="form-rule-required"><strong>Required (*)</strong><p>Place the asterisk at the end of the label, even when the screen has one field. Do not add a legend that explains the mark.</p></article>
+                <article class="form-rule" data-od-id="form-rule-optional"><strong>Optional questions</strong><p>Do not label fields “Optional.” If the whole screen can be skipped, pair Continue with Skip or Not now.</p></article>
+                <article class="form-rule" data-od-id="form-rule-submit"><strong>Submit stays active</strong><p>Do not disable the submit action. If a required value is missing, show an error after the member tries to continue.</p></article>
+                <article class="form-rule" data-od-id="form-rule-copy"><strong>Action language</strong><p>Use continue and cancel for a single path forward. Use next and back in multi-step flows. Prefer enter over type.</p></article>
+              </div>
+              <form class="stage stack" style="padding:0;border:0;margin-top:24px" onsubmit="return false">
+                <div class="field" data-od-id="form-info-required-example">
+                  <label for="legal-name">Legal first name <span class="required">*</span></label>
+                  <input id="legal-name" name="legal-name" autocomplete="given-name" placeholder="As it appears on your ID">
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="text-field" data-od-id="text-field-subsection">
+          <div class="sub-head"><p class="eyebrow">Single line</p><h4>Text field</h4><p>Body 1 Bold labels sit 8px above a 48px field. Placeholder and value both use Body 1 Medium. Hints use Caption.</p></div>
+          <div class="demo">
+            <div class="demo-label">Placeholder and value states</div>
+            <form class="stage" onsubmit="return false">
+              <div class="state-matrix" data-od-id="text-field-states">
+                <p class="col-label"></p><p class="col-label">Placeholder</p><p class="col-label">Value</p>
+                <p class="row-label">Default</p>
+                <div class="field"><label for="tf-default">Preferred name</label><input id="tf-default" placeholder="Enter preferred name"></div>
+                <div class="field"><label for="tf-value">Preferred name</label><input id="tf-value" value="Michael"></div>
+                <p class="row-label">Focus</p>
+                <div class="field"><label for="tf-focus">Preferred name</label><input id="tf-focus" placeholder="Enter preferred name" class="is-demo-focus"></div>
+                <div class="field"><label for="tf-focus-v">Preferred name</label><input id="tf-focus-v" value="Michael"></div>
+                <p class="row-label">Disabled</p>
+                <div class="field is-disabled"><label for="tf-off">Preferred name</label><input id="tf-off" placeholder="Not available" disabled></div>
+                <div class="field is-disabled"><label for="tf-off-v">Preferred name</label><input id="tf-off-v" value="Michael" disabled></div>
+                <p class="row-label">Read-only</p>
+                <div class="field is-readonly"><label for="tf-ro">Member ID</label><input id="tf-ro" value="IH-184920" readonly></div>
+                <div class="field is-readonly"><label for="tf-ro-v">Member ID</label><input id="tf-ro-v" value="IH-184920" readonly></div>
+                <p class="row-label">Error</p>
+                <div class="field is-error"><label for="tf-err">Email address</label><input id="tf-err" value="michael@" aria-invalid="true" aria-describedby="tf-err-h"><p class="hint" id="tf-err-h">Enter a complete email, such as name@example.com.</p></div>
+                <div class="field is-error"><label for="tf-err-v">Email address</label><input id="tf-err-v" value="michael@" aria-invalid="true"><p class="hint">Enter a complete email, such as name@example.com.</p></div>
+              </div>
+              <div class="field" style="margin-top:24px;max-width:311px" data-od-id="text-field-count">
+                <label class="field-label" for="tf-note">Visit reason <span class="count" id="tf-note-count">0 / 200</span></label>
+                <input id="tf-note" maxlength="200" placeholder="What would you like help with?">
+                <p class="hint">Use the email address associated with your benefits.</p>
+              </div>
+              <p class="card-spec-note">Figma: 311×80 with label · 8px field radius · 16/12 padding · 1px #8f8f8f default border (text area and dropdown use #c6c6c6) · 2.5px #0012e7 focus · #cb0c31 error.</p>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="text-area" data-od-id="text-area-subsection">
+          <div class="sub-head"><p class="eyebrow">Multi-line</p><h4>Text Area</h4><p>Same label and field chrome as Text field, with a taller 72px value area for longer member notes.</p></div>
+          <div class="demo">
+            <div class="demo-label">Default and error</div>
+            <form class="stage" onsubmit="return false" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px))">
+              <div class="field" data-od-id="text-area-default"><label for="ta-default">Anything else we should know?</label><textarea id="ta-default" placeholder="Share any details that may help your Care Team"></textarea><p class="hint">Do not include emergency or time-sensitive information here.</p></div>
+              <div class="field is-error" data-od-id="text-area-error"><label for="ta-error">Anything else we should know?</label><textarea id="ta-error" aria-invalid="true">I prefer morning appointments.</textarea><p class="hint">Add a short note so your care team can prepare.</p></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="dropdown" data-od-id="dropdown-subsection">
+          <div class="sub-head"><p class="eyebrow">Selection</p><h4>Dropdown</h4><p>Closed fields show the current value and a 16px arrow. Open the list to choose — never use this for free text.</p></div>
+          <div class="demo">
+            <div class="demo-label">Default, open, and error</div>
+            <div class="stage" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px));align-items:start">
+              <div class="field dropdown" data-od-id="dropdown-default">
+                <span class="field-label" id="dd-label">Pharmacy</span>
+                <button class="dropdown-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="dd-label dd-value"><span id="dd-value">Select pharmacy</span><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+                <ul class="dropdown-menu" role="listbox" hidden>
+                  <li><button type="button" role="option">Included Health pharmacy</button></li>
+                  <li><button type="button" role="option">Neighborhood pharmacy</button></li>
+                  <li><button type="button" role="option">Mail order</button></li>
+                </ul>
+              </div>
+              <div class="field is-error dropdown" data-od-id="dropdown-error">
+                <span class="field-label" id="dd-err-label">Pharmacy</span>
+                <button class="dropdown-trigger" type="button" aria-invalid="true"><span>Select pharmacy</span><span class="glyph glyph-arrow" aria-hidden="true"></span></button>
+                <p class="hint">Choose a pharmacy to continue.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="search-field" data-od-id="search-field-subsection">
+          <div class="sub-head"><p class="eyebrow">Find</p><h4>Search Field</h4><p>A leading 24px search glyph stays Included blue. Hover tints the field; focus thickens the brand ring.</p></div>
+          <div class="demo">
+            <div class="demo-label">Default, focus, and disabled</div>
+            <form class="stage" onsubmit="return false" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px))">
+              <div class="field search-field" data-od-id="search-default"><label for="search-default">Find care</label><div class="control control-row"><img src="assets/images/7c43e4b52b.svg" alt=""><input id="search-default" placeholder="Placeholder text" style="border:0;padding:0;min-height:24px"></div></div>
+              <div class="field is-disabled search-field" data-od-id="search-disabled"><label for="search-off">Find care</label><div class="control control-row"><img src="assets/images/7c43e4b52b.svg" alt=""><input id="search-off" placeholder="Placeholder text" disabled style="border:0;padding:0;min-height:24px"></div></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="date-input" data-od-id="date-input-subsection">
+          <div class="sub-head"><p class="eyebrow">Structured date</p><h4>Date Input</h4><p>Month, day, and year are separate 48px fields. The calendar glyph opens the Calendar pattern.</p></div>
+          <div class="demo">
+            <div class="demo-label">MM / DD / YYYY with calendar trigger</div>
+            <form class="stage" onsubmit="return false">
+              <div class="field" style="max-width:264px" data-od-id="date-input-example">
+                <label id="dob-label">Date of birth <span class="required">*</span></label>
+                <div class="date-input" role="group" aria-labelledby="dob-label">
+                  <input class="date-part control" id="dob-mm" inputmode="numeric" maxlength="2" placeholder="MM" aria-label="Month">
+                  <input class="date-part control" id="dob-dd" inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Day">
+                  <input class="date-part year control" id="dob-yyyy" inputmode="numeric" maxlength="4" placeholder="YYYY" aria-label="Year">
+                  <button class="date-cal" type="button" aria-label="Open calendar"><img src="assets/images/d2bdd5df12.svg" alt=""></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="calendar" data-od-id="calendar-subsection">
+          <div class="sub-head"><p class="eyebrow">Scheduling</p><h4>Calendar</h4><p>A selected day is a solid Included blue circle. Today uses a blue ring. Pair the month with pill-shaped time slots.</p></div>
+          <div class="demo">
+            <div class="demo-label">Desktop month and times</div>
+            <div class="stage">
+              <div class="calendar-board" data-od-id="calendar-desktop">
+                <div>
+                  <div class="cal-head"><strong>April 2026</strong><div class="cal-nav"><button type="button" aria-label="Previous month">‹</button><button type="button" aria-label="Next month">›</button></div></div>
+                  <div class="cal-grid" id="cal-grid">
+                    <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+                  </div>
+                </div>
+                <div class="time-list">
+                  <h5 id="cal-date-label">Wednesday, April 8</h5>
+                  <p>15 minute visit</p>
+                  <div class="time-slots" data-choice-group>
+                    <button type="button" role="radio" aria-checked="false">3:40 PM</button>
+                    <button type="button" role="radio" aria-checked="false">4:00 PM</button>
+                    <button type="button" role="radio" aria-checked="false">4:20 PM</button>
+                    <button type="button" role="radio" aria-checked="true">5:00 PM</button>
+                    <button type="button" role="radio" aria-checked="false">5:20 PM</button>
+                    <button type="button" role="radio" aria-checked="false">5:40 PM</button>
+                  </div>
+                </div>
+              </div>
+              <p class="card-spec-note">Figma: selected day and time use brand fill; unavailable dates 5, 17, and 20 stay disabled.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="phone-input" data-od-id="phone-input-subsection">
+          <div class="sub-head"><p class="eyebrow">Contact</p><h4>Phone Input</h4><p>Prefix and number are separate 48px segments. Focus rings the active segment only, at 2.5px Included blue.</p></div>
+          <div class="demo">
+            <div class="demo-label">Resting, prefix focus, number focus</div>
+            <form class="stage stack" onsubmit="return false">
+              <div class="phone-input" data-od-id="phone-resting"><button class="phone-prefix" type="button" aria-label="Country code">🇺🇸 +1</button><input class="phone-number" inputmode="tel" aria-label="Phone number" placeholder=""></div>
+              <div class="phone-input" data-od-id="phone-number-active"><button class="phone-prefix" type="button" aria-label="Country code">🇺🇸 +1</button><input class="phone-number" inputmode="tel" value="555" aria-label="Phone number"></div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="radio-button" data-od-id="radio-button-subsection">
+          <div class="sub-head"><p class="eyebrow">Single choice</p><h4>Radio Button</h4><p>48×48 tap region, 20px control, Body 1 Medium label. Selected uses a navy ring and Included blue inner dot.</p></div>
+          <div class="demo">
+            <div class="demo-label">With label</div>
+            <form class="stage" onsubmit="return false">
+              <fieldset>
+                <legend class="legend">How should we contact you?</legend>
+                <div class="choice-list" data-od-id="radio-list">
+                  <label class="choice"><input type="radio" name="contact-pref" checked><span class="radio-mark"></span> Text message</label>
+                  <label class="choice"><input type="radio" name="contact-pref"><span class="radio-mark"></span> Email</label>
+                  <label class="choice is-disabled"><input type="radio" name="contact-pref" disabled><span class="radio-mark"></span> Phone call</label>
+                  <label class="choice is-error"><input type="radio" name="contact-error"><span class="radio-mark"></span> List item</label>
+                </div>
+              </fieldset>
+              <p class="card-spec-note">Minimum interactive target is 48×48. Keyboard focus uses a high-contrast outline outside the control.</p>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="checkbox" data-od-id="checkbox-subsection">
+          <div class="sub-head"><p class="eyebrow">Multi choice</p><h4>Checkbox</h4><p>Unchecked is a 20px square with a 4px radius. Checked fills Included blue with the exported white check.</p></div>
+          <div class="demo">
+            <div class="demo-label">Unchecked, checked, indeterminate</div>
+            <form class="stage" onsubmit="return false">
+              <div class="choice-list" data-od-id="checkbox-list">
+                <label class="choice"><input type="checkbox"><span class="check-mark"></span> Appointment reminders</label>
+                <label class="choice"><input type="checkbox" checked><span class="check-mark"></span> Care plan updates</label>
+                <label class="choice"><input type="checkbox" id="cb-indeterminate"><span class="check-mark"></span> All notifications</label>
+                <label class="choice is-disabled"><input type="checkbox" disabled><span class="check-mark"></span> Research invitations</label>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="slider" data-od-id="slider-subsection">
+          <div class="sub-head"><p class="eyebrow">Numeric range</p><h4>Slider</h4><p>Display 2 shows the live value. The 32px thumb sits on an 8px track filled with Included blue.</p></div>
+          <div class="demo">
+            <div class="demo-label">Default / Active at 50%</div>
+            <div class="stage">
+              <div class="slider" data-od-id="slider-example">
+                <div class="slider-value" id="slider-value">5</div>
+                <p class="slider-units">weeks</p>
+                <input type="range" min="0" max="10" value="5" aria-valuetext="5 weeks" aria-label="Duration in weeks">
+                <div class="slider-scale"><span>0</span><span>10</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="star-rating" data-od-id="star-rating-subsection">
+          <div class="sub-head"><p class="eyebrow">Feedback</p><h4>Star rating</h4><p>Five 40px stars from the Anatomy asset. Filled stars use Included blue; empty stars are black at 15% opacity.</p></div>
+          <div class="demo">
+            <div class="demo-label">3 of 5 selected</div>
+            <div class="stage">
+              <div class="stars" role="radiogroup" aria-label="Visit rating" data-od-id="star-rating-example">
+                <button type="button" role="radio" aria-checked="true" aria-label="1 star"><img src="assets/images/086f7ca481.svg" alt=""></button>
+                <button type="button" role="radio" aria-checked="true" aria-label="2 stars"><img src="assets/images/086f7ca481.svg" alt=""></button>
+                <button type="button" role="radio" aria-checked="true" aria-label="3 stars"><img src="assets/images/086f7ca481.svg" alt=""></button>
+                <button type="button" role="radio" aria-checked="false" aria-label="4 stars"><img src="assets/images/086f7ca481.svg" alt=""></button>
+                <button type="button" role="radio" aria-checked="false" aria-label="5 stars"><img src="assets/images/086f7ca481.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="sms-verification" data-od-id="sms-verification-subsection">
+          <div class="sub-head"><p class="eyebrow">One-time code</p><h4>SMS Verification</h4><p>Six 48px fields collect the code. The first field takes focus; the form auto-submits when complete.</p></div>
+          <div class="demo">
+            <div class="demo-label">Enter the code we sent you</div>
+            <form class="stage otp" onsubmit="return false" data-od-id="sms-example">
+              <h5>Enter the code we sent you.</h5>
+              <p>We sent a text to 213-555-1234.</p>
+              <div class="otp-row" id="otp-row">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 1">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+                <input class="otp-box control" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+              </div>
+              <p>The form will auto-submit.</p>
+              <div class="otp-links">
+                <p>Don’t see it? <a class="text-link" href="#sms-verification">Resend code</a></p>
+                <p>Using a landline? <a class="text-link" href="#sms-verification">Call me instead</a></p>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="payment" data-od-id="payment-subsection">
+          <div class="sub-head"><p class="eyebrow">Billing</p><h4>Payment</h4><p>Credit card number, name, expiration, CVV, and ZIP reuse Text field chrome. Brand marks sit beside the card label.</p></div>
+          <div class="demo">
+            <div class="demo-label">Add a payment method</div>
+            <form class="stage pay-form" onsubmit="return false" data-od-id="payment-example">
+              <div class="field">
+                <div class="pay-head">
+                  <label for="cc-number">Credit card</label>
+                  <div class="pay-brands" aria-hidden="true">
+                    <img src="assets/images/1e7e965335.svg" alt=""><img src="assets/images/a4bca3fe3a.svg" alt=""><img src="assets/images/b5a897fe8b.svg" alt=""><img src="assets/images/5f43d84ff7.svg" alt="">
+                  </div>
+                </div>
+                <div class="control control-row"><img class="field-icon-sm" src="assets/images/45cf98e15e.svg" alt=""><input id="cc-number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" style="border:0;padding:0;min-height:24px"></div>
+              </div>
+              <div class="field"><label for="cc-first">First name</label><input id="cc-first" autocomplete="cc-given-name" placeholder="First name"></div>
+              <div class="field"><label for="cc-last">Last name</label><input id="cc-last" autocomplete="cc-family-name" placeholder="Last name"></div>
+              <div class="pay-split">
+                <div class="field"><label for="cc-exp">Exp. Date</label><input id="cc-exp" placeholder="MM/YY" autocomplete="cc-exp"></div>
+                <div class="field"><label for="cc-cvv">CVV</label><input id="cc-cvv" placeholder="123" autocomplete="cc-csc"></div>
+              </div>
+              <div class="field"><label for="cc-zip">Zip code</label><input id="cc-zip" inputmode="numeric" autocomplete="postal-code" placeholder="12345"></div>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="cards" data-od-id="cards-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Containers</p><h3>Cards</h3><p>Purpose-built containers for entering care, tracking requests, comparing services and providers, and confirming appointments.</p></div>
+          <span class="count">07 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="get-care-card" data-od-id="get-care-card-subsection">
+          <div class="sub-head"><p class="eyebrow">Care entry</p><h4>Get Care Card</h4><p>Use grid tiles for compact discovery and list cards when a description or larger tap surface helps members choose.</p></div>
+          <div class="demo">
+            <div class="demo-label">Grid and list layouts</div>
+            <div class="stage">
+              <div class="get-care-showcase">
+                <article class="figma-card get-care-card" data-od-id="get-care-card-grid">
+                  <div class="get-care-card-header"><img class="card-icon" src="assets/images/6db1382a6a.svg" alt=""><span class="card-chip">No cost</span></div>
+                  <div class="get-care-card-copy"><h5 class="card-title">Start urgent care visit</h5></div>
+                </article>
+                <article class="figma-card get-care-card list-layout" data-od-id="get-care-card-list">
+                  <img class="card-icon" src="assets/images/6db1382a6a.svg" alt="">
+                  <div><h5 class="card-title">Book primary care visit</h5><p class="card-copy">Choose your provider and time</p></div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </article>
+              </div>
+              <p class="card-spec-note">Figma: 167px grid / 343px list · 12px padding and gap · 24px corner · Grid title uses Body 1 Bold; list title uses Title 5 SemiBold.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="status-card" data-od-id="status-card-subsection">
+          <div class="sub-head"><p class="eyebrow">Request tracking</p><h4>Status Card</h4><p>Summarizes an active advocacy or care request with status, timing, contextual guidance, and an optional recovery action.</p></div>
+          <div class="demo">
+            <div class="demo-label">Request with status, callout, and action</div>
+            <div class="stage">
+              <article class="figma-card status-card" data-od-id="status-card-example">
+                <div class="status-card-head">
+                  <span class="status-card-icon"><img src="assets/images/a9179005b3.svg" alt=""></span>
+                  <h5 class="card-title">Bill review request</h5>
+                </div>
+                <p class="card-copy">We’re checking the charges and your plan details.</p>
+                <hr class="card-divider">
+                <div class="status-table">
+                  <span class="status-label">STATUS</span><span class="status-value brand"><img src="assets/images/b7a56ed85f.svg" alt="">In progress</span>
+                  <span class="status-label">ETA</span><span class="status-value">Less than 10 mins</span>
+                </div>
+                <div class="card-callout">We’ll let you know if we need anything else.</div>
+                <button class="btn small secondary card-text-action" type="button">Cancel</button>
+              </article>
+              <p class="card-spec-note">Figma: 280px base · 16px padding · 12px section gap · Title 4, Body 2, and Footer labels. This component is marked work in progress in the source.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="service-card" data-od-id="service-card-subsection">
+          <div class="sub-head"><p class="eyebrow">Service choice</p><h4>Service Card</h4><p>Presents a care option with its recommendation, expected timing, price, short description, and one clear selection action.</p></div>
+          <div class="demo">
+            <div class="demo-label">Recommended service option</div>
+            <div class="stage">
+              <article class="figma-card service-card" data-od-id="service-card-example">
+                <div class="service-card-top"><img class="card-icon" src="assets/images/3deb08233c.svg" alt=""><span class="card-chip brand">Recommended</span></div>
+                <div class="service-card-copy">
+                  <div><h5 class="card-title">Primary care visit</h5><p class="service-meta">Next visit <strong>Today</strong> · $0</p></div>
+                  <p class="card-copy">Meet with a primary care provider online for everyday health needs and ongoing support.</p>
+                </div>
+                <button class="card-full-action" type="button">Choose this service</button>
+              </article>
+              <p class="card-spec-note">Figma: 300px phone card · 16px padding and major gap · 8px copy gap · 24px corner.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="preview-card" data-od-id="preview-card-subsection">
+          <div class="sub-head"><p class="eyebrow">Provider comparison</p><h4>Preview Card</h4><p>Gives members enough provider, location, network, and availability context to make a confident next-step decision.</p></div>
+          <div class="demo">
+            <div class="demo-label">External provider preview</div>
+            <div class="stage">
+              <article class="figma-card provider-card" data-od-id="preview-card-external-provider">
+                <div class="provider-head">
+                  <img class="provider-avatar" src="assets/images/4bbd80505c.png" alt="Dr. Julianna Smith">
+                  <div><h5 class="card-title">Dr. Julianna Smith, MD</h5><p class="provider-specialty">Internal Medicine</p></div>
+                  <button class="save-provider" type="button" aria-label="Save Dr. Julianna Smith"><img src="assets/images/315f27bd89.svg" alt=""></button>
+                </div>
+                <p class="card-copy">Has strong back and spine expertise, prioritizes safe and non-invasive care, and stays engaged in long-term recovery.</p>
+                <hr class="card-divider">
+                <div class="location-row">
+                  <p><strong>Golden State Research Institute</strong><br>123 Street St<br>City Name, ST 11111</p>
+                  <span class="distance">17 mi</span>
+                </div>
+                <div class="offering-row"><span class="card-chip"><img src="assets/images/a1957d789d.svg" alt="">In network</span><span class="card-chip"><img src="assets/images/7720445710.svg" alt="">Offers telehealth</span></div>
+                <div class="provider-actions">
+                  <button class="btn small" type="button">Schedule appointment</button>
+                  <button class="btn small secondary" type="button">View full profile</button>
+                </div>
+              </article>
+              <p class="card-spec-note">Figma: 300px base · 48px profile image · 16px card rhythm · stacked primary and secondary actions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="confirmation-card" data-od-id="confirmation-card-subsection">
+          <div class="sub-head"><p class="eyebrow">Appointment completion</p><h4>Confirmation Card</h4><p>Confirms who, when, cost, and required next steps after booking without forcing the member to reconstruct the visit details.</p></div>
+          <div class="demo">
+            <div class="demo-label">Virtual primary care appointment</div>
+            <div class="stage">
+              <article class="figma-card confirmation-card" data-od-id="confirmation-card-vpc">
+                <div class="confirmation-profile">
+                  <img class="provider-avatar" src="assets/images/4bbd80505c.png" alt="Dr. Avery Bennett">
+                  <div><h5 class="card-title">Dr. Avery Bennett</h5><p class="provider-specialty">Internal Medicine</p></div>
+                </div>
+                <hr class="card-divider">
+                <div class="confirmation-main">
+                  <div><p class="appointment-time">Fri, Feb 18th · 6:00 PM PDT</p><p class="card-copy">You’ll be notified via text and email when it’s time for your visit.</p></div>
+                  <div class="card-callout">Arriving later than 5 min or missing an appointment may result in a <strong>[$00.00] fee</strong>.</div>
+                </div>
+                <hr class="card-divider">
+                <dl class="detail-list">
+                  <div><dt>For</dt><dd>Riley Jones</dd></div>
+                  <div><dt>Duration</dt><dd>15 min</dd></div>
+                  <div><dt>Est. Cost</dt><dd>$0</dd></div>
+                </dl>
+                <div class="provider-actions">
+                  <button class="btn small" type="button">Complete intake</button>
+                  <button class="btn small secondary" type="button">Manage appointment</button>
+                </div>
+              </article>
+              <p class="card-spec-note">Figma: 380px VPC card · 16px padding and section rhythm · 24px corner · responsive minimum width of 280px.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="lists" data-od-id="lists-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Structured content</p><h3>Lists</h3><p>Five production families from the Anatomy Lists page organize related choices, progressive detail, status over time, promotional benefits, and label–value information. Choose the family by task rather than styling every row alike.</p></div>
+          <span class="count">08 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="list-items" data-od-id="list-items-subsection">
+          <div class="sub-head"><p class="eyebrow">Selection and navigation</p><h4>List items</h4><p>The base item is 88px high and composes optional leading media, Body 1 content, and one trailing control. Compact text-only lists use 64px rows; dividers span the content width.</p></div>
+          <div class="demo">
+            <div class="demo-label">Leading and trailing variants</div>
+            <div class="stage">
+              <div class="list-specimen" data-od-id="list-item-variants">
+                <button class="list-row" type="button">
+                  <span class="list-leading icon"><img src="assets/images/6db1382a6a.svg" alt=""></span>
+                  <span class="list-copy"><strong>Virtual primary care</strong><span>Book a visit with a primary care provider</span></span>
+                  <span class="list-trailing"><img src="assets/images/352640253f.svg" alt=""></span>
+                </button>
+                <button class="list-row" type="button">
+                  <span class="list-leading">AB</span>
+                  <span class="list-copy"><strong>Dr. Avery Bennett</strong><span>Internal Medicine · Available Friday</span></span>
+                  <span class="list-trailing action">View</span>
+                </button>
+                <label class="list-row">
+                  <span class="list-choice"><input type="checkbox" checked aria-label="Include prescription support"></span>
+                  <span class="list-copy"><strong>Prescription support</strong><span>Help understanding a new medication</span></span>
+                  <span></span>
+                </label>
+                <label class="list-row">
+                  <span class="list-choice"><input type="radio" name="care-format" checked aria-label="Video visit"></span>
+                  <span class="list-copy"><strong>Video visit</strong><span>Meet with your provider online</span></span>
+                  <span></span>
+                </label>
+              </div>
+              <p class="card-spec-note">Figma: 88px base row · 56px leading media · 20px checkbox/radio · 32–36px trailing action · 16px horizontal inset. Keep the entire navigational row clickable; use native controls for selection rows.</p>
+            </div>
+            <div class="demo-label">List templates</div>
+            <div class="stage list-variants">
+              <div class="list-specimen">
+                <div class="list-heading"><h5>Care team</h5><p>People supporting your care</p></div>
+                <button class="list-row compact" type="button"><span class="list-copy"><strong>Primary care</strong><span>Dr. Avery Bennett</span></span><span class="list-trailing"><img src="assets/images/352640253f.svg" alt=""></span></button>
+                <button class="list-row compact" type="button"><span class="list-copy"><strong>Care coordinator</strong><span>Included Health Care Team</span></span><span class="list-trailing"><img src="assets/images/352640253f.svg" alt=""></span></button>
+              </div>
+              <fieldset class="list-specimen">
+                <legend class="list-heading"><h5>Visit preferences</h5></legend>
+                <label class="list-row compact"><span class="list-choice"><input type="checkbox" checked></span><span class="list-copy"><strong>Video visits</strong></span><span></span></label>
+                <label class="list-row compact"><span class="list-choice"><input type="checkbox"></span><span class="list-copy"><strong>Evening hours</strong></span><span></span></label>
+                <label class="list-row compact"><span class="list-choice"><input type="checkbox"></span><span class="list-copy"><strong>Weekend hours</strong></span><span></span></label>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="accordions" data-od-id="accordion-subsection">
+          <div class="sub-head"><p class="eyebrow">Progressive disclosure</p><h4>Accordion</h4><p>An 80px header expands to reveal related supporting content. The same header returns to its original collapsed state; do not change its label or replace the disclosure control after opening.</p></div>
+          <div class="demo">
+            <div class="demo-label">Collapsed and expanded</div>
+            <div class="stage">
+              <div class="accordion-list" data-od-id="accordion-list">
+                <details open>
+                  <summary>What does my plan cover?</summary>
+                  <div class="accordion-panel"><p>Your plan includes virtual primary care and support understanding your benefits. Review your plan details for service-specific costs.</p></div>
+                </details>
+                <details>
+                  <summary>How do I prepare for a visit?</summary>
+                  <div class="accordion-panel"><p>Have your medications and questions nearby, and join from a private place with a stable connection.</p></div>
+                </details>
+                <details>
+                  <summary>Can I change my appointment?</summary>
+                  <div class="accordion-panel"><p>Open the appointment from Activity to review available rescheduling and cancellation options.</p></div>
+                </details>
+              </div>
+              <p class="card-spec-note">Figma: 343px reference width · 80px header · 44px disclosure target · expanded examples at 152–168px total height. Native <code>details</code> preserves keyboard and screen-reader behavior.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="timelines" data-od-id="timeline-subsection">
+          <div class="sub-head"><p class="eyebrow">Ordered status</p><h4>Timeline</h4><p>Use a vertical timeline only when order and status are both meaningful. Complete, in-progress, not-started, danger, time-dependent, and cancelled states combine a 22px marker with a solid or dotted connector.</p></div>
+          <div class="demo">
+            <div class="demo-label">Care request progress</div>
+            <div class="stage">
+              <ol class="timeline" data-od-id="care-request-timeline">
+                <li class="timeline-step complete">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <div class="timeline-copy"><strong>Request received</strong><span>Today · 9:14 AM</span></div>
+                </li>
+                <li class="timeline-step complete">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <div class="timeline-copy"><strong>Benefits reviewed</strong><span>Your coverage details are ready.</span></div>
+                </li>
+                <li class="timeline-step current dotted" aria-current="step">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <div class="timeline-copy"><strong>Finding care options</strong><span class="status">In progress</span><span>Your Care Team is reviewing available providers.</span></div>
+                </li>
+                <li class="timeline-step">
+                  <span class="timeline-dot" aria-hidden="true"></span>
+                  <div class="timeline-copy"><strong>Choose a provider</strong><span>Not started</span></div>
+                </li>
+              </ol>
+              <p class="card-spec-note">Figma: 22px status dots · 12px dot-to-copy gap · solid connectors for established progression and dotted connectors where timing or transition remains open.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="promo-bullets" data-od-id="promo-bullets-subsection">
+          <div class="sub-head"><p class="eyebrow">Benefit summary</p><h4>Promo bullets</h4><p>A short, scannable group pairs one supporting icon with one member benefit. Use parallel language and keep each explanation to one concise line when possible.</p></div>
+          <div class="demo">
+            <div class="demo-label">Why use Included Health</div>
+            <div class="stage">
+              <ul class="promo-bullets" data-od-id="promo-bullets-list">
+                <li><span class="promo-icon"><img src="assets/images/a157bcd3a2.svg" alt=""></span><span><strong>Care that fits your life</strong><span>Connect virtually or find trusted care near you.</span></span></li>
+                <li><span class="promo-icon"><img src="assets/images/a157bcd3a2.svg" alt=""></span><span><strong>Benefits made clearer</strong><span>Understand coverage and costs before you choose care.</span></span></li>
+                <li><span class="promo-icon"><img src="assets/images/a157bcd3a2.svg" alt=""></span><span><strong>Support in one place</strong><span>Message your Care Team when questions come up.</span></span></li>
+              </ul>
+              <p class="card-spec-note">Use three to five bullets. Icons support recognition but never replace the visible text label.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="detail-lists" data-od-id="detail-list-subsection">
+          <div class="sub-head"><p class="eyebrow">Label and value</p><h4>Detail List</h4><p>Use a Detail List for compact, non-editable facts. Values may be plain text, text with an icon, a text link, or a status paired with a text link; dividers are optional when grouping is already clear.</p></div>
+          <div class="demo">
+            <div class="demo-label">Insurance details · with dividers</div>
+            <div class="stage">
+              <dl class="detail-list-specimen" data-od-id="insurance-detail-list">
+                <div><dt>Plan</dt><dd>Preferred Provider Plan</dd></div>
+                <div><dt>Member ID</dt><dd>•••• 4821</dd></div>
+                <div><dt>Coverage</dt><dd class="detail-value"><span class="detail-status">Active</span><a href="#detail-lists">View plan details</a></dd></div>
+                <div><dt>Primary care</dt><dd class="detail-value"><img src="assets/images/7720445710.svg" width="16" height="16" alt=""><span>Virtual visits available</span></dd></div>
+              </dl>
+              <p class="card-spec-note">Figma: 355px reference width · Body 2 label and value rows · optional dividers · text, icon, link, and status value variants. Keep labels concise and align values consistently.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="navigation" data-od-id="navigation-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Wayfinding</p><h3>Navigation</h3><p>Six production patterns from the Anatomy Navigation page: persistent destinations, in-page views, and legal wayfinding. Do not mix a bottom tab bar with a web top nav on the same surface.</p></div>
+          <span class="count">09 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="bottom-tab-bar" data-od-id="bottom-tab-bar-subsection">
+          <div class="sub-head"><p class="eyebrow">Native destinations</p><h4>Bottom tab bar</h4><p>iPhone is 100px with a stacked 24px icon and Footer 11/16 label. iPad is 72px with icon and label in a row. Active uses a filled glyph, SemiBold label, and a 2px black highlight at the top of the item.</p></div>
+          <div class="demo">
+            <div class="demo-label">iPhone · Home active</div>
+            <div class="stage">
+              <nav class="bottom-tab-bar" aria-label="Member destinations" data-od-id="bottom-tab-iphone">
+                <div class="tab-items">
+                  <button class="bottom-tab" type="button" aria-current="page"><span class="highlight" aria-hidden="true"></span><img src="assets/images/c8661a01e4.svg" alt=""><span>Home</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/cfa95e9e48.svg" alt=""><span>Messages</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/8591112bbb.svg" alt=""><span>Activity</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/152ff08dcf.svg" alt=""><span>Me</span></button>
+                </div>
+                <span class="home-indicator" aria-hidden="true"></span>
+              </nav>
+            </div>
+            <div class="demo-label">iPad · icon and label in a row</div>
+            <div class="stage" style="overflow-x:auto">
+              <nav class="bottom-tab-bar tablet" aria-label="Member destinations on tablet" data-od-id="bottom-tab-ipad">
+                <div class="tab-items">
+                  <button class="bottom-tab" type="button" aria-current="page"><span class="highlight" aria-hidden="true"></span><img src="assets/images/c8661a01e4.svg" alt=""><span>Home</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/cfa95e9e48.svg" alt=""><span>Messages</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/8591112bbb.svg" alt=""><span>Activity</span></button>
+                  <button class="bottom-tab" type="button"><span class="highlight" aria-hidden="true"></span><img src="assets/images/152ff08dcf.svg" alt=""><span>Me</span></button>
+                </div>
+                <span class="home-indicator" aria-hidden="true"></span>
+              </nav>
+              <p class="card-spec-note">Figma: Home, Messages, Activity, Me. Inactive icons are outline. A red badge sits on Messages when unread. The home indicator is device chrome, not a control.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="nav-drawer" data-od-id="nav-drawer-subsection">
+          <div class="sub-head"><p class="eyebrow">Web overlay</p><h4>Nav Drawer (web)</h4><p>A 491px panel with a 56px modal nav, Title 1 headline, Get Care Cards, and optional saved-provider guidance. Close sits in the header; the page behind is not a second primary destination.</p></div>
+          <div class="demo">
+            <div class="demo-label">Web drawer · Get Care cards</div>
+            <div class="stage">
+              <aside class="nav-drawer" aria-label="Get care" data-od-id="nav-drawer-web">
+                <div class="nav-drawer-head">
+                  <h5>Get care</h5>
+                  <button class="icon-btn filled" type="button" aria-label="Close get care"><span class="glyph glyph-clear" aria-hidden="true"></span></button>
+                </div>
+                <div class="nav-drawer-body">
+                  <h4>How can we help?</h4>
+                  <div class="drawer-cards">
+                    <button class="drawer-care" type="button">
+                      <img class="care-icon" src="assets/images/6db1382a6a.svg" alt="">
+                      <span><strong>Start urgent care visit</strong><p>No appointment needed</p><span class="card-chip">No cost</span></span>
+                      <img class="chevron" src="assets/images/352640253f.svg" alt="">
+                    </button>
+                    <button class="drawer-care" type="button">
+                      <img class="care-icon" src="assets/images/6db1382a6a.svg" alt="">
+                      <span><strong>Book primary care visit</strong><p>Choose your provider and time</p></span>
+                      <img class="chevron" src="assets/images/352640253f.svg" alt="">
+                    </button>
+                  </div>
+                  <div class="drawer-save">
+                    <h5>Recently saved providers</h5>
+                    <p>Click <img src="assets/images/315f27bd89.svg" alt=""> to quickly find providers again later.</p>
+                  </div>
+                </div>
+              </aside>
+              <p class="card-spec-note">Figma: 32px side padding · 24px card radius · 12px card padding. Mobile web uses the same panel at 375px instead of a second pattern.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="top-nav" data-od-id="top-nav-subsection">
+          <div class="sub-head"><p class="eyebrow">Web destinations</p><h4>Top Nav</h4><p>64px bar. Mobile shows the brand mark plus 24px icons; desktop 768px and up switches to Body 1 labels. Active is Included blue with a 4px brand underline. A danger-red 8px badge marks unread messages.</p></div>
+          <div class="demo">
+            <div class="demo-label">Mobile web · 280–479px</div>
+            <div class="stage">
+              <nav class="top-nav-web" aria-label="Member destinations" data-od-id="top-nav-mobile">
+                <img class="brand-mark" src="assets/images/ce8e5770b8.svg" alt="Included Health">
+                <div class="nav-items">
+                  <button class="top-nav-item" type="button" aria-current="page" aria-label="Home"><img src="assets/images/6363768f79.svg" alt=""></button>
+                  <button class="top-nav-item" type="button" aria-label="Messages, unread"><img src="assets/images/1fa9f7f432.svg" alt=""><span class="badge" aria-hidden="true"></span></button>
+                  <button class="top-nav-item" type="button" aria-label="Activity"><img src="assets/images/f872dfb41a.svg" alt=""></button>
+                  <button class="top-nav-item" type="button" aria-label="Me"><img src="assets/images/17275a7df6.svg" alt=""></button>
+                </div>
+              </nav>
+            </div>
+            <div class="demo-label">Desktop web · text labels</div>
+            <div class="stage" style="overflow-x:auto">
+              <nav class="top-nav-web desktop" aria-label="Member destinations on desktop" data-od-id="top-nav-desktop">
+                <img class="brand-mark" src="assets/images/ce8e5770b8.svg" alt="Included Health">
+                <div class="nav-items">
+                  <button class="top-nav-item" type="button" aria-current="page">Home</button>
+                  <button class="top-nav-item" type="button"><span class="badge" aria-hidden="true"></span>Messages</button>
+                  <button class="top-nav-item" type="button">Activity</button>
+                  <button class="top-nav-item" type="button">Me</button>
+                </div>
+              </nav>
+              <p class="card-spec-note">Figma: 16px mobile padding, 48px large-desktop padding. Do not pair this with a bottom tab bar. The mark is the exported Anatomy logo, not a redrawn H.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="secondary-nav" data-od-id="secondary-nav-subsection">
+          <div class="sub-head"><p class="eyebrow">In-flow header</p><h4>Secondary nav</h4><p>A 64px title bar with Title 4 Bold in the center. Left action is a 22px back chevron; right action is optional Body 1 Bold in Included blue. Minimum 48px hit areas on both sides.</p></div>
+          <div class="demo">
+            <div class="demo-label">Back only</div>
+            <div class="stage">
+              <header class="secondary-nav" data-od-id="secondary-nav-back">
+                <div class="nav-left"><button class="back" type="button" aria-label="Back"><img src="assets/images/2731ca5849.svg" alt=""></button></div>
+                <p class="title">Screen title</p>
+                <div class="nav-right"></div>
+              </header>
+            </div>
+            <div class="demo-label">Back and text action</div>
+            <div class="stage">
+              <header class="secondary-nav" data-od-id="secondary-nav-help">
+                <div class="nav-left"><button class="back" type="button" aria-label="Back"><img src="assets/images/2731ca5849.svg" alt=""></button></div>
+                <p class="title">Back and string button</p>
+                <div class="nav-right"><button class="text-action" type="button">Help</button></div>
+              </header>
+              <p class="card-spec-note">Figma also ships Close, Cancel, and Done as text or icon variants of the same 64px bar. Keep one left action and at most one right action.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="page-tab" data-od-id="page-tab-subsection">
+          <div class="sub-head"><p class="eyebrow">In-page views</p><h4>Page Tab</h4><p>48px row, Caption 12/16. Active is Bold Included blue with a 4px brand underline; default is Medium secondary text on a 1px weak divider. Equal-width tabs; use two or three, not more.</p></div>
+          <div class="demo">
+            <div class="demo-label">Two tabs</div>
+            <div class="stage">
+              <div class="page-tabs" role="tablist" aria-label="Visit views" data-od-id="page-tabs-2">
+                <button class="tab" id="tab-upcoming" role="tab" aria-selected="true" aria-controls="panel-upcoming">Upcoming</button>
+                <button class="tab" id="tab-history" role="tab" aria-selected="false" aria-controls="panel-history">History</button>
+              </div>
+              <div class="tab-panel" id="panel-upcoming" role="tabpanel" aria-labelledby="tab-upcoming"><strong>Next appointment</strong><p>Virtual primary care · Friday at 10:30 AM</p></div>
+              <div class="tab-panel" id="panel-history" role="tabpanel" aria-labelledby="tab-history" hidden=""><strong>Care history</strong><p>Review completed visits and shared plans.</p></div>
+            </div>
+            <div class="demo-label">Three tabs</div>
+            <div class="stage">
+              <div class="page-tabs tabs-3" role="tablist" aria-label="Message views" data-od-id="page-tabs-3">
+                <button class="tab" id="tab-inbox" role="tab" aria-selected="true" aria-controls="panel-inbox">Inbox</button>
+                <button class="tab" id="tab-care-team" role="tab" aria-selected="false" aria-controls="panel-care-team">Care team</button>
+                <button class="tab" id="tab-archived" role="tab" aria-selected="false" aria-controls="panel-archived">Archived</button>
+              </div>
+              <div class="tab-panel" id="panel-inbox" role="tabpanel" aria-labelledby="tab-inbox"><strong>Inbox</strong><p>Your care team has replied to your question.</p></div>
+              <div class="tab-panel" id="panel-care-team" role="tabpanel" aria-labelledby="tab-care-team" hidden=""><strong>Care team</strong><p>Message your assigned clinician or advocate.</p></div>
+              <div class="tab-panel" id="panel-archived" role="tabpanel" aria-labelledby="tab-archived" hidden=""><strong>Archived</strong><p>Older threads stay here after you close them.</p></div>
+              <p class="card-spec-note">Hover tints the tab with brand-weakest. Focus uses a 2px Included blue ring. Do not use Page Tabs for app-level destinations — that is Top Nav or the bottom tab bar.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="footer-nav" data-od-id="footer-nav-subsection">
+          <div class="sub-head"><p class="eyebrow">Legal wayfinding</p><h4>Footer</h4><p>A deep-navy tagline band over a white legal row. Links are Body 1 Medium, underlined, in brand-strong blue. Copyright is Body 1 Medium primary text, not a link.</p></div>
+          <div class="demo">
+            <div class="demo-label">Tagline and legal links</div>
+            <div class="stage" style="overflow-x:auto">
+              <div class="ih-footer" data-od-id="ih-footer">
+                <div class="tagline">Designed to treat you better.<sup>TM</sup></div>
+                <div class="legal">
+                  <a href="#footer-nav">Terms of Service</a>
+                  <a href="#footer-nav">Privacy Policy</a>
+                  <a href="#footer-nav">Member Service Agreement</a>
+                  <span>© 2026 Included Health</span>
+                </div>
+              </div>
+              <p class="card-spec-note">Figma: 1280px specimen · 20px tagline padding · 12/48px legal padding · 24px gap. Center the row; wrap on small screens rather than shrinking type.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="component-section" id="messaging" data-od-id="messaging-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Conversation</p><h3>Messaging</h3><p>Nine conversation primitives establish chronology, authorship, response choices, files, and safe AI guidance without making members decode the interface.</p></div>
+          <span class="count">10 / 13</span>
+        </div>
+
+        <section class="card-subsection" id="timestamp" data-od-id="timestamp-subsection">
+          <div class="sub-head"><p class="eyebrow">Chronology</p><h4>Timestamp</h4><p>Caption Medium centers message time; an optional Caption Bold success label marks unread messages.</p></div>
+          <div class="demo"><div class="demo-label">Today · new messages</div><div class="stage">
+            <div class="message-timestamp" data-od-id="message-timestamp"><span>12:34 PM</span><span>·</span><strong>3 New messages</strong></div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="system-message" data-od-id="system-message-subsection">
+          <div class="sub-head"><p class="eyebrow">Conversation event</p><h4>System Message</h4><p>Use centered system copy for changes to the conversation itself, not for care guidance or action feedback.</p></div>
+          <div class="demo"><div class="demo-label">With timestamp</div><div class="stage">
+            <div class="system-message" data-od-id="system-message-example">
+              <div class="message-timestamp"><span>12:34 PM</span><span>·</span><strong>3 New messages</strong></div>
+              <p>Carrie R is now your Care Team member.</p>
+            </div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="chat-input" data-od-id="chat-input-subsection">
+          <div class="sub-head"><p class="eyebrow">Compose</p><h4>Chat input</h4><p>A 393px, 24px-radius composer supports empty, active, in-progress, disabled, multi-select, end-chat, and keyboard states. Controls retain 48px targets.</p></div>
+          <div class="demo"><div class="demo-label">Empty → active</div><div class="stage">
+            <div class="chat-input" data-od-id="chat-input-control">
+              <label class="visually-hidden" for="message-compose">Describe your issue</label>
+              <textarea id="message-compose" rows="1" placeholder="Describe your issue..."></textarea>
+              <div class="chat-actions">
+                <button class="chat-action" type="button" aria-label="Add attachment"><img src="assets/images/eddfe2d296.svg" alt=""></button>
+                <button class="chat-action send" id="message-send" type="button" aria-label="Send message" disabled><img src="assets/images/352640253f.svg" alt=""></button>
+              </div>
+            </div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="jump-to-latest" data-od-id="jump-to-latest-subsection">
+          <div class="sub-head"><p class="eyebrow">Position recovery</p><h4>Jump to Latest</h4><p>A floating 48px control returns members to the newest content. The optional 20px badge reports unseen messages.</p></div>
+          <div class="demo"><div class="demo-label">Light surface · unread badge</div><div class="stage">
+            <button class="jump-latest" type="button" aria-label="Jump to latest, 3 new messages" data-od-id="jump-to-latest-control"><span class="glyph glyph-arrow" aria-hidden="true"></span><span class="badge">3</span></button>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="response" data-od-id="response-subsection">
+          <div class="sub-head"><p class="eyebrow">Authorship</p><h4>Response</h4><p>Dot speaks without a filled bubble; care-team replies use neutral fill; member replies use the weak brand surface. Every response uses Body 1 Medium.</p></div>
+          <div class="demo"><div class="demo-label">Dot · Care Team · Member</div><div class="stage">
+            <div class="message-specimen" data-od-id="response-specimen">
+              <article class="message-response dot">
+                <div class="message-byline"><span class="message-avatar" aria-hidden="true"><img src="assets/images/d9a9bb3770.svg" alt=""></span><span>Dot</span></div>
+                <div class="message-bubble"><p>Hi Michael, good to see you again. What’s going on? Do you have any health goals you’d like us to work toward?</p></div>
+              </article>
+              <article class="message-response care-team">
+                <div class="message-byline"><span class="message-avatar" aria-hidden="true">CL</span><span>Carrie L. · Care Team</span></div>
+                <div class="message-bubble"><p>I can help you understand your next care options.</p></div>
+              </article>
+              <article class="message-response member">
+                <div class="message-bubble"><p>The area is red and swollen and hasn’t improved.</p></div>
+              </article>
+              <article class="message-response care-team" aria-label="Care Team is typing">
+                <div class="message-byline"><span class="message-avatar" aria-hidden="true">CL</span><span>Carrie L. · Care Team</span></div>
+                <div class="message-bubble"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span></div>
+              </article>
+            </div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="attachments" data-od-id="attachments-subsection">
+          <div class="sub-head"><p class="eyebrow">Files</p><h4>Attachments</h4><p>Member and care-team files use the sender’s bubble surface. File rows are 56px high; image files may expand to a larger preview surface.</p></div>
+          <div class="demo"><div class="demo-label">Member PDF</div><div class="stage">
+            <button class="attachment-row" type="button" data-od-id="member-attachment"><img src="assets/images/e0ec30fd79.svg" alt=""><span>Visit-summary.pdf</span></button>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="quick-reply" data-od-id="quick-reply-subsection">
+          <div class="sub-head"><p class="eyebrow">Single choice</p><h4>Quick Reply</h4><p>Quick replies use Body 2 Medium and 48px pill targets. Stack longer choices; use a horizontal row only when labels remain short.</p></div>
+          <div class="demo"><div class="demo-label">Stack and horizontal layouts</div><div class="stage two-col">
+            <div><p class="reply-label">What would you like help with?</p><div class="quick-replies stack" data-choice-group data-od-id="quick-reply-stack">
+              <button class="reply-chip" type="button" aria-pressed="false">Find care</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Understand a bill</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Review my benefits</button>
+            </div></div>
+            <div><p class="reply-label">Is this urgent?</p><div class="quick-replies" data-choice-group data-od-id="quick-reply-horizontal">
+              <button class="reply-chip" type="button" aria-pressed="false">Yes</button>
+              <button class="reply-chip" type="button" aria-pressed="false">No</button>
+            </div></div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="multi-select-reply" data-od-id="multi-select-reply-subsection">
+          <div class="sub-head"><p class="eyebrow">Multiple choice</p><h4>Multi-select Reply</h4><p>Compact 32px Caption chips allow more than one response. Selected options stay visibly filled; unavailable options use disabled semantics.</p></div>
+          <div class="demo"><div class="demo-label">Symptoms</div><div class="stage">
+            <div class="multi-replies" data-od-id="multi-select-replies">
+              <button class="reply-chip" type="button" disabled>Back pain</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Fever</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Burning or pain when urinating</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Need to urinate more often</button>
+              <button class="reply-chip" type="button" aria-pressed="false">Vomiting</button>
+            </div>
+          </div></div>
+        </section>
+
+        <section class="card-subsection" id="disclaimer" data-od-id="disclaimer-subsection">
+          <div class="sub-head"><p class="eyebrow">Safety context</p><h4>Disclaimer</h4><p>Keep the AI disclaimer near Dot’s conversation context and use Caption Medium centered within a 343px reading width.</p></div>
+          <div class="demo"><div class="demo-label">Dot guidance</div><div class="stage">
+            <p class="message-disclaimer" data-od-id="message-disclaimer">Dot can provide generalized AI-generated answers for select healthcare questions and connect you to the Care Team at any time, but it is not a substitute for professional medical advice.</p>
+          </div></div>
+        </section>
+      </section>
+
+      <section class="component-section" id="logos" data-od-id="logos-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Brand identity</p><h3>Logos</h3><p>Use the 2026 Included Health and Doctor On Demand lockups from Anatomy. Export the official files — do not redraw, recolor, or restack the mark and wordmark.</p></div>
+          <span class="count">11 / 13</span>
+        </div>
+
+        <div class="sub-head" id="brand-logo" data-od-id="brand-logo-head">
+          <h4>Brand logo</h4>
+          <p>Horizontal lockups for Included Health (blue and knockout white) and Doctor On Demand. Use these at product and marketing scale; do not redraw the type or mark.</p>
+        </div>
+        <div class="demo" data-od-id="brand-logo-demo">
+          <div class="demo-label">Style variants</div>
+          <div class="stage">
+            <div class="logo-matrix" data-od-id="brand-logo-matrix">
+              <figure class="logo-tile" data-od-id="logo-ih-blue">
+                <div class="logo-plate">
+                  <img src="assets/images/17ca3a4763.svg" alt="Included Health wordmark, Included blue">
+                </div>
+                <figcaption>Style=IH / Blue<code>logos/included-health-wordmark-blue.svg</code></figcaption>
+              </figure>
+              <figure class="logo-tile" data-od-id="logo-ih-white">
+                <div class="logo-plate is-brand">
+                  <img src="assets/images/ca0e6b9e89.svg" alt="Included Health wordmark, white">
+                </div>
+                <figcaption>Style=IH / White<code>logos/included-health-wordmark-white.svg</code></figcaption>
+              </figure>
+              <figure class="logo-tile" data-od-id="logo-dod">
+                <div class="logo-plate">
+                  <img src="assets/images/352eb6d828.svg" alt="Doctor On Demand by Included Health wordmark">
+                </div>
+                <figcaption>Style=DOD<code>logos/doctor-on-demand-wordmark-blue.svg</code></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-head" id="brand-logo-mark" data-od-id="brand-logo-mark-head">
+          <h4>Brand logo mark</h4>
+          <p>Compact marks for tight chrome such as top nav and app icon contexts. Pair with the matching wordmark color: blue on light, white on Included blue.</p>
+        </div>
+        <div class="demo" data-od-id="brand-logo-mark-demo">
+          <div class="demo-label">Style variants</div>
+          <div class="stage">
+            <div class="logo-matrix" data-od-id="brand-logo-mark-matrix">
+              <figure class="logo-tile" data-od-id="logomark-ih-blue">
+                <div class="logo-plate">
+                  <img src="assets/images/98ad24d23a.svg" alt="Included Health mark, Included blue">
+                </div>
+                <figcaption>Style=IH / Blue<code>logos/included-health-logomark-blue.svg</code></figcaption>
+              </figure>
+              <figure class="logo-tile" data-od-id="logomark-ih-white">
+                <div class="logo-plate is-brand">
+                  <img src="assets/images/feeea74ad4.svg" alt="Included Health mark, white">
+                </div>
+                <figcaption>Style=IH / White<code>logos/included-health-logomark-white.svg</code></figcaption>
+              </figure>
+              <figure class="logo-tile" data-od-id="logomark-dod">
+                <div class="logo-plate">
+                  <img src="assets/images/a4babc3a17.svg" alt="Doctor On Demand mark">
+                </div>
+                <figcaption>Style=DOD<code>logos/doctor-on-demand-logomark-blue.svg</code></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-head" id="logo-example-usage" data-od-id="logo-example-usage-head">
+          <h4>Logo example usage</h4>
+          <p>Centered editorial presentations from the Anatomy examples frame: IH on white, IH knockout on Included blue, DOD on white, and the cobrand lockup.</p>
+        </div>
+        <div class="demo" data-od-id="logo-example-usage-demo">
+          <div class="demo-label">Surfaces</div>
+          <div class="stage">
+            <div class="logo-usage">
+              <div class="logo-usage-card" data-od-id="logo-usage-ih-light">
+                <img class="wordmark" src="assets/images/17ca3a4763.svg" alt="Included Health on white">
+                <img class="mark-hug" src="assets/images/98ad24d23a.svg" alt="">
+              </div>
+              <div class="logo-usage-card is-brand" data-od-id="logo-usage-ih-blue">
+                <img class="wordmark" src="assets/images/ca0e6b9e89.svg" alt="Included Health on Included blue">
+                <img class="mark-hug" src="assets/images/c48ce33715.svg" alt="">
+              </div>
+              <div class="logo-usage-card" data-od-id="logo-usage-dod">
+                <img class="wordmark" src="assets/images/352eb6d828.svg" alt="Doctor On Demand on white">
+                <img class="mark-hug" src="assets/images/2d7acea5a1.svg" alt="">
+              </div>
+              <div class="logo-usage-card" data-od-id="logo-usage-lockup">
+                <img class="lockup" src="assets/images/547ef40649.svg" alt="Included Health and Doctor On Demand cobrand lockup">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo">
+          <div class="demo-label">Usage</div>
+          <div class="stage">
+            <dl class="logo-rules" data-od-id="logo-usage-rules">
+              <div><dt>IH / Blue</dt><dd>Primary lockup and mark on white or pale surfaces. Keep Included blue as drawn.</dd></div>
+              <div><dt>IH / White</dt><dd>Knockout lockup and mark on Included blue fields. Do not place white logos on white.</dd></div>
+              <div><dt>Doctor On Demand</dt><dd>Use the dr+ wordmark or mark for DOD surfaces. Keep the “by Included Health” tagline with the wordmark.</dd></div>
+              <div><dt>Cobrand lockup</dt><dd>Use the IH + DOD lockup when both brands must appear together. Do not rebuild the divider or restack the pair.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="component-section" id="patterns" data-od-id="patterns-section">
+        <div class="section-head">
+          <div><p class="eyebrow">Disclosure and overlays</p><h3>Patterns</h3><p>Progressively reveal supporting detail and reserve modals for focused, interruptive decisions.</p></div>
+          <span class="count">12 / 13</span>
+        </div>
+        <div class="demo">
+          <div class="demo-label">Accordion and modal</div>
+          <div class="stage">
+            <details open=""><summary>When should I use an inline banner?</summary><p>Use one for contextual information that belongs to the current task and should remain visible while the member acts.</p></details>
+            <details><summary>When should I use a toast?</summary><p>Use a toast to confirm a completed action. Keep it brief and do not place critical recovery steps inside it.</p></details>
+            <div class="row" style="margin-top:32px">
+              <button class="btn" id="open-modal" type="button" data-od-id="open-modal-button">Open modal</button>
+              <button class="btn secondary" id="show-toast" type="button">Show toast</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="component-section" id="tokens" data-od-id="tokens-section">
+        <div class="section-head">
+          <div><p class="eyebrow">System values</p><h3>Color tokens</h3><p>Primitives come from the Anatomy Colors page. Semantic roles come from the Color tokens page. Components bind aliases to these roles instead of raw hex.</p></div>
+          <span class="count">13 / 13</span>
+        </div>
+        <div class="demo" id="color-primitives" data-od-id="color-primitives">
+          <div class="demo-label">Primitive scales</div>
+          <div class="stage">
+            <div class="token-family" data-od-id="scale-blue"><h4>Blue</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-100)"></span></div><p>blue/100<code>#f6fafe</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-200)"></span></div><p>blue/200<code>#e6effe</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-300)"></span></div><p>blue/300<code>#d0e2ff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-400)"></span></div><p>blue/400<code>#a6c8ff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-500)"></span></div><p>blue/500<code>#81adf6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-600)"></span></div><p>blue/600<code>#578ee8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-700)"></span></div><p>blue/700 base<code>#0012e7</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-800)"></span></div><p>blue/800<code>#002380</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-blue-900)"></span></div><p>blue/900<code>#001048</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-purple"><h4>Purple</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-100)"></span></div><p>purple/100<code>#faf9ff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-200)"></span></div><p>purple/200<code>#f1f0ff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-300)"></span></div><p>purple/300<code>#e0dcfd</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-400)"></span></div><p>purple/400<code>#c6bdfb</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-500)"></span></div><p>purple/500<code>#ad9ff0</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-600)"></span></div><p>purple/600<code>#917ce1</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-700)"></span></div><p>purple/700 base<code>#6a4cde</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-800)"></span></div><p>purple/800<code>#3c1b8f</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-purple-900)"></span></div><p>purple/900<code>#190745</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-orange"><h4>Orange</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-100)"></span></div><p>orange/100<code>#fef9f7</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-200)"></span></div><p>orange/200<code>#fcf3f0</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-300)"></span></div><p>orange/300<code>#fdd7cd</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-400)"></span></div><p>orange/400<code>#f8b3a0</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-500)"></span></div><p>orange/500<code>#ec9179</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-600)"></span></div><p>orange/600<code>#da694c</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-700)"></span></div><p>orange/700 base<code>#b54325</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-800)"></span></div><p>orange/800<code>#711100</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-orange-900)"></span></div><p>orange/900<code>#3b0000</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-teal"><h4>Teal</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-100)"></span></div><p>teal/100<code>#f7fbfb</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-200)"></span></div><p>teal/200<code>#edf8f8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-300)"></span></div><p>teal/300<code>#cce8e8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-400)"></span></div><p>teal/400<code>#91d6d6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-500)"></span></div><p>teal/500<code>#60bfbf</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-600)"></span></div><p>teal/600<code>#00abab</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-700)"></span></div><p>teal/700 base<code>#0b7e7e</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-800)"></span></div><p>teal/800<code>#005353</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-teal-900)"></span></div><p>teal/900<code>#002525</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-green"><h4>Green</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-100)"></span></div><p>green/100<code>#f8fbf8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-200)"></span></div><p>green/200<code>#edf9ed</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-300)"></span></div><p>green/300<code>#d0e9d0</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-400)"></span></div><p>green/400<code>#a4d6a4</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-500)"></span></div><p>green/500<code>#7dc07d</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-600)"></span></div><p>green/600<code>#4ea64e</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-700)"></span></div><p>green/700 base<code>#008200</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-800)"></span></div><p>green/800<code>#004f00</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-green-900)"></span></div><p>green/900<code>#002c00</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-yellow"><h4>Yellow</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-100)"></span></div><p>yellow/100<code>#fffbf5</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-200)"></span></div><p>yellow/200<code>#fcf4e6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-300)"></span></div><p>yellow/300<code>#f5dcc3</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-400)"></span></div><p>yellow/400<code>#ecbc8a</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-500)"></span></div><p>yellow/500<code>#dd9e56</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-600)"></span></div><p>yellow/600<code>#c97a00</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-700)"></span></div><p>yellow/700 base<code>#a55600</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-800)"></span></div><p>yellow/800<code>#662600</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-yellow-900)"></span></div><p>yellow/900<code>#350500</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-red"><h4>Red</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-100)"></span></div><p>red/100<code>#fef9f8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-200)"></span></div><p>red/200<code>#fdf2f1</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-300)"></span></div><p>red/300<code>#fdd6d4</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-400)"></span></div><p>red/400<code>#fab1ae</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-500)"></span></div><p>red/500<code>#ed8e8c</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-600)"></span></div><p>red/600<code>#db6566</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-700)"></span></div><p>red/700 base<code>#cb0c31</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-800)"></span></div><p>red/800<code>#7f0009</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-red-900)"></span></div><p>red/900<code>#3c0002</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-neutral"><h4>Neutral</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-white)"></span></div><p>white<code>#ffffff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-100)"></span></div><p>neutral/100<code>#fafafa</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-200)"></span></div><p>neutral/200<code>#f2f2f2</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-300)"></span></div><p>neutral/300<code>#e1e1e1</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-400)"></span></div><p>neutral/400<code>#c6c6c6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-500)"></span></div><p>neutral/500<code>#acacac</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-600)"></span></div><p>neutral/600<code>#8f8f8f</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-700)"></span></div><p>neutral/700 base<code>#6d6d6d</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-800)"></span></div><p>neutral/800<code>#3b3b3b</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-neutral-900)"></span></div><p>neutral/900<code>#181818</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-black)"></span></div><p>black<code>#000000</code></p></div>
+            </div></div>
+            <div class="token-family" data-od-id="scale-overlay"><h4>Transparent overlays</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-black-transparent-10)"></span></div><p>black/10<code>#0000001a</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-black-transparent-30)"></span></div><p>black/30<code>#0000004d</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-black-transparent-50)"></span></div><p>black/50<code>#00000080</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-black-transparent-80)"></span></div><p>black/80<code>#000000cc</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-white-transparent-10)"></span></div><p>white/10<code>#ffffff1a</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-white-transparent-50)"></span></div><p>white/50<code>#ffffff80</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--color-white-transparent-80)"></span></div><p>white/80<code>#ffffffcc</code></p></div>
+            </div></div>
+          </div>
+        </div>
+        <div class="demo" id="color-semantic" data-od-id="color-semantic">
+          <div class="demo-label">Semantic roles</div>
+          <div class="stage">
+            <div class="token-family"><h4>Surface</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-primary)"></span></div><p>surface/primary<code>#ffffff</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-secondary)"></span></div><p>surface/secondary<code>#fafafa</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-disabled)"></span></div><p>surface/disabled<code>#f2f2f2</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-brand-weak)"></span></div><p>surface/brand/weak<code>#e6effe</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-brand-base)"></span></div><p>surface/brand/base<code>#0012e7</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-brand-strong)"></span></div><p>surface/brand/strong<code>#002380</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-success-weak)"></span></div><p>surface/success/weak<code>#edf9ed</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-warning-weak)"></span></div><p>surface/warning/weak<code>#fcf4e6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--surface-danger-weak)"></span></div><p>surface/danger/weak<code>#fdf2f1</code></p></div>
+            </div></div>
+            <div class="token-family"><h4>Text</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-primary)"></span></div><p>text/primary<code>#181818</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-secondary)"></span></div><p>text/secondary<code>#3b3b3b</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-placeholder)"></span></div><p>text/placeholder<code>#6d6d6d</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-disabled)"></span></div><p>text/disabled<code>#8f8f8f</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-brand-base)"></span></div><p>text/brand/base<code>#0012e7</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-success-base)"></span></div><p>text/success/base<code>#008200</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-warning-base)"></span></div><p>text/warning/base<code>#a55600</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--text-danger-base)"></span></div><p>text/danger/base<code>#cb0c31</code></p></div>
+            </div></div>
+            <div class="token-family"><h4>Border</h4><div class="token-row">
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-weakest)"></span></div><p>border/weakest<code>#e1e1e1</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-weak)"></span></div><p>border/weak<code>#c6c6c6</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-base)"></span></div><p>border/base<code>#8f8f8f</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-strong)"></span></div><p>border/strong<code>#6d6d6d</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-brand-weak)"></span></div><p>border/brand/weak<code>#578ee8</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-brand-base)"></span></div><p>border/brand/base<code>#0012e7</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-success-base)"></span></div><p>border/success/base<code>#008200</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-warning-base)"></span></div><p>border/warning/base<code>#a55600</code></p></div>
+              <div class="swatch"><div class="swatch-color"><span style="background:var(--border-danger-base)"></span></div><p>border/danger/base<code>#cb0c31</code></p></div>
+            </div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer data-od-id="footer">
+    <div class="footer-inner">
+      <img src="assets/images/02da3584e4.svg" alt="Included Health">
+      <p>Anatomy · Components and templates reference</p>
+    </div>
+  </footer>
+
+  <dialog id="component-modal" aria-labelledby="modal-title">
+    <div class="modal-body">
+      <h3 id="modal-title">Confirm your preference</h3>
+      <p>Your care team will use this preference when sharing appointment updates.</p>
+      <div class="row">
+        <button class="btn small secondary" id="close-modal" type="button">Cancel</button>
+        <button class="btn small" id="confirm-modal" type="button">Confirm</button>
+      </div>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" hidden="">
+    <span><strong>Preference saved.</strong> Your care team can see the update.</span>
+    <button class="dismiss" id="close-toast" type="button" aria-label="Dismiss confirmation">×</button>
+  </div>
+
+    <script src="js/components.js"></script>
+</body></html>
