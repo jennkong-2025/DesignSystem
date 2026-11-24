@@ -540,12 +540,15 @@
     }
     .side-nav a.sub { min-height: 40px; padding-left: var(--s5); color: var(--body); font-size: 13px; font-weight: 500; }
     main { min-width: 0; }
-    .intro { max-width: 840px; margin-bottom: 80px; }
+    .intro { margin-bottom: 80px; }
     .eyebrow { margin: 0 0 var(--s3); color: var(--brand-blue); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     h2 { margin: 0; font-size: clamp(36px, 5vw, 64px); line-height: 1; letter-spacing: -.045em; }
-    .intro > p:last-child, .section-head p { max-width: 720px; margin: var(--s5) 0 0; color: var(--body); font-size: 18px; }
+    .intro > p:last-child, .section-head p { margin: var(--s5) 0 0; color: var(--body); font-size: 18px; }
     .component-section { padding: 72px 0; border-top: 1px solid var(--border); }
     .section-head { margin-bottom: var(--s8); display: flex; align-items: end; justify-content: space-between; gap: var(--s6); }
+    .section-head > div { flex: 1 1 auto; min-width: 0; }
+    .section-head { position: relative; }
+    .section-head > .count { position: absolute; top: 2px; right: 0; } /* sits beside the eyebrow so the intro paragraph can use the full width */
     .section-head h3 { margin: 0; font-size: clamp(30px, 4vw, 46px); line-height: 1.05; letter-spacing: -.035em; }
     .count { flex: 0 0 auto; color: var(--muted); font: 600 13px/1 var(--font); letter-spacing: .08em; }
     .demo {
@@ -651,9 +654,9 @@
 
     .sub-head { margin: 0 0 var(--s5); }
     .sub-head h4 { margin: 0; font-size: 24px; line-height: 32px; letter-spacing: -.02em; }
-    .sub-head p { max-width: 660px; margin: var(--s2) 0 0; color: var(--body); font-size: 16px; }
+    .sub-head p { margin: var(--s2) 0 0; color: var(--body); font-size: 16px; }
     .component-section > .sub-head { margin-top: 72px; }
-    .stage-note { max-width: 660px; margin: var(--s5) 0 0; color: var(--muted); font-size: 14px; }
+    .stage-note { margin: var(--s5) 0 0; color: var(--muted); font-size: 14px; }
     .stage.row .stage-note { flex: 1 1 240px; margin: 0; }
 
     /* Button group */
@@ -999,7 +1002,7 @@
     .affix { color: var(--text-secondary); font-weight: var(--weight-medium); white-space: nowrap; }
     .state-matrix { display: grid; grid-template-columns: 96px minmax(0, 311px) minmax(0, 311px); gap: 16px 24px; align-items: center; }
     .state-matrix .col-label { margin: 0; color: var(--muted); font-size: var(--caption-size); font-weight: var(--weight-bold); letter-spacing: .06em; text-transform: uppercase; }
-    .state-matrix .row-label { margin: 0; color: var(--body); font-size: var(--body-2-size); font-weight: var(--weight-medium); }
+    .state-matrix .row-label { margin: 0; align-self: center; justify-self: end; text-align: right; color: var(--body); font-size: var(--body-2-size); font-weight: var(--weight-medium); }
     .form-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); }
     .form-rule { padding: var(--s5); border: 1px solid var(--border); border-radius: var(--r-card); background: var(--surface); }
     .form-rule strong { display: block; font-size: var(--body-1-size); line-height: var(--body-1-line); }
@@ -1299,7 +1302,37 @@
     .detail-list dt, .detail-list dd { margin: 0; font-size: var(--body-2-size); line-height: var(--body-2-line); }
     .detail-list dt { font-weight: var(--weight-bold); }
     .detail-list dd { font-weight: var(--weight-medium); }
+    .source-links { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s3); }
+    .source-link { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 12px; border: 1px solid var(--border-weak); border-radius: 9999px; color: var(--text-primary); font-size: var(--body-2-size); line-height: var(--body-2-line); font-weight: var(--weight-medium); text-decoration: none; }
+    .source-link img { width: auto; height: 16px; flex: 0 0 auto; }
+    .source-link.pending img { opacity: .5; }
+    a.source-link::after { content: "↗"; font-size: 12px; color: var(--muted); }
+    a.source-link:hover { border-color: var(--brand-blue); color: var(--brand-blue); }
+    a.source-link:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; }
+    .source-link.pending { color: var(--muted); border-style: dashed; }
     .card-spec-note { margin-top: var(--s5); color: var(--muted); font-size: var(--body-2-size); line-height: var(--body-2-line); }
+
+    /* Shared: Figma guidance block (Design Intent, Usage, Accessibility) */
+    .guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); margin-top: var(--s5); }
+    .guide-card { min-width: 0; padding: var(--s5); border: 1px solid var(--border); border-radius: var(--r-field); background: var(--canvas); }
+    .guide-card.wide { grid-column: 1 / -1; }
+    .guide-card h5 { display: flex; align-items: center; gap: var(--s2); margin: 0 0 var(--s3); color: var(--text-primary); font-size: var(--body-1-size); line-height: var(--body-1-line); font-weight: var(--weight-bold); }
+    .guide-card h5::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--text-brand-base); }
+    .guide-card.use h5::before { background: var(--text-success-base); }
+    .guide-card.avoid h5::before { background: var(--text-danger-base); }
+    .guide-card ul { margin: 0; padding-left: 20px; color: var(--body); font-size: var(--body-2-size); line-height: var(--body-2-line); }
+    .guide-card li + li { margin-top: var(--s1); }
+    .guide-card dl { display: grid; grid-template-columns: minmax(120px, 200px) 1fr; gap: var(--s3) var(--s5); margin: 0; font-size: var(--body-2-size); line-height: var(--body-2-line); }
+    .guide-card dt { color: var(--text-primary); font-weight: var(--weight-bold); }
+    .guide-card dd { margin: 0; color: var(--body); }
+    .guide-card dd p { margin: 0; }
+    .guide-card dd p + p { margin-top: var(--s1); }
+    @media (max-width: 640px) { .guide { grid-template-columns: 1fr; } .guide-card dl { grid-template-columns: 1fr; gap: var(--s1); } .guide-card dd { margin-bottom: var(--s3); } }
+
+    /* Shared: "In progress" tag for parts Figma marks as WIP (Chip Static warning, small) */
+    .wip-tag { display: inline-flex; align-items: center; gap: var(--s1); min-height: 24px; padding: var(--s1) var(--s2); border-radius: var(--r-compact); background: var(--surface-warning-weak); color: var(--text-warning-strong); font-size: var(--caption-size); font-weight: var(--weight-medium); line-height: var(--caption-line); letter-spacing: 0; text-transform: none; vertical-align: middle; }
+    h4 .wip-tag, h3 .wip-tag { margin-left: var(--s2); }
+    .wip-note { margin-top: var(--s3); color: var(--text-warning-strong); font-size: var(--body-2-size); line-height: var(--body-2-line); }
 
     .page-tabs {
       width: min(100%, 375px);
@@ -1972,9 +2005,10 @@
 
     .atom-matrix {
       display: grid;
-      grid-template-columns: minmax(92px, auto) repeat(4, minmax(80px, auto));
-      gap: var(--s5) var(--s4);
-      align-items: end;
+      grid-template-columns: max-content repeat(4, minmax(80px, auto));
+      gap: var(--s5) var(--s6);
+      align-items: center;
+      justify-items: center;
       width: max-content;
       max-width: 100%;
     }
@@ -1986,7 +2020,8 @@
       letter-spacing: .06em;
       text-transform: uppercase;
     }
-    .atom-matrix .row-label { align-self: center; text-transform: none; letter-spacing: 0; font-weight: var(--weight-medium); color: var(--text-secondary); font-size: var(--body-2-size); line-height: var(--body-2-line); }
+    .atom-matrix .col-label { align-self: end; text-align: center; text-transform: none; letter-spacing: 0; }
+    .atom-matrix .row-label { align-self: center; justify-self: end; text-align: right; text-transform: none; letter-spacing: 0; font-weight: var(--weight-medium); color: var(--text-secondary); font-size: var(--body-2-size); line-height: var(--body-2-line); }
     .ic {
       display: grid;
       place-items: center;
@@ -2014,7 +2049,9 @@
     .ic.success { background: var(--surface-success-weak); color: var(--text-success-base); }
     .ic.warning { background: var(--surface-warning-weak); color: var(--text-warning-base); }
     .ic.danger { background: var(--surface-danger-weak); color: var(--text-danger-base); }
-    .divider-stack { display: grid; gap: var(--s5); max-width: 343px; }
+    .divider-stack { display: grid; gap: var(--s8); width: 100%; }
+    .variant { display: grid; gap: var(--s3); }
+    .variant-label { margin: 0; color: var(--text-secondary); font-size: var(--body-2-size); line-height: var(--body-2-line); font-weight: var(--weight-medium); } /* Figma: divider fills the parent */
     .divider-content { width: 100%; height: 0; border-top: 1px solid var(--border-weakest); }
     .divider-or {
       display: flex;
@@ -2026,6 +2063,7 @@
       font-weight: var(--weight-medium);
       line-height: var(--body-2-line);
     }
+    .divider-or span { max-width: 80%; text-align: center; } /* Figma: OR text max 80% of the divider, then wraps */
     .divider-or::before, .divider-or::after {
       content: "";
       flex: 1 1 auto;
@@ -2033,6 +2071,17 @@
       height: 0;
       border-top: 1px solid var(--border-weakest);
     }
+    .illo-row { display: flex; align-items: flex-end; gap: var(--s10); flex-wrap: wrap; }
+    .illo-row figure { display: grid; justify-items: center; gap: var(--s2); margin: 0; }
+    .illo-row figcaption { color: var(--muted); font-size: var(--caption-size); line-height: var(--caption-line); }
+    .illo { display: grid; place-items: center; flex: none; } /* Figma: borderless, illustration fills the container */
+    .illo img { width: 71%; height: auto; display: block; }
+    .illo-s { width: 40px; height: 40px; }
+    .illo-m { width: 56px; height: 56px; }
+    .illo-l { width: 80px; height: 80px; }
+    .illo-example { display: flex; align-items: center; gap: var(--s4); max-width: 420px; padding: var(--s5); border: 1px solid var(--border-weakest); border-radius: var(--r-card); background: var(--canvas); }
+    .illo-example strong { display: block; font-size: var(--body-1-size); line-height: var(--body-1-line); }
+    .illo-example p { margin: var(--s1) 0 0; color: var(--body); font-size: var(--body-2-size); line-height: var(--body-2-line); }
     .avatar-scroll { overflow-x: auto; padding-bottom: var(--s2); }
     .avatar-matrix {
       display: grid;
@@ -2044,6 +2093,8 @@
     .avatar-matrix .row-label {
       margin: 0;
       align-self: center;
+      justify-self: end;
+      text-align: right;
       color: var(--text-secondary);
       font-size: var(--body-2-size);
       font-weight: var(--weight-medium);
@@ -2263,7 +2314,7 @@
       .logo-matrix, .logo-rules { grid-template-columns: 1fr; }
       .logo-usage-card { gap: 48px; padding: 48px 20px; }
       .logo-usage-card .wordmark, .logo-usage-card .lockup { height: 48px; }
-      .atom-matrix { grid-template-columns: 72px repeat(4, minmax(56px, auto)); gap: var(--s4) var(--s3); }
+      .atom-matrix { grid-template-columns: max-content repeat(4, minmax(56px, auto)); gap: var(--s4) var(--s3); }
       .avatar-matrix { grid-template-columns: 88px repeat(6, auto); gap: var(--s4) var(--s3); }
     }
     @media (prefers-reduced-motion: reduce) {

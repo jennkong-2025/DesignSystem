@@ -48,6 +48,7 @@
           <div class="nav-subs" id="nav-subs-atoms">
             <a class="sub" href="#icon-container">Icon container</a>
             <a class="sub" href="#divider">Divider</a>
+            <a class="sub" href="#illustration-container">Illustration container</a>
           </div>
         </div>
         <div class="nav-group" data-nav-group="avatar">
@@ -213,21 +214,21 @@
 
       <section class="component-section" id="atoms" data-od-id="atoms-section">
         <div class="section-head">
-          <div><p class="eyebrow">Primitives</p><h3>Atoms</h3><p>Shared containers that wrap an icon or split content. Use these instead of inventing a new circle or rule for each screen.</p></div>
+          <div><h3>Atoms</h3><p>Shared building blocks: a container for an icon, a container for an illustration, and a divider that splits content. Use these instead of inventing a new circle, frame or rule for each screen.</p></div>
           <span class="count">01 / 13</span>
         </div>
 
         <section class="card-subsection" id="icon-container" data-od-id="icon-container-subsection">
-          <div class="sub-head"><p class="eyebrow">Icon plate</p><h4>Icon container</h4><p>A circular plate for a single glyph. Production sizes in the component set are 40, 48, 56, and 80. The inner placeholder scales 20 / 24 / 28 / 40. The page also documents 16, 24, 32, 64, and 160 as related image-container sizes — do not mix those into this plate unless a spec says so.</p></div>
+          <div class="sub-head"><h4>Icon container</h4><p>Shows one icon inside a circular colored container so the symbol reads as a single object. Use it when a member needs an object, category, or status marked with a colored background. Sizes are S (40px), M (48px), L (56px), and XL (80px) only; the glyph is always half the container.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=47425-22964" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">State × size</div>
             <div class="stage avatar-scroll">
               <div class="atom-matrix" data-od-id="icon-container-matrix">
                 <span></span>
-                <p class="col-label">40</p>
-                <p class="col-label">48</p>
-                <p class="col-label">56</p>
-                <p class="col-label">80</p>
+                <p class="col-label">S (40px)</p>
+                <p class="col-label">M (48px)</p>
+                <p class="col-label">L (56px)</p>
+                <p class="col-label">XL (80px)</p>
                 <p class="row-label">Primary</p>
                 <span class="ic ic-40 primary" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-48 primary" aria-hidden="true"><span class="ph"></span></span>
@@ -238,12 +239,12 @@
                 <span class="ic ic-48 neutral" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-56 neutral" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-80 neutral" aria-hidden="true"><span class="ph"></span></span>
-                <p class="row-label">Purple</p>
+                <p class="row-label">Secondary purple</p>
                 <span class="ic ic-40 purple" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-48 purple" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-56 purple" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-80 purple" aria-hidden="true"><span class="ph"></span></span>
-                <p class="row-label">Orange</p>
+                <p class="row-label">Secondary orange</p>
                 <span class="ic ic-40 orange" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-48 orange" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-56 orange" aria-hidden="true"><span class="ph"></span></span>
@@ -264,34 +265,80 @@
                 <span class="ic ic-56 danger" aria-hidden="true"><span class="ph"></span></span>
                 <span class="ic ic-80 danger" aria-hidden="true"><span class="ph"></span></span>
               </div>
-              <p class="card-spec-note">Figma: radius max 9999 · surfaces brand/neutral/accentOne/accentTwo/success/warning/danger weak · glyph uses the exported placeholder, tinted with the matching text token.</p>
             </div>
+          </div>
+          <div class="guide" data-od-id="icon-container-guidance">
+            <section class="guide-card use"><h5>Use for</h5><ul><li>Object or category marker on a card, list item, carousel item, page header, or standalone module</li><li>Primary for a brand-colored marker; Neutral when the icon should stay quiet</li><li>Secondary purple or orange for a category accent that is not a status</li><li>Success, warning, or danger for status, with a nearby label that states it</li><li>One icon container per idea</li></ul></section>
+            <section class="guide-card avoid"><h5>Not for</h5><ul><li>A control the member activates (use <a href="#icon-buttons">Icon button</a>); it has no interactions</li><li>Navigation or inline in a line of body text</li><li>A count or compact status chip (use Badge Notification)</li><li>A symbol with no background (use Icon)</li><li>Rows of many containers, which are hard to scan</li></ul></section>
+            <section class="guide-card wide"><h5>Accessibility</h5><dl>
+              <dt>Icon</dt><dd><p>Hide the icon from assistive technology when a nearby label states the meaning, or give it a short name when it is the only cue. It needs at least 3:1 contrast against the container fill for its state.</p></dd>
+              <dt>Icon container</dt><dd><p>Success, warning, and danger must not be the only status cue, so a nearby label must state the status. Meaning must not rely only on the container color, shape, or size.</p></dd>
+            </dl></section>
           </div>
         </section>
 
         <section class="card-subsection" id="divider" data-od-id="divider-subsection">
-          <div class="sub-head"><p class="eyebrow">Separation</p><h4>Divider</h4><p>Two types: a 1px content rule, and an OR rule that splits a line around Body 2 Medium label. Reference width is 343px.</p></div>
+          <div class="sub-head"><h4>Divider</h4><p>Separates related items or distinct content. Type=content is a single line between related regions that are not a choice. Type=or places the label OR between two lines when the member is choosing between what is above and what is below.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=47624-55843" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
-            <div class="demo-label">Content and OR</div>
+            <div class="demo-label">Variants</div>
             <div class="stage">
               <div class="divider-stack" data-od-id="divider-types">
-                <div class="divider-content" role="separator"></div>
-                <div class="divider-or" role="separator"><span>OR</span></div>
+                <div class="variant"><p class="variant-label">Content</p><div class="divider-content" role="separator"></div></div>
+                <div class="variant"><p class="variant-label">Or</p><div class="divider-or" role="separator"><span>OR</span></div></div>
               </div>
-              <p class="card-spec-note">Figma: Type=content is a hairline in border/weakest. Type=or uses 20px gaps and text/neutral/strong (#3b3b3b).</p>
             </div>
+          </div>
+          <div class="guide" data-od-id="divider-guidance">
+            <section class="guide-card use"><h5>Use for</h5><ul><li>Content: separating items that don't require a distinct choice, one divider between blocks</li><li>OR: separating two alternatives the member chooses between, one per pair</li><li>Placing between the two regions at the content width</li><li>The label written as OR, in capitals, with no period or slash</li></ul></section>
+            <section class="guide-card avoid"><h5>Not for</h5><ul><li>A line between every row of content</li><li>Several OR dividers on one screen</li><li>A phrase or sentence in the label</li><li>A header underline or a card border</li><li>A control inside a button</li><li>A tappable row (use List item) or a section that expands (use Accordion)</li></ul></section>
+            <section class="guide-card wide"><h5>Accessibility</h5><dl>
+              <dt>Line</dt><dd><p>Hide the lines from assistive technology because they repeat the visual break. When a line is the only cue that content is separated, it needs at least 3:1 contrast against the surface.</p></dd>
+              <dt>OR label</dt><dd><p>The choice between the two regions must be stated by the visible OR label, not by line color alone. The label must stay readable and must not clip at 200% text size.</p></dd>
+              <dt>Divider</dt><dd><p>Reading order follows the visual order: content above, then OR when it is present, then content below.</p></dd>
+            </dl></section>
+          </div>
+        </section>
+
+        <section class="card-subsection" id="illustration-container" data-od-id="illustration-container-subsection">
+          <div class="sub-head"><h4>Illustration container</h4><p>Holds an illustration for a broad idea, rather than a single object or service. Use it when an inline module or a full page needs a conceptual visual the member can recognize before reading.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=49983-20353" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
+          <div class="demo">
+            <div class="demo-label">Sizes</div>
+            <div class="stage">
+              <div class="illo-row" data-od-id="illustration-container-sizes">
+                <figure><span class="illo illo-s"><img src="assets/images/illo-pill-bottle.svg" alt=""></span><figcaption>S (40px)</figcaption></figure>
+                <figure><span class="illo illo-m"><img src="assets/images/illo-pill-bottle.svg" alt=""></span><figcaption>M (56px)</figcaption></figure>
+                <figure><span class="illo illo-l"><img src="assets/images/illo-pill-bottle.svg" alt=""></span><figcaption>L (80px)</figcaption></figure>
+              </div>
+            </div>
+          </div>
+          <div class="demo" style="margin-top: var(--s4)">
+            <div class="demo-label">In a module</div>
+            <div class="stage">
+              <div class="illo-example" data-od-id="illustration-container-example">
+                <span class="illo illo-m"><img src="assets/images/illo-pill-bottle.svg" alt=""></span>
+                <div><strong>Manage your prescriptions</strong><p>See refills, pharmacy details, and pricing in one place.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="guide" data-od-id="illustration-container-guidance">
+            <section class="guide-card use"><h5>Use for</h5><ul><li>A concept that an icon cannot carry</li><li>S inline with text, M in a module, L at the top of a page or empty state</li><li>Sitting beside or above the text that explains the idea</li><li>One illustration container per module</li></ul></section>
+            <section class="guide-card avoid"><h5>Not for</h5><ul><li>A single object or service (use Icon)</li><li>A tappable control (use Icon button), a list marker, or inside a button</li><li>Standing alone with no explanatory text</li><li>A photo of a person or place</li><li>Several containers in one block</li></ul></section>
+            <section class="guide-card wide"><h5>Accessibility</h5><dl>
+              <dt>Illustration</dt><dd><p>Hide it from assistive technology when the text beside it states the idea, or give it brief alt text when it adds meaning. The parts the member needs to understand need at least 3:1 contrast with the surface.</p></dd>
+              <dt>Container</dt><dd><p>Keep the illustration with the text that explains it, in the reading order the member sees. Don't bake words into the illustration, and keep the text beside it readable at 200% text size.</p></dd>
+            </dl></section>
           </div>
         </section>
       </section>
 
       <section class="component-section" id="avatar" data-od-id="avatar-section">
         <div class="section-head">
-          <div><p class="eyebrow">Identity</p><h3>Avatar</h3><p>Circular identity for a member, provider, clinic, or the Dot assistant. Prefer a photo. Initials are the next fallback. Clinic and provider glyphs are for those roles when a photo is not available. Dot is reserved for the Included Health assistant.</p></div>
+          <div><h3>Avatar</h3><p>Circular identity for a member, provider, clinic, or the Dot assistant. Prefer a photo. Initials are the next fallback. Clinic and provider glyphs are for those roles when a photo is not available. Dot is reserved for the Included Health assistant.</p></div>
           <span class="count">02 / 13</span>
         </div>
 
         <section class="card-subsection" id="avatar-photo" data-od-id="avatar-photo-subsection">
-          <div class="sub-head"><p class="eyebrow">Preferred</p><h4>Photo</h4><p>Crop a real photograph into the circle. 24 through 160. A verified badge may sit on 48 and up, bottom-right.</p></div>
+          <div class="sub-head"><h4>Photo</h4><p>Crop a real photograph into the circle. 24 through 160. A verified badge may sit on 48 and up, bottom-right.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-15599" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Sizes with optional verification</div>
             <div class="stage avatar-scroll">
@@ -303,13 +350,12 @@
                 <span class="avatar av-80" aria-label="Verified member photo, 80"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
                 <span class="avatar av-160" aria-label="Verified member photo, 160"><span class="avatar-media"><img src="assets/images/d9ade7fcec.png" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
               </div>
-              <p class="card-spec-note">Figma sizes: 24, 32, 48, 64, 80, 160. Photo uses a 1px border/weakest ring. Verified overlay: 16 / 22 / 28 / 46 on 48 / 64 / 80 / 160.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="avatar-initials" data-od-id="avatar-initials-subsection">
-          <div class="sub-head"><p class="eyebrow">Fallback</p><h4>Initials</h4><p>Use two letters when no photo is available. Neutral weak fill, black Figtree Bold. Type tracks the named scale: Caption at 24, Body 2 at 32, Title 3 at 48, Title 2 at 64, Title 1 at 80, Display 1 at 160.</p></div>
+          <div class="sub-head"><h4>Initials</h4><p>Use two letters when no photo is available. Neutral weak fill, black Figtree Bold. Type tracks the named scale: Caption at 24, Body 2 at 32, Title 3 at 48, Title 2 at 64, Title 1 at 80, Display 1 at 160.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-15599" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">AL across sizes</div>
             <div class="stage avatar-scroll">
@@ -326,7 +372,7 @@
         </section>
 
         <section class="card-subsection" id="avatar-clinic" data-od-id="avatar-clinic-subsection">
-          <div class="sub-head"><p class="eyebrow">Place</p><h4>Clinic fallback</h4><p>Location glyph on a neutral plate when the subject is a clinic or site, not a person. No verified badge. Sizes start at 32 — there is no 24 in the Figma set.</p></div>
+          <div class="sub-head"><h4>Clinic fallback</h4><p>Location glyph on a neutral plate when the subject is a clinic or site, not a person. No verified badge. Sizes start at 32 — there is no 24 in the Figma set.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-15599" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">32 to 160</div>
             <div class="stage avatar-scroll">
@@ -342,7 +388,7 @@
         </section>
 
         <section class="card-subsection" id="avatar-dot" data-od-id="avatar-dot-subsection">
-          <div class="sub-head"><p class="eyebrow">Assistant</p><h4>Dot</h4><p>The Included Health assistant mark on white with a weakest border. Do not substitute a member photo or initials for Dot.</p></div>
+          <div class="sub-head"><h4>Dot</h4><p>The Included Health assistant mark on white with a weakest border. Do not substitute a member photo or initials for Dot.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-12799" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">24 to 160</div>
             <div class="stage avatar-scroll">
@@ -359,7 +405,7 @@
         </section>
 
         <section class="card-subsection" id="avatar-provider" data-od-id="avatar-provider-subsection">
-          <div class="sub-head"><p class="eyebrow">Clinician fallback</p><h4>Provider fallback</h4><p>Use when initials are not available for a clinician. Neutral plate plus the exported person-medical glyph. Verified badge may appear from 48 up, as in the Figma matrix.</p></div>
+          <div class="sub-head"><h4>Provider fallback</h4><p>Use when initials are not available for a clinician. Neutral plate plus the exported person-medical glyph. Verified badge may appear from 48 up, as in the Figma matrix.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-15599" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">24 to 160</div>
             <div class="stage avatar-scroll">
@@ -371,7 +417,6 @@
                 <span class="avatar fallback av-80" aria-label="Verified provider, 80"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
                 <span class="avatar fallback av-160" aria-label="Verified provider, 160"><span class="avatar-media"><img src="assets/images/e304045968.svg" alt=""></span><span class="badge-verified ih"><img class="seal" src="assets/images/dbe80f9746.svg" alt=""><img class="mark" src="assets/images/59b0f4cf8b.svg" alt=""></span></span>
               </div>
-              <p class="card-spec-note">Annotation in Figma: provider fallback if initials are not available. Initials are used when no photo is available.</p>
             </div>
           </div>
         </section>
@@ -379,12 +424,12 @@
 
       <section class="component-section" id="badges" data-od-id="badges-section">
         <div class="section-head">
-          <div><p class="eyebrow">Status marks</p><h3>Badges</h3><p>Two families: a verified seal for Included Health or Doctor On Demand, and a notification mark for unread or unseen activity. Do not invent a third badge shape.</p></div>
+          <div><h3>Badges</h3><p>Two families: a verified seal for Included Health or Doctor On Demand, and a notification mark for unread or unseen activity. Do not invent a third badge shape.</p></div>
           <span class="count">03 / 13</span>
         </div>
 
         <section class="card-subsection" id="badge-verified" data-od-id="badge-verified-subsection">
-          <div class="sub-head"><p class="eyebrow">Credential</p><h4>Badge Verified</h4><p>Scalloped Included blue seal. Small is 32px; large is 44px. IH uses the knockout logomark. DOD uses the dr+ mark. Place on an avatar’s bottom-right — never as a standalone brand logo.</p></div>
+          <div class="sub-head"><h4>Badge Verified</h4><p>Scalloped Included blue seal. Small is 32px; large is 44px. IH uses the knockout logomark. DOD uses the dr+ mark. Place on an avatar’s bottom-right — never as a standalone brand logo.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-12798" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">IH and DOD · small and large</div>
             <div class="stage">
@@ -394,13 +439,12 @@
                 <div class="badge-pair"><span class="badge-verified dod" role="img" aria-label="Doctor On Demand verified, small"><img class="seal" src="assets/images/7be78b848c.svg" alt=""><img class="mark" src="assets/images/dce26874c5.png" alt=""></span><span>DOD · 32</span></div>
                 <div class="badge-pair"><span class="badge-verified dod large" role="img" aria-label="Doctor On Demand verified, large"><img class="seal" src="assets/images/b4c6f0a11e.svg" alt=""><img class="mark" src="assets/images/dce26874c5.png" alt=""></span><span>DOD · 44</span></div>
               </div>
-              <p class="card-spec-note">Seals and marks are exported Figma vectors. The DOD small seal shares the IH small star path, with the dr+ mark inset 18.75%.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="badge-notification" data-od-id="badge-notification-subsection">
-          <div class="sub-head"><p class="eyebrow">Unread</p><h4>Badge Notification</h4><p>Brand style only in this production set. Minimized is an 8px dot. Emphasized is a 20px count with Caption Bold and a 2px white stroke so it stays visible on a photo or icon.</p></div>
+          <div class="sub-head"><h4>Badge Notification</h4><p>Brand style only in this production set. Minimized is an 8px dot. Emphasized is a 20px count with Caption Bold and a 2px white stroke so it stays visible on a photo or icon.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=46757-12798" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Minimized and emphasized</div>
             <div class="stage">
@@ -418,7 +462,6 @@
                   <span class="badge-count">1</span>
                 </div>
               </div>
-              <p class="card-spec-note">Figma: Style=brand · Type=minimized 8px · Type=emphasized 20px Caption Bold inverse. Stroke is white so the count reads on imagery.</p>
             </div>
           </div>
         </section>
@@ -426,7 +469,7 @@
 
       <section class="component-section" id="buttons" data-od-id="buttons-section">
         <div class="section-head">
-          <div><p class="eyebrow">Actions</p><h3>Buttons</h3><p>Use one primary action per task. The family covers three hierarchy levels, two sizes, fixed or content-fit widths, destructive actions, and six interaction states, plus groups, icon buttons, text links, and the segmented control. Medium button labels use <strong>Body 1</strong> (Figtree Medium 500, 16&nbsp;/&nbsp;24); Small buttons use <strong>Body 2</strong> (14&nbsp;/&nbsp;20).</p></div>
+          <div><h3>Buttons</h3><p>Use one primary action per task. The family covers three hierarchy levels, two sizes, fixed or content-fit widths, destructive actions, and six interaction states, plus groups, icon buttons, text links, and the segmented control. Medium button labels use <strong>Body 1</strong> (Figtree Medium 500, 16&nbsp;/&nbsp;24); Small buttons use <strong>Body 2</strong> (14&nbsp;/&nbsp;20).</p></div>
           <span class="count">04 / 13</span>
         </div>
         <div class="demo">
@@ -606,7 +649,7 @@
 
       <section class="component-section" id="feedback" data-od-id="feedback-section">
         <div class="section-head">
-          <div><p class="eyebrow">Status and feedback</p><h3>Banners</h3><p>Use the banner type that matches who initiated the message and how broadly it applies.</p></div>
+          <div><h3>Banners</h3><p>Use the banner type that matches who initiated the message and how broadly it applies.</p></div>
           <span class="count">05 / 13</span>
         </div>
         <div class="sub-head" id="page-banners" data-od-id="page-banners-heading">
@@ -715,12 +758,12 @@
 
       <section class="component-section" id="forms" data-od-id="forms-section">
         <div class="section-head">
-          <div><p class="eyebrow">Data entry</p><h3>Inputs &amp; forms</h3><p>Labels stay visible, fields are 48px with 8px corners, and focus uses a 2.5px Included blue ring. Required fields use an asterisk — never “optional.”</p></div>
+          <div><h3>Inputs &amp; forms</h3><p>Labels stay visible, fields are 48px with 8px corners, and focus uses a 2.5px Included blue ring. Required fields use an asterisk — never “optional.”</p></div>
           <span class="count">06 / 13</span>
         </div>
 
         <section class="card-subsection" id="form-info" data-od-id="form-info-subsection">
-          <div class="sub-head"><p class="eyebrow">Content rules</p><h4>Form info</h4><p>Mark required field titles with an asterisk. Keep submit active. Use Skip when a screen is optional.</p></div>
+          <div class="sub-head"><h4>Form info</h4><p>Mark required field titles with an asterisk. Keep submit active. Use Skip when a screen is optional.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Required fields and actions</div>
             <div class="stage">
@@ -741,7 +784,7 @@
         </section>
 
         <section class="card-subsection" id="text-field" data-od-id="text-field-subsection">
-          <div class="sub-head"><p class="eyebrow">Single line</p><h4>Text field</h4><p>Body 1 Bold labels sit 8px above a 48px field. Placeholder and value both use Body 1 Medium. Hints use Caption.</p></div>
+          <div class="sub-head"><h4>Text field</h4><p>Body 1 Bold labels sit 8px above a 48px field. Placeholder and value both use Body 1 Medium. Hints use Caption.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Placeholder and value states</div>
             <form class="stage" onsubmit="return false">
@@ -768,13 +811,12 @@
                 <input id="tf-note" maxlength="200" placeholder="What would you like help with?">
                 <p class="hint">Use the email address associated with your benefits.</p>
               </div>
-              <p class="card-spec-note">Figma: 311×80 with label · 8px field radius · 16/12 padding · 1px #8f8f8f default border (text area and dropdown use #c6c6c6) · 2.5px #0012e7 focus · #cb0c31 error.</p>
             </form>
           </div>
         </section>
 
         <section class="card-subsection" id="text-area" data-od-id="text-area-subsection">
-          <div class="sub-head"><p class="eyebrow">Multi-line</p><h4>Text Area</h4><p>Same label and field chrome as Text field, with a taller 72px value area for longer member notes.</p></div>
+          <div class="sub-head"><h4>Text Area</h4><p>Same label and field chrome as Text field, with a taller 72px value area for longer member notes.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Default and error</div>
             <form class="stage" onsubmit="return false" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px))">
@@ -785,7 +827,7 @@
         </section>
 
         <section class="card-subsection" id="dropdown" data-od-id="dropdown-subsection">
-          <div class="sub-head"><p class="eyebrow">Selection</p><h4>Dropdown</h4><p>Closed fields show the current value and a 16px arrow. Open the list to choose — never use this for free text.</p></div>
+          <div class="sub-head"><h4>Dropdown</h4><p>Closed fields show the current value and a 16px arrow. Open the list to choose — never use this for free text.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Default, open, and error</div>
             <div class="stage" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px));align-items:start">
@@ -808,7 +850,7 @@
         </section>
 
         <section class="card-subsection" id="search-field" data-od-id="search-field-subsection">
-          <div class="sub-head"><p class="eyebrow">Find</p><h4>Search Field</h4><p>A leading 24px search glyph stays Included blue. Hover tints the field; focus thickens the brand ring.</p></div>
+          <div class="sub-head"><h4>Search Field</h4><p>A leading 24px search glyph stays Included blue. Hover tints the field; focus thickens the brand ring.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Default, focus, and disabled</div>
             <form class="stage" onsubmit="return false" style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,311px))">
@@ -819,7 +861,7 @@
         </section>
 
         <section class="card-subsection" id="date-input" data-od-id="date-input-subsection">
-          <div class="sub-head"><p class="eyebrow">Structured date</p><h4>Date Input</h4><p>Month, day, and year are separate 48px fields. The calendar glyph opens the Calendar pattern.</p></div>
+          <div class="sub-head"><h4>Date Input</h4><p>Month, day, and year are separate 48px fields. The calendar glyph opens the Calendar pattern.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">MM / DD / YYYY with calendar trigger</div>
             <form class="stage" onsubmit="return false">
@@ -837,7 +879,7 @@
         </section>
 
         <section class="card-subsection" id="calendar" data-od-id="calendar-subsection">
-          <div class="sub-head"><p class="eyebrow">Scheduling</p><h4>Calendar</h4><p>A selected day is a solid Included blue circle. Today uses a blue ring. Pair the month with pill-shaped time slots.</p></div>
+          <div class="sub-head"><h4>Calendar</h4><p>A selected day is a solid Included blue circle. Today uses a blue ring. Pair the month with pill-shaped time slots.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Desktop month and times</div>
             <div class="stage">
@@ -861,13 +903,12 @@
                   </div>
                 </div>
               </div>
-              <p class="card-spec-note">Figma: selected day and time use brand fill; unavailable dates 5, 17, and 20 stay disabled.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="phone-input" data-od-id="phone-input-subsection">
-          <div class="sub-head"><p class="eyebrow">Contact</p><h4>Phone Input</h4><p>Prefix and number are separate 48px segments. Focus rings the active segment only, at 2.5px Included blue.</p></div>
+          <div class="sub-head"><h4>Phone Input</h4><p>Prefix and number are separate 48px segments. Focus rings the active segment only, at 2.5px Included blue.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Resting, prefix focus, number focus</div>
             <form class="stage stack" onsubmit="return false">
@@ -878,7 +919,7 @@
         </section>
 
         <section class="card-subsection" id="radio-button" data-od-id="radio-button-subsection">
-          <div class="sub-head"><p class="eyebrow">Single choice</p><h4>Radio Button</h4><p>48×48 tap region, 20px control, Body 1 Medium label. Selected uses a navy ring and Included blue inner dot.</p></div>
+          <div class="sub-head"><h4>Radio Button</h4><p>48×48 tap region, 20px control, Body 1 Medium label. Selected uses a navy ring and Included blue inner dot.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">With label</div>
             <form class="stage" onsubmit="return false">
@@ -891,13 +932,12 @@
                   <label class="choice is-error"><input type="radio" name="contact-error"><span class="radio-mark"></span> List item</label>
                 </div>
               </fieldset>
-              <p class="card-spec-note">Minimum interactive target is 48×48. Keyboard focus uses a high-contrast outline outside the control.</p>
             </form>
           </div>
         </section>
 
         <section class="card-subsection" id="checkbox" data-od-id="checkbox-subsection">
-          <div class="sub-head"><p class="eyebrow">Multi choice</p><h4>Checkbox</h4><p>Unchecked is a 20px square with a 4px radius. Checked fills Included blue with the exported white check.</p></div>
+          <div class="sub-head"><h4>Checkbox</h4><p>Unchecked is a 20px square with a 4px radius. Checked fills Included blue with the exported white check.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Unchecked, checked, indeterminate</div>
             <form class="stage" onsubmit="return false">
@@ -912,7 +952,7 @@
         </section>
 
         <section class="card-subsection" id="slider" data-od-id="slider-subsection">
-          <div class="sub-head"><p class="eyebrow">Numeric range</p><h4>Slider</h4><p>Display 2 shows the live value. The 32px thumb sits on an 8px track filled with Included blue.</p></div>
+          <div class="sub-head"><h4>Slider</h4><p>Display 2 shows the live value. The 32px thumb sits on an 8px track filled with Included blue.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Default / Active at 50%</div>
             <div class="stage">
@@ -927,7 +967,7 @@
         </section>
 
         <section class="card-subsection" id="star-rating" data-od-id="star-rating-subsection">
-          <div class="sub-head"><p class="eyebrow">Feedback</p><h4>Star rating</h4><p>Five 40px stars from the Anatomy asset. Filled stars use Included blue; empty stars are black at 15% opacity.</p></div>
+          <div class="sub-head"><h4>Star rating</h4><p>Five 40px stars from the Anatomy asset. Filled stars use Included blue; empty stars are black at 15% opacity.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">3 of 5 selected</div>
             <div class="stage">
@@ -943,7 +983,7 @@
         </section>
 
         <section class="card-subsection" id="sms-verification" data-od-id="sms-verification-subsection">
-          <div class="sub-head"><p class="eyebrow">One-time code</p><h4>SMS Verification</h4><p>Six 48px fields collect the code. The first field takes focus; the form auto-submits when complete.</p></div>
+          <div class="sub-head"><h4>SMS Verification</h4><p>Six 48px fields collect the code. The first field takes focus; the form auto-submits when complete.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Enter the code we sent you</div>
             <form class="stage otp" onsubmit="return false" data-od-id="sms-example">
@@ -967,7 +1007,7 @@
         </section>
 
         <section class="card-subsection" id="payment" data-od-id="payment-subsection">
-          <div class="sub-head"><p class="eyebrow">Billing</p><h4>Payment</h4><p>Credit card number, name, expiration, CVV, and ZIP reuse Text field chrome. Brand marks sit beside the card label.</p></div>
+          <div class="sub-head"><h4>Payment</h4><p>Credit card number, name, expiration, CVV, and ZIP reuse Text field chrome. Brand marks sit beside the card label.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-47486" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Add a payment method</div>
             <form class="stage pay-form" onsubmit="return false" data-od-id="payment-example">
@@ -994,12 +1034,12 @@
 
       <section class="component-section" id="cards" data-od-id="cards-section">
         <div class="section-head">
-          <div><p class="eyebrow">Containers</p><h3>Cards</h3><p>Purpose-built containers for entering care, tracking requests, comparing services and providers, and confirming appointments.</p></div>
+          <div><h3>Cards</h3><p>Purpose-built containers for entering care, tracking requests, comparing services and providers, and confirming appointments.</p></div>
           <span class="count">07 / 13</span>
         </div>
 
         <section class="card-subsection" id="get-care-card" data-od-id="get-care-card-subsection">
-          <div class="sub-head"><p class="eyebrow">Care entry</p><h4>Get Care Card</h4><p>Use grid tiles for compact discovery and list cards when a description or larger tap surface helps members choose.</p></div>
+          <div class="sub-head"><h4>Get Care Card</h4><p>Use grid tiles for compact discovery and list cards when a description or larger tap surface helps members choose.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-59986" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Grid and list layouts</div>
             <div class="stage">
@@ -1014,13 +1054,12 @@
                   <span class="arrow" aria-hidden="true">→</span>
                 </article>
               </div>
-              <p class="card-spec-note">Figma: 167px grid / 343px list · 12px padding and gap · 24px corner · Grid title uses Body 1 Bold; list title uses Title 5 SemiBold.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="status-card" data-od-id="status-card-subsection">
-          <div class="sub-head"><p class="eyebrow">Request tracking</p><h4>Status Card</h4><p>Summarizes an active advocacy or care request with status, timing, contextual guidance, and an optional recovery action.</p></div>
+          <div class="sub-head"><h4>Status Card</h4><p>Summarizes an active advocacy or care request with status, timing, contextual guidance, and an optional recovery action.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-59986" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Request with status, callout, and action</div>
             <div class="stage">
@@ -1038,13 +1077,12 @@
                 <div class="card-callout">We’ll let you know if we need anything else.</div>
                 <button class="btn small secondary card-text-action" type="button">Cancel</button>
               </article>
-              <p class="card-spec-note">Figma: 280px base · 16px padding · 12px section gap · Title 4, Body 2, and Footer labels. This component is marked work in progress in the source.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="service-card" data-od-id="service-card-subsection">
-          <div class="sub-head"><p class="eyebrow">Service choice</p><h4>Service Card</h4><p>Presents a care option with its recommendation, expected timing, price, short description, and one clear selection action.</p></div>
+          <div class="sub-head"><h4>Service Card</h4><p>Presents a care option with its recommendation, expected timing, price, short description, and one clear selection action.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-59986" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Recommended service option</div>
             <div class="stage">
@@ -1056,13 +1094,12 @@
                 </div>
                 <button class="card-full-action" type="button">Choose this service</button>
               </article>
-              <p class="card-spec-note">Figma: 300px phone card · 16px padding and major gap · 8px copy gap · 24px corner.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="preview-card" data-od-id="preview-card-subsection">
-          <div class="sub-head"><p class="eyebrow">Provider comparison</p><h4>Preview Card</h4><p>Gives members enough provider, location, network, and availability context to make a confident next-step decision.</p></div>
+          <div class="sub-head"><h4>Preview Card</h4><p>Gives members enough provider, location, network, and availability context to make a confident next-step decision.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-59986" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">External provider preview</div>
             <div class="stage">
@@ -1084,13 +1121,12 @@
                   <button class="btn small secondary" type="button">View full profile</button>
                 </div>
               </article>
-              <p class="card-spec-note">Figma: 300px base · 48px profile image · 16px card rhythm · stacked primary and secondary actions.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="confirmation-card" data-od-id="confirmation-card-subsection">
-          <div class="sub-head"><p class="eyebrow">Appointment completion</p><h4>Confirmation Card</h4><p>Confirms who, when, cost, and required next steps after booking without forcing the member to reconstruct the visit details.</p></div>
+          <div class="sub-head"><h4>Confirmation Card</h4><p>Confirms who, when, cost, and required next steps after booking without forcing the member to reconstruct the visit details.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-59986" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Virtual primary care appointment</div>
             <div class="stage">
@@ -1115,7 +1151,6 @@
                   <button class="btn small secondary" type="button">Manage appointment</button>
                 </div>
               </article>
-              <p class="card-spec-note">Figma: 380px VPC card · 16px padding and section rhythm · 24px corner · responsive minimum width of 280px.</p>
             </div>
           </div>
         </section>
@@ -1123,12 +1158,12 @@
 
       <section class="component-section" id="lists" data-od-id="lists-section">
         <div class="section-head">
-          <div><p class="eyebrow">Structured content</p><h3>Lists</h3><p>Five production families from the Anatomy Lists page organize related choices, progressive detail, status over time, promotional benefits, and label–value information. Choose the family by task rather than styling every row alike.</p></div>
+          <div><h3>Lists</h3><p>Five production families from the Anatomy Lists page organize related choices, progressive detail, status over time, promotional benefits, and label–value information. Choose the family by task rather than styling every row alike.</p></div>
           <span class="count">08 / 13</span>
         </div>
 
         <section class="card-subsection" id="list-items" data-od-id="list-items-subsection">
-          <div class="sub-head"><p class="eyebrow">Selection and navigation</p><h4>List items</h4><p>The base item is 88px high and composes optional leading media, Body 1 content, and one trailing control. Compact text-only lists use 64px rows; dividers span the content width.</p></div>
+          <div class="sub-head"><h4>List items</h4><p>The base item is 88px high and composes optional leading media, Body 1 content, and one trailing control. Compact text-only lists use 64px rows; dividers span the content width.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-40444" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Leading and trailing variants</div>
             <div class="stage">
@@ -1154,7 +1189,6 @@
                   <span></span>
                 </label>
               </div>
-              <p class="card-spec-note">Figma: 88px base row · 56px leading media · 20px checkbox/radio · 32–36px trailing action · 16px horizontal inset. Keep the entire navigational row clickable; use native controls for selection rows.</p>
             </div>
             <div class="demo-label">List templates</div>
             <div class="stage list-variants">
@@ -1174,7 +1208,7 @@
         </section>
 
         <section class="card-subsection" id="accordions" data-od-id="accordion-subsection">
-          <div class="sub-head"><p class="eyebrow">Progressive disclosure</p><h4>Accordion</h4><p>An 80px header expands to reveal related supporting content. The same header returns to its original collapsed state; do not change its label or replace the disclosure control after opening.</p></div>
+          <div class="sub-head"><h4>Accordion</h4><p>An 80px header expands to reveal related supporting content. The same header returns to its original collapsed state; do not change its label or replace the disclosure control after opening.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-40444" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Collapsed and expanded</div>
             <div class="stage">
@@ -1192,13 +1226,12 @@
                   <div class="accordion-panel"><p>Open the appointment from Activity to review available rescheduling and cancellation options.</p></div>
                 </details>
               </div>
-              <p class="card-spec-note">Figma: 343px reference width · 80px header · 44px disclosure target · expanded examples at 152–168px total height. Native <code>details</code> preserves keyboard and screen-reader behavior.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="timelines" data-od-id="timeline-subsection">
-          <div class="sub-head"><p class="eyebrow">Ordered status</p><h4>Timeline</h4><p>Use a vertical timeline only when order and status are both meaningful. Complete, in-progress, not-started, danger, time-dependent, and cancelled states combine a 22px marker with a solid or dotted connector.</p></div>
+          <div class="sub-head"><h4>Timeline</h4><p>Use a vertical timeline only when order and status are both meaningful. Complete, in-progress, not-started, danger, time-dependent, and cancelled states combine a 22px marker with a solid or dotted connector.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-40444" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Care request progress</div>
             <div class="stage">
@@ -1220,13 +1253,12 @@
                   <div class="timeline-copy"><strong>Choose a provider</strong><span>Not started</span></div>
                 </li>
               </ol>
-              <p class="card-spec-note">Figma: 22px status dots · 12px dot-to-copy gap · solid connectors for established progression and dotted connectors where timing or transition remains open.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="promo-bullets" data-od-id="promo-bullets-subsection">
-          <div class="sub-head"><p class="eyebrow">Benefit summary</p><h4>Promo bullets</h4><p>A short, scannable group pairs one supporting icon with one member benefit. Use parallel language and keep each explanation to one concise line when possible.</p></div>
+          <div class="sub-head"><h4>Promo bullets</h4><p>A short, scannable group pairs one supporting icon with one member benefit. Use parallel language and keep each explanation to one concise line when possible.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-40444" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Why use Included Health</div>
             <div class="stage">
@@ -1235,13 +1267,12 @@
                 <li><span class="promo-icon"><img src="assets/images/a157bcd3a2.svg" alt=""></span><span><strong>Benefits made clearer</strong><span>Understand coverage and costs before you choose care.</span></span></li>
                 <li><span class="promo-icon"><img src="assets/images/a157bcd3a2.svg" alt=""></span><span><strong>Support in one place</strong><span>Message your Care Team when questions come up.</span></span></li>
               </ul>
-              <p class="card-spec-note">Use three to five bullets. Icons support recognition but never replace the visible text label.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="detail-lists" data-od-id="detail-list-subsection">
-          <div class="sub-head"><p class="eyebrow">Label and value</p><h4>Detail List</h4><p>Use a Detail List for compact, non-editable facts. Values may be plain text, text with an icon, a text link, or a status paired with a text link; dividers are optional when grouping is already clear.</p></div>
+          <div class="sub-head"><h4>Detail List</h4><p>Use a Detail List for compact, non-editable facts. Values may be plain text, text with an icon, a text link, or a status paired with a text link; dividers are optional when grouping is already clear.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-40444" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Insurance details · with dividers</div>
             <div class="stage">
@@ -1251,7 +1282,6 @@
                 <div><dt>Coverage</dt><dd class="detail-value"><span class="detail-status">Active</span><a href="#detail-lists">View plan details</a></dd></div>
                 <div><dt>Primary care</dt><dd class="detail-value"><img src="assets/images/7720445710.svg" width="16" height="16" alt=""><span>Virtual visits available</span></dd></div>
               </dl>
-              <p class="card-spec-note">Figma: 355px reference width · Body 2 label and value rows · optional dividers · text, icon, link, and status value variants. Keep labels concise and align values consistently.</p>
             </div>
           </div>
         </section>
@@ -1259,12 +1289,12 @@
 
       <section class="component-section" id="navigation" data-od-id="navigation-section">
         <div class="section-head">
-          <div><p class="eyebrow">Wayfinding</p><h3>Navigation</h3><p>Six production patterns from the Anatomy Navigation page: persistent destinations, in-page views, and legal wayfinding. Do not mix a bottom tab bar with a web top nav on the same surface.</p></div>
+          <div><h3>Navigation</h3><p>Six production patterns from the Anatomy Navigation page: persistent destinations, in-page views, and legal wayfinding. Do not mix a bottom tab bar with a web top nav on the same surface.</p></div>
           <span class="count">09 / 13</span>
         </div>
 
         <section class="card-subsection" id="bottom-tab-bar" data-od-id="bottom-tab-bar-subsection">
-          <div class="sub-head"><p class="eyebrow">Native destinations</p><h4>Bottom tab bar</h4><p>iPhone is 100px with a stacked 24px icon and Footer 11/16 label. iPad is 72px with icon and label in a row. Active uses a filled glyph, SemiBold label, and a 2px black highlight at the top of the item.</p></div>
+          <div class="sub-head"><h4>Bottom tab bar</h4><p>iPhone is 100px with a stacked 24px icon and Footer 11/16 label. iPad is 72px with icon and label in a row. Active uses a filled glyph, SemiBold label, and a 2px black highlight at the top of the item.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">iPhone · Home active</div>
             <div class="stage">
@@ -1289,13 +1319,12 @@
                 </div>
                 <span class="home-indicator" aria-hidden="true"></span>
               </nav>
-              <p class="card-spec-note">Figma: Home, Messages, Activity, Me. Inactive icons are outline. A red badge sits on Messages when unread. The home indicator is device chrome, not a control.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="nav-drawer" data-od-id="nav-drawer-subsection">
-          <div class="sub-head"><p class="eyebrow">Web overlay</p><h4>Nav Drawer (web)</h4><p>A 491px panel with a 56px modal nav, Title 1 headline, Get Care Cards, and optional saved-provider guidance. Close sits in the header; the page behind is not a second primary destination.</p></div>
+          <div class="sub-head"><h4>Nav Drawer (web)</h4><p>A 491px panel with a 56px modal nav, Title 1 headline, Get Care Cards, and optional saved-provider guidance. Close sits in the header; the page behind is not a second primary destination.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Web drawer · Get Care cards</div>
             <div class="stage">
@@ -1324,13 +1353,12 @@
                   </div>
                 </div>
               </aside>
-              <p class="card-spec-note">Figma: 32px side padding · 24px card radius · 12px card padding. Mobile web uses the same panel at 375px instead of a second pattern.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="top-nav" data-od-id="top-nav-subsection">
-          <div class="sub-head"><p class="eyebrow">Web destinations</p><h4>Top Nav</h4><p>64px bar. Mobile shows the brand mark plus 24px icons; desktop 768px and up switches to Body 1 labels. Active is Included blue with a 4px brand underline. A danger-red 8px badge marks unread messages.</p></div>
+          <div class="sub-head"><h4>Top Nav</h4><p>64px bar. Mobile shows the brand mark plus 24px icons; desktop 768px and up switches to Body 1 labels. Active is Included blue with a 4px brand underline. A danger-red 8px badge marks unread messages.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Mobile web · 280–479px</div>
             <div class="stage">
@@ -1355,13 +1383,12 @@
                   <button class="top-nav-item" type="button">Me</button>
                 </div>
               </nav>
-              <p class="card-spec-note">Figma: 16px mobile padding, 48px large-desktop padding. Do not pair this with a bottom tab bar. The mark is the exported Anatomy logo, not a redrawn H.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="secondary-nav" data-od-id="secondary-nav-subsection">
-          <div class="sub-head"><p class="eyebrow">In-flow header</p><h4>Secondary nav</h4><p>A 64px title bar with Title 4 Bold in the center. Left action is a 22px back chevron; right action is optional Body 1 Bold in Included blue. Minimum 48px hit areas on both sides.</p></div>
+          <div class="sub-head"><h4>Secondary nav</h4><p>A 64px title bar with Title 4 Bold in the center. Left action is a 22px back chevron; right action is optional Body 1 Bold in Included blue. Minimum 48px hit areas on both sides.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Back only</div>
             <div class="stage">
@@ -1378,13 +1405,12 @@
                 <p class="title">Back and string button</p>
                 <div class="nav-right"><button class="text-action" type="button">Help</button></div>
               </header>
-              <p class="card-spec-note">Figma also ships Close, Cancel, and Done as text or icon variants of the same 64px bar. Keep one left action and at most one right action.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="page-tab" data-od-id="page-tab-subsection">
-          <div class="sub-head"><p class="eyebrow">In-page views</p><h4>Page Tab</h4><p>48px row, Caption 12/16. Active is Bold Included blue with a 4px brand underline; default is Medium secondary text on a 1px weak divider. Equal-width tabs; use two or three, not more.</p></div>
+          <div class="sub-head"><h4>Page Tab</h4><p>48px row, Caption 12/16. Active is Bold Included blue with a 4px brand underline; default is Medium secondary text on a 1px weak divider. Equal-width tabs; use two or three, not more.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Two tabs</div>
             <div class="stage">
@@ -1405,13 +1431,12 @@
               <div class="tab-panel" id="panel-inbox" role="tabpanel" aria-labelledby="tab-inbox"><strong>Inbox</strong><p>Your care team has replied to your question.</p></div>
               <div class="tab-panel" id="panel-care-team" role="tabpanel" aria-labelledby="tab-care-team" hidden=""><strong>Care team</strong><p>Message your assigned clinician or advocate.</p></div>
               <div class="tab-panel" id="panel-archived" role="tabpanel" aria-labelledby="tab-archived" hidden=""><strong>Archived</strong><p>Older threads stay here after you close them.</p></div>
-              <p class="card-spec-note">Hover tints the tab with brand-weakest. Focus uses a 2px Included blue ring. Do not use Page Tabs for app-level destinations — that is Top Nav or the bottom tab bar.</p>
             </div>
           </div>
         </section>
 
         <section class="card-subsection" id="footer-nav" data-od-id="footer-nav-subsection">
-          <div class="sub-head"><p class="eyebrow">Legal wayfinding</p><h4>Footer</h4><p>A deep-navy tagline band over a white legal row. Links are Body 1 Medium, underlined, in brand-strong blue. Copyright is Body 1 Medium primary text, not a link.</p></div>
+          <div class="sub-head"><h4>Footer</h4><p>A deep-navy tagline band over a white legal row. Links are Body 1 Medium, underlined, in brand-strong blue. Copyright is Body 1 Medium primary text, not a link.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=43307-16532" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo">
             <div class="demo-label">Tagline and legal links</div>
             <div class="stage" style="overflow-x:auto">
@@ -1424,7 +1449,6 @@
                   <span>© 2026 Included Health</span>
                 </div>
               </div>
-              <p class="card-spec-note">Figma: 1280px specimen · 20px tagline padding · 12/48px legal padding · 24px gap. Center the row; wrap on small screens rather than shrinking type.</p>
             </div>
           </div>
         </section>
@@ -1432,19 +1456,19 @@
 
       <section class="component-section" id="messaging" data-od-id="messaging-section">
         <div class="section-head">
-          <div><p class="eyebrow">Conversation</p><h3>Messaging</h3><p>Nine conversation primitives establish chronology, authorship, response choices, files, and safe AI guidance without making members decode the interface.</p></div>
+          <div><h3>Messaging</h3><p>Nine conversation primitives establish chronology, authorship, response choices, files, and safe AI guidance without making members decode the interface.</p></div>
           <span class="count">10 / 13</span>
         </div>
 
         <section class="card-subsection" id="timestamp" data-od-id="timestamp-subsection">
-          <div class="sub-head"><p class="eyebrow">Chronology</p><h4>Timestamp</h4><p>Caption Medium centers message time; an optional Caption Bold success label marks unread messages.</p></div>
+          <div class="sub-head"><h4>Timestamp</h4><p>Caption Medium centers message time; an optional Caption Bold success label marks unread messages.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Today · new messages</div><div class="stage">
             <div class="message-timestamp" data-od-id="message-timestamp"><span>12:34 PM</span><span>·</span><strong>3 New messages</strong></div>
           </div></div>
         </section>
 
         <section class="card-subsection" id="system-message" data-od-id="system-message-subsection">
-          <div class="sub-head"><p class="eyebrow">Conversation event</p><h4>System Message</h4><p>Use centered system copy for changes to the conversation itself, not for care guidance or action feedback.</p></div>
+          <div class="sub-head"><h4>System Message</h4><p>Use centered system copy for changes to the conversation itself, not for care guidance or action feedback.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">With timestamp</div><div class="stage">
             <div class="system-message" data-od-id="system-message-example">
               <div class="message-timestamp"><span>12:34 PM</span><span>·</span><strong>3 New messages</strong></div>
@@ -1454,7 +1478,7 @@
         </section>
 
         <section class="card-subsection" id="chat-input" data-od-id="chat-input-subsection">
-          <div class="sub-head"><p class="eyebrow">Compose</p><h4>Chat input</h4><p>A 393px, 24px-radius composer supports empty, active, in-progress, disabled, multi-select, end-chat, and keyboard states. Controls retain 48px targets.</p></div>
+          <div class="sub-head"><h4>Chat input</h4><p>A 393px, 24px-radius composer supports empty, active, in-progress, disabled, multi-select, end-chat, and keyboard states. Controls retain 48px targets.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Empty → active</div><div class="stage">
             <div class="chat-input" data-od-id="chat-input-control">
               <label class="visually-hidden" for="message-compose">Describe your issue</label>
@@ -1468,14 +1492,14 @@
         </section>
 
         <section class="card-subsection" id="jump-to-latest" data-od-id="jump-to-latest-subsection">
-          <div class="sub-head"><p class="eyebrow">Position recovery</p><h4>Jump to Latest</h4><p>A floating 48px control returns members to the newest content. The optional 20px badge reports unseen messages.</p></div>
+          <div class="sub-head"><h4>Jump to Latest</h4><p>A floating 48px control returns members to the newest content. The optional 20px badge reports unseen messages.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Light surface · unread badge</div><div class="stage">
             <button class="jump-latest" type="button" aria-label="Jump to latest, 3 new messages" data-od-id="jump-to-latest-control"><span class="glyph glyph-arrow" aria-hidden="true"></span><span class="badge">3</span></button>
           </div></div>
         </section>
 
         <section class="card-subsection" id="response" data-od-id="response-subsection">
-          <div class="sub-head"><p class="eyebrow">Authorship</p><h4>Response</h4><p>Dot speaks without a filled bubble; care-team replies use neutral fill; member replies use the weak brand surface. Every response uses Body 1 Medium.</p></div>
+          <div class="sub-head"><h4>Response</h4><p>Dot speaks without a filled bubble; care-team replies use neutral fill; member replies use the weak brand surface. Every response uses Body 1 Medium.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Dot · Care Team · Member</div><div class="stage">
             <div class="message-specimen" data-od-id="response-specimen">
               <article class="message-response dot">
@@ -1498,14 +1522,14 @@
         </section>
 
         <section class="card-subsection" id="attachments" data-od-id="attachments-subsection">
-          <div class="sub-head"><p class="eyebrow">Files</p><h4>Attachments</h4><p>Member and care-team files use the sender’s bubble surface. File rows are 56px high; image files may expand to a larger preview surface.</p></div>
+          <div class="sub-head"><h4>Attachments</h4><p>Member and care-team files use the sender’s bubble surface. File rows are 56px high; image files may expand to a larger preview surface.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Member PDF</div><div class="stage">
             <button class="attachment-row" type="button" data-od-id="member-attachment"><img src="assets/images/e0ec30fd79.svg" alt=""><span>Visit-summary.pdf</span></button>
           </div></div>
         </section>
 
         <section class="card-subsection" id="quick-reply" data-od-id="quick-reply-subsection">
-          <div class="sub-head"><p class="eyebrow">Single choice</p><h4>Quick Reply</h4><p>Quick replies use Body 2 Medium and 48px pill targets. Stack longer choices; use a horizontal row only when labels remain short.</p></div>
+          <div class="sub-head"><h4>Quick Reply</h4><p>Quick replies use Body 2 Medium and 48px pill targets. Stack longer choices; use a horizontal row only when labels remain short.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Stack and horizontal layouts</div><div class="stage two-col">
             <div><p class="reply-label">What would you like help with?</p><div class="quick-replies stack" data-choice-group data-od-id="quick-reply-stack">
               <button class="reply-chip" type="button" aria-pressed="false">Find care</button>
@@ -1520,7 +1544,7 @@
         </section>
 
         <section class="card-subsection" id="multi-select-reply" data-od-id="multi-select-reply-subsection">
-          <div class="sub-head"><p class="eyebrow">Multiple choice</p><h4>Multi-select Reply</h4><p>Compact 32px Caption chips allow more than one response. Selected options stay visibly filled; unavailable options use disabled semantics.</p></div>
+          <div class="sub-head"><h4>Multi-select Reply</h4><p>Compact 32px Caption chips allow more than one response. Selected options stay visibly filled; unavailable options use disabled semantics.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Symptoms</div><div class="stage">
             <div class="multi-replies" data-od-id="multi-select-replies">
               <button class="reply-chip" type="button" disabled>Back pain</button>
@@ -1533,7 +1557,7 @@
         </section>
 
         <section class="card-subsection" id="disclaimer" data-od-id="disclaimer-subsection">
-          <div class="sub-head"><p class="eyebrow">Safety context</p><h4>Disclaimer</h4><p>Keep the AI disclaimer near Dot’s conversation context and use Caption Medium centered within a 343px reading width.</p></div>
+          <div class="sub-head"><h4>Disclaimer</h4><p>Keep the AI disclaimer near Dot’s conversation context and use Caption Medium centered within a 343px reading width.</p><div class="source-links"><a class="source-link" href="https://www.figma.com/design/VT79VSlhYlpl0g2JS9vLKt/Anatomy--IH-Design-System?node-id=190-88687" target="_blank" rel="noopener"><img src="assets/images/figma-logo.webp" alt="">Figma</a><span class="source-link pending" title="Storybook link coming soon"><img src="assets/images/storybook-logo.webp" alt="">Storybook · coming soon</span></div></div>
           <div class="demo"><div class="demo-label">Dot guidance</div><div class="stage">
             <p class="message-disclaimer" data-od-id="message-disclaimer">Dot can provide generalized AI-generated answers for select healthcare questions and connect you to the Care Team at any time, but it is not a substitute for professional medical advice.</p>
           </div></div>
@@ -1542,7 +1566,7 @@
 
       <section class="component-section" id="logos" data-od-id="logos-section">
         <div class="section-head">
-          <div><p class="eyebrow">Brand identity</p><h3>Logos</h3><p>Use the 2026 Included Health and Doctor On Demand lockups from Anatomy. Export the official files — do not redraw, recolor, or restack the mark and wordmark.</p></div>
+          <div><h3>Logos</h3><p>Use the 2026 Included Health and Doctor On Demand lockups from Anatomy. Export the official files — do not redraw, recolor, or restack the mark and wordmark.</p></div>
           <span class="count">11 / 13</span>
         </div>
 
@@ -1647,7 +1671,7 @@
 
       <section class="component-section" id="patterns" data-od-id="patterns-section">
         <div class="section-head">
-          <div><p class="eyebrow">Disclosure and overlays</p><h3>Patterns</h3><p>Progressively reveal supporting detail and reserve modals for focused, interruptive decisions.</p></div>
+          <div><h3>Patterns</h3><p>Progressively reveal supporting detail and reserve modals for focused, interruptive decisions.</p></div>
           <span class="count">12 / 13</span>
         </div>
         <div class="demo">
@@ -1665,7 +1689,7 @@
 
       <section class="component-section" id="tokens" data-od-id="tokens-section">
         <div class="section-head">
-          <div><p class="eyebrow">System values</p><h3>Color tokens</h3><p>Primitives come from the Anatomy Colors page. Semantic roles come from the Color tokens page. Components bind aliases to these roles instead of raw hex.</p></div>
+          <div><h3>Color tokens</h3><p>Primitives come from the Anatomy Colors page. Semantic roles come from the Color tokens page. Components bind aliases to these roles instead of raw hex.</p></div>
           <span class="count">13 / 13</span>
         </div>
         <div class="demo" id="color-primitives" data-od-id="color-primitives">

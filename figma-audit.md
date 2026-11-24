@@ -8,7 +8,7 @@ Node ids in parentheses are Figma node ids. "(screenshot only)" = read visually,
 
 | Figma page | Site status | Size of work |
 |---|---|---|
-| Atoms | Present | Small – add Illustration container, copy fixes |
+| Atoms | ✅ Done 2026-11-23 | Illustration container added; Icon container + Divider specs and guidance |
 | Avatar | Present | Small – photo border rule, badge sizes, copy |
 | Dot | Only inside Avatar | Small – standalone 24px mark |
 | Badges | Present | Medium – Custom brand, borderless, avatar sizes |
